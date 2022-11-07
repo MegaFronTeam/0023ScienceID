@@ -1,0 +1,20 @@
+mixin sDefaultSlider(title, btn, select)
+	// start sDefaultSlider
+	+b.SECTION.sDefaultSlider.section#sDefaultSlider&attributes(attributes)
+		.container
+			+b.section-title
+				h2!= title
+				if select
+					+e.select-row
+						+input('Выберите город', 'select')
+						+input('Тематика', 'select')
+						+input('Даты проведения', 'select')
+			+e.slider--js.swiper
+				.swiper-wrapper
+					block
+				+e.row.row.align-items-center
+					.col
+						+e.btn.btn.btn-outline-primary(href='#')!= btn
+					.col-auto.d-flex
+						+arrow
+	// end sDefaultSlider

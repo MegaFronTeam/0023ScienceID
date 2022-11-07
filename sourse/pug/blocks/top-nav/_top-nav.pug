@@ -11,23 +11,32 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.menu-mobile--js
+	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 			+mnu()
+			+e.link(href='#').text-center Войти
+			+e.btn.btn.btn-primary(href='#').text-center Регистрация
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
-				.col.order-lg-0.order-last
+			+e.row.row
+				.col-auto
+					+logo()
+				.col.d-none.d-lg-block
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
 					
-				.col-auto.d-lg-none
+				.col-auto.d-lg-none.order-last
 					+menu-toggle()
+				.col-auto.ms-auto
+					+e.wrap
+						+e.link(href='#').d-none.d-lg-block Войти
+						+e.btn.btn.btn-primary(href='#').d-none.d-lg-block Регистрация
+						+e.search.btn.btn-primary(href='#'): +icon('search')
 	// end top-nav

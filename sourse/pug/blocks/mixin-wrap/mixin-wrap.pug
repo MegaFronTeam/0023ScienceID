@@ -13,9 +13,9 @@ include components/ddgroup.pug
 
 mixin arrow()
 	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
-		+icon('chevron-left')
+		+icon('arrow-left')
 	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
-		+icon('chevron-right')
+		+icon('arrow-right')
 //- /arrow for swiper-slider
 
 mixin ie11()
@@ -45,3 +45,31 @@ mixin page-head(t,...items)
 			+breadcrumb('Главная',...items)
 
 			h1= t
+
+mixin logo(img=true)
+	+b.logo(href="#")
+		+img('img/svg/logo-text.svg').text
+		if img
+			+img('img/logo-img.png').img
+
+mixin sliderItem(img, title, date, city, customClass, ...tags)
+	+b.slider-item(class= customClass)
+		+e.img-wrap(href="#")
+			+img(`img/${img}`, 'bg')
+		+e.content
+			+e.tags-row.row
+				.col-auto
+					+e.online
+						span
+						| Online
+				each tag in tags
+					.col-auto
+						+e.tag!= tag
+			a.h5(href="#")!= title
+			+e.bottom-row.row
+				.col-auto
+					+e.date!= date
+				.col-auto
+					+e.city
+						+img('img/svg/pin.svg')
+						!= city

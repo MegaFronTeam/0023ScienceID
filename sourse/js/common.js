@@ -377,17 +377,33 @@ function eventHandler() {
 		watchOverflow: true
 	});
 	
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-
+	const headerBlockSwiper = new Swiper('.headerBlock__slider--js', {
+		slidesPerView: 1,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
 	});
+
+	const defaultSwiper = new Swiper('.sDefaultSlider__slider--js', {
+		slidesPerView: 'auto',
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
+	let banner = document.querySelector('.headerBlock__banner-col');
+	if(banner) {
+		banner.querySelector('.headerBlock__close').addEventListener('click', function () {
+			$(banner).hide();
+		});
+	}
 
 	// modal window
 

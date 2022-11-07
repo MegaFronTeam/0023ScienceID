@@ -2,9 +2,59 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+			+e.row.row
+				.col-lg-7
+					+e.wrap.bg-wrap
+						+e.img-wrap.picture-bg
+							+img('img/headerBlock-img-1.jpg', 'bg')
+						h1 Science-ID – объединяя российских ученых
+						p Решайте задачи научно-технологического развития России вместе с&nbsp;учеными, исследователями, инженерами и&nbsp;специалистами
+						+e.btn.btn.btn-light(href="#") Присоединяйтесь к&nbsp;сообществу ученых
+						+e.items
+							mixin item(icon, title, num)
+								+e.item
+									+icon(icon)
+									+e.title!= title
+									+e.num!= num
+							+item('headerBlock-icon-1', 'Пользователей<br>в системе:', '27 811')
+							+item('headerBlock-icon-2', 'Народных разработок<br>в каталоге', '5 600')
+							+item('headerBlock-icon-2', 'Количсетво<br>СМУ и СНО:', '860')
+				.col-lg-5 
+					+e.inner-row.row
+						.col-12
+							+e.slider--js.swiper
+								.swiper-wrapper
+									-for(let i = 0; i < 4; i++)
+										+e.wrapper--slider.swiper-slide.bg-wrap
+											+e.slider-img-wrap.picture-bg
+												+img('img/headerBlock-img-2.jpg', 'bg')
+											h4 Есть идеи или проект?
+											p Расскажите о&nbsp;своих предложениях по&nbsp;содействию научно-технологическому развитию России и&nbsp;преодолению вызовов, стоящий перед нашей страной
+											+e.outline-btn.btn.btn-outline-light(href="#") Президент, у меня идея!
+								+e.control-wrap
+									+arrow
+									.swiper-pagination
+						.col-12
+							+e.wrapper--lab.bg-wrap
+								+e.image-wrap.picture-bg
+									+img('img/headerBlock-img-3.jpg', 'bg')
+								h4.ttu НАША ЛАБА
+								p Народный каталог научного оборудования и&nbsp;расходных материалов
+								+e.outline-btn.btn.btn-outline-light(href="#") Узнать больше
+								+img('img/microscope.png').img
+						.col-12
+							+e.wrapper--map.bg-wrap
+								+e.image-wrap.picture-bg
+									+img('img/headerBlock-img-4.jpg', 'bg')
+								h4 Карта СМУ<br>и СНО 
+								+e.outline-btn.btn.btn-outline-light(href="#") Подробнее
+								+img('img/svg/map.svg').map
+				+e.banner-col.col-12
+					+e.banner
+						+e.content
+							.h5 Банер уведомление
+							p Решайте задачи научно-технологического развития России вместе с&nbsp;учеными, Решайте задачи научно-технологического развития России вместе с&nbsp;учеными,
+						+e.outline-btn.btn.btn-outline-light(href="#") Подробнее
+						+img('img/particals.png').particals
+						+e.close
 	// end headerBlock
