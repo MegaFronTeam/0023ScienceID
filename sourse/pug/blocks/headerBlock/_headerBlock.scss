@@ -145,6 +145,7 @@
 		width: 100%;
 		color: #fff;
 		padding: rem(40) rem(40) rem(60) rem(40);
+		position: relative;
 		h4 {
 			color: #fff;
 			margin-bottom: rem(24);
@@ -153,6 +154,20 @@
 			margin-bottom: rem(24);
 			line-height: 1.5em;
 			max-width: rem(336);
+		}
+		.img {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			z-index: -1;
+			&--1 {
+				max-width: rem(273);
+				right: -23px;
+			}
+			&--2 {
+				max-width: rem(366);
+				right: -72px;
+			}
 		}
 		&--slider {
 			p {
@@ -273,7 +288,7 @@
 			height: 100%;
 			top: 0;
 			left: 0;
-			background-image: linear-gradient(180deg, rgba(67, 150, 247, 0.72) 57.36%, rgba(53, 116, 198, 0) 100%);
+			background-image: linear-gradient(180deg, rgba(67, 150, 247, 0.72) 57.36%, rgba(53, 116, 198, 0) 100%), linear-gradient(180deg, rgba(67, 150, 247, 0.72) 42.03%, rgba(0, 0, 0, 0) 100%);
 			z-index: 1;
 		}
 	}

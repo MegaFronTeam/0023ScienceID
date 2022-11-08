@@ -24,13 +24,32 @@ mixin headerBlock()
 						.col-12
 							+e.slider--js.swiper
 								.swiper-wrapper
-									-for(let i = 0; i < 4; i++)
-										+e.wrapper--slider.swiper-slide.bg-wrap
-											+e.slider-img-wrap.picture-bg
-												+img('img/headerBlock-img-2.jpg', 'bg')
-											h4 Есть идеи или проект?
-											p Расскажите о&nbsp;своих предложениях по&nbsp;содействию научно-технологическому развитию России и&nbsp;преодолению вызовов, стоящий перед нашей страной
-											+e.outline-btn.btn.btn-outline-light(href="#") Президент, у меня идея!
+									+e.wrapper--slider.swiper-slide.bg-wrap
+										+e.slider-img-wrap.picture-bg
+											+img('img/headerBlock-img-2.jpg', 'bg')
+										h4 Есть идеи или проект?
+										p Расскажите о&nbsp;своих предложениях по&nbsp;содействию научно-технологическому развитию России и&nbsp;преодолению вызовов, стоящий перед нашей страной
+										+e.outline-btn.btn.btn-outline-light(href="#") Президент, у меня идея!
+									+e.wrapper--slider.swiper-slide.bg-wrap
+										+e.slider-img-wrap.picture-bg
+											+img('img/headerBlock-img-5.jpg', 'bg')
+										h4 Научный<br>туризм<br>в России
+										p Описательный текст<br>для наглядности<br>отображения<br>контента
+										+e.outline-btn.btn.btn-outline-light(href="#") Кнопка
+										+img('img/headerBlock-img-8.jpg').img.img--1
+									+e.wrapper--slider.swiper-slide.bg-wrap
+										+e.slider-img-wrap.picture-bg
+											+img('img/headerBlock-img-6.jpg', 'bg')
+										h4 Программа<br>волонтеров<br>на&nbsp;2023 год
+										p Описательный текст<br>для наглядности<br>отображения<br>контента
+										+e.outline-btn.btn.btn-outline-light(href="#") Кнопка
+										+img('img/headerBlock-img-9.jpg').img.img--2
+									+e.wrapper--slider.swiper-slide.bg-wrap
+										+e.slider-img-wrap.picture-bg
+											+img('img/headerBlock-img-7.jpg', 'bg')
+										h4 Создайте<br>мероприятие<br>для своей аудитории
+										p Описательный текст для наглядности<br>отображения контента
+										+e.outline-btn.btn.btn-outline-light(href="#") Кнопка
 								+e.control-wrap
 									+arrow
 									.swiper-pagination
