@@ -67,6 +67,7 @@
 			max-width: 110px;
 			margin-right: 3px;
 			@include media-breakpoint-up(sm) {
+				margin-right: rem(28);
 				max-width: 148px;
 			}
 		}

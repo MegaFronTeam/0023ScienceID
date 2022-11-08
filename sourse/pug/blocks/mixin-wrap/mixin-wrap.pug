@@ -38,13 +38,21 @@ mixin search()
 			button 
 				+icon("search")
 
-mixin page-head(t,...items)
+mixin page-head(t, calendar, ...items)
 	+b.page-head
 		- let l = items.length
 		.container
 			+breadcrumb('Главная',...items)
+			if t
+				+e.row.row
+					.col
+						h1.h2= t
+					if calendar
+						.col-auto
+							+e.calendar(href='#')
+								+icon('calendar')
+								| Мой календарь
 
-			h1= t
 
 mixin logo(img=true)
 	+b.logo(href="#")

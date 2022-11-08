@@ -2,7 +2,8 @@
 	// start .header
 .header {
 	padding-top: rem(16);
-	padding-bottom: rem(16);
+	padding-bottom: rem(13);
+	border-bottom: 1px solid #DADADA;
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
