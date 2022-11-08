@@ -312,6 +312,7 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
+	JSCCommon.getCurrentYear('.footer__text span');
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
@@ -405,7 +406,31 @@ function eventHandler() {
 		});
 	}
 
-	// modal window
+	let labSlides = document.querySelectorAll('.labSlide');
+	if(labSlides) {
+		for (let labSlide of labSlides) {
+			let labSlideDots = labSlide.querySelector('.dots'),
+					labSlideDetailed = labSlide.querySelector('.detailed'),
+					labSlideMoreText = labSlide.querySelector('.moreText');
+			if(labSlideDetailed) {
+				labSlideDetailed.addEventListener('click', function() {
+					labSlideMoreText.classList.add('active');
+					$(labSlideDots).hide();
+					$(labSlideDetailed).hide();
+				});
+			}
+
+
+			let tagBtns = labSlide.querySelectorAll('.labSlide__show-more');
+			for (let tagBtn of tagBtns) {
+				tagBtn.addEventListener('click', function () {
+					this.classList.add('hide');
+					let tagCols = this.closest('.labSlide__tags').querySelectorAll(`.labSlide__tag-col`);
+					$(tagCols).slideDown();
+				});
+			}
+		}
+	};
 
 };
 if (document.readyState !== 'loading') {

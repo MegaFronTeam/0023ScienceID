@@ -22,7 +22,14 @@
 				<div class="menu-mobile__inner">
 					<nav>
 						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Лаба</a></li>
+							<li class="menu-item menu-item-has-children"><span>Лаба</span>
+								<ul class="sub-menu">
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Еще пункт меню</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Дополнительный пункт</a></li>
+								</ul>
+							</li>
 							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пользователи</a></li>
 							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Группы</a></li>
 							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мероприятия</a></li>
@@ -62,7 +69,14 @@
 										</div>
 										<nav>
 											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Лаба</a></li>
+												<li class="menu-item menu-item-has-children"><span>Лаба</span>
+													<ul class="sub-menu">
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Еще пункт меню</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Дополнительный пункт</a></li>
+													</ul>
+												</li>
 												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пользователи</a></li>
 												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Группы</a></li>
 												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мероприятия</a></li>
@@ -239,10 +253,10 @@
 				</div>
 				<!-- end headerBlock-->
 				<!-- start sDefaultSlider-->
-				<section class="sDefaultSlider section" id="sDefaultSlider">
+				<section class="sDefaultSlider section">
 					<div class="container">
 						<div class="section-title">
-							<h2>Мероприятия</h2>
+							<h3>Мероприятия</h3>
 							<div class="section-title__select-row">
 								<div class="section-title__input-wrap form-group">
 									<select class="section-title__input form-select" name="select">
@@ -278,151 +292,181 @@
 						</div>
 						<div class="sDefaultSlider__slider sDefaultSlider__slider--js swiper">
 							<div class="swiper-wrapper">
-								<div class="slider-item swiper-slide">
-									<a class="slider-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-1.png" alt="" loading="lazy"/>
+								<div class="news-item swiper-slide">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-1.png" alt="" loading="lazy"/>
 									</a>
-									<div class="slider-item__content">
-										<div class="slider-item__tags-row row">
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
 											<div class="col-auto">
-												<div class="slider-item__online"><span></span>Online
-												</div>
+												<a class="news-item__online" href="#"><span></span>Online
+												</a>
 											</div>
 											<div class="col-auto">
-												<div class="slider-item__tag">Тегмероприятия
-												</div>
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
 											</div>
 											<div class="col-auto">
-												<div class="slider-item__tag">Тег
-												</div>
+												<a class="news-item__tag" href="#">Тег
+												</a>
 											</div>
 										</div><a class="h5" href="#">Первая летняя &laquo;Школа академического совершенства&raquo;</a>
-										<div class="slider-item__bottom-row row">
+										<div class="news-item__bottom-row row">
 											<div class="col-auto">
-												<div class="slider-item__date">15 августа 2022
+												<div class="news-item__date">15 августа 2022
 												</div>
 											</div>
 											<div class="col-auto">
-												<div class="slider-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="slider-item swiper-slide">
-									<a class="slider-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-1.png" alt="" loading="lazy"/>
+								<div class="news-item swiper-slide">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-2.png" alt="" loading="lazy"/>
 									</a>
-									<div class="slider-item__content">
-										<div class="slider-item__tags-row row">
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
 											<div class="col-auto">
-												<div class="slider-item__online"><span></span>Online
+												<a class="news-item__online" href="#"><span></span>Online
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег
+												</a>
+											</div>
+										</div><a class="h5" href="#">IX&nbsp;Международный форум технологического развития ТЕХНОПРОМ-2022</a>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">15 августа 2022
 												</div>
 											</div>
 											<div class="col-auto">
-												<div class="slider-item__tag">Тегмероприятия
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="slider-item__tag">Тег
-												</div>
-											</div>
-										</div><a class="h5" href="#">Первая летняя &laquo;Школа академического совершенства&raquo;</a>
-										<div class="slider-item__bottom-row row">
-											<div class="col-auto">
-												<div class="slider-item__date">15 августа 2022
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="slider-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="slider-item swiper-slide">
-									<a class="slider-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-1.png" alt="" loading="lazy"/>
+								<div class="news-item swiper-slide">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-3.png" alt="" loading="lazy"/>
 									</a>
-									<div class="slider-item__content">
-										<div class="slider-item__tags-row row">
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
 											<div class="col-auto">
-												<div class="slider-item__online"><span></span>Online
+												<a class="news-item__online" href="#"><span></span>Online
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег
+												</a>
+											</div>
+										</div><a class="h5" href="#">1-я Международная научно-техническая конференция &laquo;Скоростной транспорт будущего: перспективы, проблемы, решения&raquo;</a>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">28 - 29 августа 2022
 												</div>
 											</div>
 											<div class="col-auto">
-												<div class="slider-item__tag">Тегмероприятия
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="slider-item__tag">Тег
-												</div>
-											</div>
-										</div><a class="h5" href="#">Первая летняя &laquo;Школа академического совершенства&raquo;</a>
-										<div class="slider-item__bottom-row row">
-											<div class="col-auto">
-												<div class="slider-item__date">15 августа 2022
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="slider-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="slider-item swiper-slide">
-									<a class="slider-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-1.png" alt="" loading="lazy"/>
+								<div class="news-item swiper-slide">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-1.png" alt="" loading="lazy"/>
 									</a>
-									<div class="slider-item__content">
-										<div class="slider-item__tags-row row">
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
 											<div class="col-auto">
-												<div class="slider-item__online"><span></span>Online
-												</div>
+												<a class="news-item__online" href="#"><span></span>Online
+												</a>
 											</div>
 											<div class="col-auto">
-												<div class="slider-item__tag">Тегмероприятия
-												</div>
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
 											</div>
 											<div class="col-auto">
-												<div class="slider-item__tag">Тег
-												</div>
+												<a class="news-item__tag" href="#">Тег
+												</a>
 											</div>
 										</div><a class="h5" href="#">Первая летняя &laquo;Школа академического совершенства&raquo;</a>
-										<div class="slider-item__bottom-row row">
+										<div class="news-item__bottom-row row">
 											<div class="col-auto">
-												<div class="slider-item__date">15 августа 2022
+												<div class="news-item__date">15 августа 2022
 												</div>
 											</div>
 											<div class="col-auto">
-												<div class="slider-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="slider-item swiper-slide">
-									<a class="slider-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-1.png" alt="" loading="lazy"/>
+								<div class="news-item swiper-slide">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-2.png" alt="" loading="lazy"/>
 									</a>
-									<div class="slider-item__content">
-										<div class="slider-item__tags-row row">
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
 											<div class="col-auto">
-												<div class="slider-item__online"><span></span>Online
+												<a class="news-item__online" href="#"><span></span>Online
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег
+												</a>
+											</div>
+										</div><a class="h5" href="#">IX&nbsp;Международный форум технологического развития ТЕХНОПРОМ-2022</a>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">15 августа 2022
 												</div>
 											</div>
 											<div class="col-auto">
-												<div class="slider-item__tag">Тегмероприятия
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="news-item swiper-slide">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-3.png" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__online" href="#"><span></span>Online
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег
+												</a>
+											</div>
+										</div><a class="h5" href="#">1-я Международная научно-техническая конференция &laquo;Скоростной транспорт будущего: перспективы, проблемы, решения&raquo;</a>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">28 - 29 августа 2022
 												</div>
 											</div>
 											<div class="col-auto">
-												<div class="slider-item__tag">Тег
-												</div>
-											</div>
-										</div><a class="h5" href="#">Первая летняя &laquo;Школа академического совершенства&raquo;</a>
-										<div class="slider-item__bottom-row row">
-											<div class="col-auto">
-												<div class="slider-item__date">15 августа 2022
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="slider-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
 												</div>
 											</div>
 										</div>
@@ -451,19 +495,774 @@
 					</div>
 				</section>
 				<!-- end sDefaultSlider-->
+				<!-- start sBanners-->
+				<section class="sBanners section" id="sBanners">
+					<div class="container">
+						<div class="sBanners__row row">
+							<div class="col-lg-6">
+								<div class="sBanners__item">
+									<h3>Научный туризм в&nbsp;России</h3>
+									<a class="sBanners__btn btn btn-primary" href="#">Узнать больше
+									</a><img class="img-1" src="img/sBanners-img-1.png" alt="" loading="lazy"/>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="sBanners__item bg-wrap">
+									<h3>Научное волонтерство</h3>
+									<a class="sBanners__btn btn btn-primary" href="#">Узнать больше
+									</a><img class="object-fit-js picture-bg" src="img/sBanners-img-2.png" alt="" loading="lazy"/><img class="img-2" src="img/sBanners-img-3.png" alt="" loading="lazy"/>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="sBanners__item sBanners__item--big">
+									<h2>Карта Советов молодых ученых и&nbsp;Студенческих научных обществ</h2>
+									<p>Найди ближайшее объединение и&nbsp;развивайтесь вместе</p>
+									<a class="sBanners__btn btn btn-primary" href="#">Открыть карту
+									</a><img class="img-3" src="img/sBanners-img-4.png" alt="" loading="lazy"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sBanners-->
+				<!-- start sDefaultSlider-->
+				<section class="sDefaultSlider section sDefaultSlider sDefaultSlider--vacancies">
+					<div class="container">
+						<div class="section-title">
+							<h3>Научные вакансии</h3>
+						</div>
+						<div class="sDefaultSlider__slider sDefaultSlider__slider--js swiper">
+							<div class="swiper-wrapper">
+								<div class="vacancies-item swiper-slide">
+									<div class="vacancies-item__head-row row">
+										<div class="col">
+											<div class="vacancies-item__label">Педагогические науки
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="vacancies-item__price">100 000 Р
+											</div>
+										</div>
+									</div><a class="h5" href="#">Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)</a>
+									<div class="vacancies-item__bottom-row row">
+										<div class="col-auto">
+											<div class="vacancies-item__text">Science-ID
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="vacancies-item__text">Город Санкт-Петербург
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="vacancies-item swiper-slide">
+									<div class="vacancies-item__head-row row">
+										<div class="col">
+											<div class="vacancies-item__label">Сельское хозяйство
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="vacancies-item__price">40 000 Р
+											</div>
+										</div>
+									</div><a class="h5" href="#">Администратор в&nbsp;школу английского языка Sony English, Мурино</a>
+									<div class="vacancies-item__bottom-row row">
+										<div class="col-auto">
+											<div class="vacancies-item__text">Science-ID
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="vacancies-item__text">Город Москва
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="vacancies-item swiper-slide">
+									<div class="vacancies-item__head-row row">
+										<div class="col">
+											<div class="vacancies-item__label">Педагогические науки
+											</div>
+										</div>
+									</div><a class="h5" href="#">Воспитатель</a>
+									<div class="vacancies-item__bottom-row row">
+										<div class="col-auto">
+											<div class="vacancies-item__text">Science-ID
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="vacancies-item__text">Город Москва
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="vacancies-item swiper-slide">
+									<div class="vacancies-item__head-row row">
+										<div class="col">
+											<div class="vacancies-item__label">Технические науки
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="vacancies-item__price">140 000 Р
+											</div>
+										</div>
+									</div><a class="h5" href="#">Заведующий кафедрой информационных систем и&nbsp;технологий</a>
+									<div class="vacancies-item__bottom-row row">
+										<div class="col-auto">
+											<div class="vacancies-item__text">Science-ID
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="vacancies-item__text">Город Москва
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="vacancies-item swiper-slide">
+									<div class="vacancies-item__head-row row">
+										<div class="col">
+											<div class="vacancies-item__label">Педагогические науки
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="vacancies-item__price">100 000 Р
+											</div>
+										</div>
+									</div><a class="h5" href="#">Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)</a>
+									<div class="vacancies-item__bottom-row row">
+										<div class="col-auto">
+											<div class="vacancies-item__text">Science-ID
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="vacancies-item__text">Город Санкт-Петербург
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="vacancies-item swiper-slide">
+									<div class="vacancies-item__head-row row">
+										<div class="col">
+											<div class="vacancies-item__label">Сельское хозяйство
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="vacancies-item__price">40 000 Р
+											</div>
+										</div>
+									</div><a class="h5" href="#">Администратор в&nbsp;школу английского языка Sony English, Мурино</a>
+									<div class="vacancies-item__bottom-row row">
+										<div class="col-auto">
+											<div class="vacancies-item__text">Science-ID
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="vacancies-item__text">Город Москва
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="vacancies-item swiper-slide">
+									<div class="vacancies-item__head-row row">
+										<div class="col">
+											<div class="vacancies-item__label">Педагогические науки
+											</div>
+										</div>
+									</div><a class="h5" href="#">Воспитатель</a>
+									<div class="vacancies-item__bottom-row row">
+										<div class="col-auto">
+											<div class="vacancies-item__text">Science-ID
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="vacancies-item__text">Город Москва
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="vacancies-item swiper-slide">
+									<div class="vacancies-item__head-row row">
+										<div class="col">
+											<div class="vacancies-item__label">Технические науки
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="vacancies-item__price">140 000 Р
+											</div>
+										</div>
+									</div><a class="h5" href="#">Заведующий кафедрой информационных систем и&nbsp;технологий</a>
+									<div class="vacancies-item__bottom-row row">
+										<div class="col-auto">
+											<div class="vacancies-item__text">Science-ID
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="vacancies-item__text">Город Москва
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sDefaultSlider__row row align-items-center">
+								<div class="col">
+									<a class="sDefaultSlider__btn btn btn-outline-primary" href="#">Все вакансии
+									</a>
+								</div>
+								<div class="col-auto d-flex">
+									<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+										<svg class="icon icon-arrow-left ">
+											<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+										</svg>
+									</div>
+									<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+										<svg class="icon icon-arrow-right ">
+											<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sDefaultSlider-->
+				<!-- start sCompetencies-->
+				<div class="sCompetencies section" id="sCompetencies">
+					<div class="container">
+						<div class="sCompetencies__wrap">
+							<div class="h1">Компетенции в науке</div>
+							<p>Решайте задачи научно-технологического развития России вместе с&nbsp;учеными, исследователями, инженерами и&nbsp;специалистами</p>
+							<div class="sCompetencies__btn-wrap">
+								<a class="sCompetencies__btn btn btn-light" href="#">Оцени свои компетенции
+								</a>
+								<a class="sCompetencies__btn sCompetencies__btn--outline btn btn-outline-light" href="#">Узнать больше
+								</a>
+							</div><img src="img/sCompetencies-img-1.png" alt="" loading="lazy"/>
+						</div>
+					</div>
+				</div>
+				<!-- end sCompetencies-->
+				<!-- start sDefaultSlider-->
+				<section class="sDefaultSlider section sDefaultSlider sDefaultSlider--new">
+					<div class="container">
+						<div class="section-title">
+							<h3>Новое в Нашей Лабе</h3>
+						</div>
+						<div class="sDefaultSlider__slider sDefaultSlider__slider--js swiper">
+							<div class="swiper-wrapper">
+								<div class="labSlide swiper-slide">
+									<a class="labSlide__img-wrap" href="#">
+										<div class="img-wrap-center"><img src="img/labSlide-img-1.png" alt="" loading="lazy"/>
+										</div>
+									</a>
+									<div class="labSlide__content"><a class="h6" href="#">Cтанция радиационного контроля Застава-1</a>
+										<div class="labSlide__row row">
+											<div class="col-auto"><span class="active">Ритм</span></div>
+											<div class="col-auto"><span>Новокузнецк</span></div>
+										</div>
+										<p>Преобразователь напряжение-ток Я9-44 обеспечивает преобразование постоянного и&nbsp;переменного напряжения (синусоидальной формы) до&nbsp;30&nbsp;В в&nbsp;силу тока до&nbsp;30&nbsp;А (соответственного постоянного и&nbsp;переменного) с&nbsp;коэффициентом преобразования<span class="dots">...</span><span class="detailed">Подробнее </span><span class="moreText">Преобразователь напряжение-ток Я9-44 обеспечивает преобразование постоянного и&nbsp;переменного напряжения</span>
+										</p>
+										<div class="labSlide__tags row">
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Электроника
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Электроника
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="col-auto">
+												<div class="labSlide__show-more">Еще 3
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="labSlide swiper-slide">
+									<a class="labSlide__img-wrap" href="#">
+										<div class="img-wrap-center"><img src="img/labSlide-img-2.png" alt="" loading="lazy"/>
+										</div>
+									</a>
+									<div class="labSlide__content"><a class="h6" href="#">Cтанция радиационного контроля Застава-1</a>
+										<div class="labSlide__row row">
+											<div class="col-auto"><span class="active">Ритм</span></div>
+											<div class="col-auto"><span>Новокузнецк</span></div>
+										</div>
+										<p>Преобразователь напряжение-ток Я9-44 обеспечивает преобразование постоянного и&nbsp;переменного напряжения
+										</p>
+										<div class="labSlide__tags row">
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Электроника
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Электроника
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="col-auto">
+												<div class="labSlide__show-more">Еще 3
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="labSlide swiper-slide">
+									<a class="labSlide__img-wrap" href="#">
+										<div class="img-wrap-center"><img src="img/labSlide-img-3.png" alt="" loading="lazy"/>
+										</div>
+									</a>
+									<div class="labSlide__content"><a class="h6" href="#">Cтанция радиационного</a>
+										<div class="labSlide__row row">
+											<div class="col-auto"><span class="active">Ритм</span></div>
+											<div class="col-auto"><span>Новокузнецк</span></div>
+										</div>
+										<p>Преобразователь напряжение-ток Я9-44 обеспечивает преобразование постоянного и&nbsp;переменного напряжения (синусоидальной формы) до
+										</p>
+										<div class="labSlide__tags row">
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Электроника
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Электроника
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="col-auto">
+												<div class="labSlide__show-more">Еще 3
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="labSlide swiper-slide">
+									<a class="labSlide__img-wrap" href="#">
+										<div class="img-wrap-center"><img src="img/labSlide-img-1.png" alt="" loading="lazy"/>
+										</div>
+									</a>
+									<div class="labSlide__content"><a class="h6" href="#">Cтанция радиационного контроля Застава-1</a>
+										<div class="labSlide__row row">
+											<div class="col-auto"><span class="active">Ритм</span></div>
+											<div class="col-auto"><span>Новокузнецк</span></div>
+										</div>
+										<p>Преобразователь напряжение-ток Я9-44 обеспечивает преобразование постоянного и&nbsp;переменного напряжения (синусоидальной формы) до&nbsp;30&nbsp;В в&nbsp;силу тока до&nbsp;30&nbsp;А (соответственного постоянного и&nbsp;переменного) с&nbsp;коэффициентом преобразования<span class="dots">...</span><span class="detailed">Подробнее </span><span class="moreText">Преобразователь напряжение-ток Я9-44 обеспечивает преобразование постоянного и&nbsp;переменного напряжения</span>
+										</p>
+										<div class="labSlide__tags row">
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Электроника
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Электроника
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="col-auto">
+												<div class="labSlide__show-more">Еще 3
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="labSlide swiper-slide">
+									<a class="labSlide__img-wrap" href="#">
+										<div class="img-wrap-center"><img src="img/labSlide-img-2.png" alt="" loading="lazy"/>
+										</div>
+									</a>
+									<div class="labSlide__content"><a class="h6" href="#">Cтанция радиационного контроля Застава-1</a>
+										<div class="labSlide__row row">
+											<div class="col-auto"><span class="active">Ритм</span></div>
+											<div class="col-auto"><span>Новокузнецк</span></div>
+										</div>
+										<p>Преобразователь напряжение-ток Я9-44 обеспечивает преобразование постоянного и&nbsp;переменного напряжения
+										</p>
+										<div class="labSlide__tags row">
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Электроника
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Электроника
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="col-auto">
+												<div class="labSlide__show-more">Еще 3
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="labSlide swiper-slide">
+									<a class="labSlide__img-wrap" href="#">
+										<div class="img-wrap-center"><img src="img/labSlide-img-3.png" alt="" loading="lazy"/>
+										</div>
+									</a>
+									<div class="labSlide__content"><a class="h6" href="#">Cтанция радиационного</a>
+										<div class="labSlide__row row">
+											<div class="col-auto"><span class="active">Ритм</span></div>
+											<div class="col-auto"><span>Новокузнецк</span></div>
+										</div>
+										<p>Преобразователь напряжение-ток Я9-44 обеспечивает преобразование постоянного и&nbsp;переменного напряжения (синусоидальной формы) до
+										</p>
+										<div class="labSlide__tags row">
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Электроника
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Электроника
+												</a>
+											</div>
+											<div class="labSlide__tag-col col-auto">
+												<a class="labSlide__tag" href="#">Оборудование
+												</a>
+											</div>
+											<div class="col-auto">
+												<div class="labSlide__show-more">Еще 3
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sDefaultSlider__row row align-items-center">
+								<div class="col">
+									<a class="sDefaultSlider__btn btn btn-outline-primary" href="#">Все товары
+									</a>
+								</div>
+								<div class="col-auto d-flex">
+									<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+										<svg class="icon icon-arrow-left ">
+											<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+										</svg>
+									</div>
+									<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+										<svg class="icon icon-arrow-right ">
+											<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sDefaultSlider-->
+				<!-- start sDefaultSlider-->
+				<section class="sDefaultSlider section sDefaultSlider sDefaultSlider--news">
+					<div class="container">
+						<div class="section-title">
+							<h3>Новости</h3>
+						</div>
+						<div class="sDefaultSlider__slider sDefaultSlider__slider--js swiper">
+							<div class="swiper-wrapper">
+								<div class="news-item swiper-slide news-item news-item--second-variant">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/news-img-1.jpg" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег новости
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегновый
+												</a>
+											</div>
+										</div><a class="h5" href="#">Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?</a>
+										<div class="news-item__text">Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)
+										</div>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">14.05.2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city">Разработки
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="news-item swiper-slide news-item news-item--second-variant">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/news-img-2.jpg" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег новости
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегновый
+												</a>
+											</div>
+										</div><a class="h5" href="#">Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?</a>
+										<div class="news-item__text">Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)
+										</div>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">14.05.2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city">Разработки
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="news-item swiper-slide news-item news-item--second-variant">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/news-img-3.jpg" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег новости
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегновый
+												</a>
+											</div>
+										</div><a class="h5" href="#">Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?</a>
+										<div class="news-item__text">Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)
+										</div>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">14.05.2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city">Разработки
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="news-item swiper-slide news-item news-item--second-variant">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/news-img-1.jpg" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег новости
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегновый
+												</a>
+											</div>
+										</div><a class="h5" href="#">Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?</a>
+										<div class="news-item__text">Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)
+										</div>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">14.05.2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city">Разработки
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="news-item swiper-slide news-item news-item--second-variant">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/news-img-2.jpg" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег новости
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегновый
+												</a>
+											</div>
+										</div><a class="h5" href="#">Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?</a>
+										<div class="news-item__text">Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)
+										</div>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">14.05.2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city">Разработки
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="news-item swiper-slide news-item news-item--second-variant">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/news-img-3.jpg" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег новости
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегновый
+												</a>
+											</div>
+										</div><a class="h5" href="#">Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?</a>
+										<div class="news-item__text">Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)
+										</div>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">14.05.2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city">Разработки
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sDefaultSlider__row row align-items-center">
+								<div class="col">
+									<a class="sDefaultSlider__btn btn btn-outline-primary" href="#">Все новости
+									</a>
+								</div>
+								<div class="col-auto d-flex">
+									<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+										<svg class="icon icon-arrow-left ">
+											<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+										</svg>
+									</div>
+									<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+										<svg class="icon icon-arrow-right ">
+											<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sDefaultSlider-->
 			</main>
 			<footer class="footer section">
 				<div class="container">
-					<div class="row">
-						<div class="col"></div>
-						<div class="col">Footer</div>
-						<div class="col"></div>
-						<div class="col-auto"></div>
+					<div class="footer__row row">
+						<div class="col-auto order-1">
+							<a class="logo" href="#"><img class="text" src="img/svg/logo-text.svg" alt="" loading="lazy"/>
+							</a><img src="img/logo-2.png" alt="" loading="lazy"/>
+						</div>
+						<div class="col order-3 order-lg-1">
+							<div class="footer__list-wrap">
+								<ul>
+									<li><a href="#">Пользователи</a></li>
+									<li><a href="#">Мероприятия</a></li>
+									<li><a href="#">Вакансии</a></li>
+									<li><a href="#">Группы</a></li>
+									<li><a href="#">Новости</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">Курс СНТР</a></li>
+									<li><a href="#">Компетенции в науке</a></li>
+									<li><a href="#">Опросы</a></li>
+									<li><a href="#">О проекте</a></li>
+									<li><a href="#">Контакты</a></li>
+									<li><a href="#">Карта СМУ и СНО</a></li>
+									<li><a href="#">Помощь</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-auto order-2 order-lg-1">
+							<a class="footer__tel" href="tel:+74951447437">+7 (495) 144 74 37
+							</a>
+							<a class="footer__mail" href="mailto:support@scienceid.net">support@scienceid.net
+							</a>
+						</div>
+					</div>
+					<div class="footer__bottom-row row">
+						<div class="col-sm">
+							<div class="footer__text">&copy;&nbsp;<span></span> Science&nbsp;&mdash; ID
+							</div>
+						</div>
+						<div class="col-sm-auto">
+							<a class="footer__link" href="#">Политика конфиденциальности
+							</a>
+						</div>
+						<div class="col-sm-auto">
+							<div class="footer__text">При поддержке Министерства науки и высшего образования РФ
+							</div>
+						</div>
 					</div>
 				</div>
 			</footer>
 		</div>
-		<!--  start modals--><a class="link-modal-js" href="modal-call">modal-call </a>
+		<!--  start modals-->
 		<div id="modal-call" style="display: none">
 			<div class="modal-win">
 				<div class="form-wrap">

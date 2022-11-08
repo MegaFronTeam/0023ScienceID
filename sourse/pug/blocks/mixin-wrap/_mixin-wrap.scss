@@ -127,7 +127,7 @@
 	}
 }
 
-.slider-item {
+.news-item {
 	max-width: rem(416);
 	margin-right: rem(32);
 	height: auto;
@@ -156,7 +156,8 @@
 		flex-grow: 1;
 		.h5 {
 			flex-grow: 1;
-			margin-bottom: rem(11);
+			margin-bottom: rem(20.006);
+			font-weight: 600;
 			&:before {
 				content: '';
 				position: absolute;
@@ -171,16 +172,21 @@
 	&__tags-row {
 		--bs-gutter-x: 8px;
 
-		margin-bottom: rem(16);
+		margin-bottom: rem(19);
+		position: relative;
+		z-index: 3;
 	}
 	&__online {
 		position: relative;
-		padding: 5.9px 6px 5.5px 23px;
+		padding: 4.6px 4.9px 3.4px 23px;
 		border: 1px solid #C2DCFB;
 		border-radius: 2px;
 		font-size: 11px;
 		line-height: 1;
 		height: 100%;
+		&:not(:hover) {
+			color: $gray-800;
+		}
 		span {
 			position: absolute;
 			display: block;
@@ -194,7 +200,7 @@
 		}
 	}
 	&__tag {
-		padding: 5.9px 6px 5.5px 6px;
+		padding: 4.6px 4.9px 3.4px;
 		background-color: #C2DCFB;
 		border: 1px solid #C2DCFB;
 		color: $gray-800;
@@ -202,6 +208,7 @@
 		font-size: 11px;
 		line-height: 1;
 		height: 100%;
+		border-radius: 2px;
 	}
 	&__bottom-row {
 		--bs-gutter-x: #{rem(25)};
@@ -218,6 +225,207 @@
 		img {
 			flex: 0 0 auto;
 			margin-right: 8px;
+		}
+	}
+	&--second-variant {
+		max-width: rem(304);
+		.news-item {
+			&__img-wrap {
+				--ratio: 179/304;
+	
+				border-radius: 8px;
+			}
+			&__tags-row {
+				margin-bottom: rem(11);
+			}
+			&__tag {
+				padding: 1.5px 3.1px 1.5px;
+			}
+			&__content {
+				background-color: #fff;
+				border-radius: 8px;
+				padding: rem(26) rem(24) rem(25.5);
+				.h5 {
+					@extend .h6;
+					color: $primary;
+					font-weight: 600;
+					line-height: 1.5em;
+					flex-grow: 0;
+				}
+			}
+			&__text {
+				flex-grow: 1;
+				line-height: 1.5em;
+				color: $gray-700;
+				margin-bottom: rem(10);
+			}
+		}
+	}
+}
+
+.vacancies-item {
+	min-height: rem(291);
+	max-width: rem(304);
+	margin-right: rem(32);
+	padding: rem(24);
+	border-radius: 8px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	height: auto;
+	&__head-row {
+		--bs-gutter-x: 6.5px;
+		
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x: #{rem(30)};
+		}
+	}
+	&__label {
+		display: inline;
+		font-size: 11px;
+		background-color: rgba(67, 150, 247, 0.2);
+		border-radius: 2px;
+		color: $gray-800;
+		padding: 4.5px 6px;
+	}
+	&__price {
+		font-size: rem(20);
+		font-weight: 600;
+		color: $primary;
+		line-height: 1.2;
+	}
+	.h5 {
+		flex-grow: 1;
+		margin-bottom: rem(11);
+		letter-spacing: -0.01em;
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
+	}
+	&__bottom-row {
+		--bs-gutter-x: #{rem(25)};
+	}
+	&__text {
+		font-size: 10px;
+		line-height: 1.5em;
+	}
+}
+
+.labSlide {
+	border: 1px solid #DADADA;
+	border-radius: 8px;
+	max-width: rem(305);
+	margin-right: rem(32);
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	&__img-wrap {
+		@include block(305, 203);
+	}
+	&__content {
+		position: relative;
+		padding: rem(24);
+		flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+		.h6 {
+			line-height: 1.5em;
+			margin-bottom: 1.500px;
+			&::before {
+				content: '';
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+			}
+		}
+		p {
+			position: relative;
+			z-index: 3;
+			font-size: 11px;
+			margin-bottom: rem(16);
+			line-height: 1.5em;
+			flex-grow: 1;
+			.detailed {
+				@include mt;
+				cursor: pointer;
+				color: $primary;
+				&:hover {
+					opacity: .8;
+				}
+			}
+			.moreText {
+				display: none;
+				&.active {
+					display: block;
+				}
+			}
+		}
+	}
+	&__row {
+		--bs-gutter-x: #{rem(15)};
+
+		margin-bottom: rem(8);
+		span {
+			color: $gray-800;
+			font-size: 11px;
+			line-height: 1.5em;
+			&.active {
+				color: $primary;
+			}
+		}
+	}
+	&__tags {
+		--bs-gutter-x: #{rem(8)};
+		--bs-gutter-y: #{rem(8)};
+
+		position: relative;
+		z-index: 3;
+	}
+	&__tag-col {
+		&:nth-child(n+3) {
+			display: none;
+		}
+	}
+	&__tag {
+		font-size: 10px;
+		font-weight: 700;
+		padding: 4px 8px;
+		background-color: #EEF3F7;
+		color: $primary;
+		border-radius: 4px;
+		display: inline;
+		&:hover {
+			color: #fff;
+			background-color: $primary;
+		}
+	}
+	&__show-more {
+		@include mt;
+		display: inline;
+		font-size: 10px;
+		font-weight: 700;
+		padding: 4px 8px;
+		background-color: $primary;
+		border-radius: 4px;
+		color: #fff;
+		cursor: pointer;
+		&:hover {
+			background-color: #EEF3F7;
+			color: $primary;
+		}
+		&.hide {
+			display: none;
 		}
 	}
 }

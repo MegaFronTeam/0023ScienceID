@@ -1,9 +1,45 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				.col-auto.order-1
+					+logo(false)
+					+img('img/logo-2.png')
+				.col.order-3.order-lg-1
+					+e.list-wrap
+						ul
+							li
+								a(href="#") Пользователи
+							li
+								a(href="#") Мероприятия
+							li
+								a(href="#") Вакансии
+							li
+								a(href="#") Группы
+							li
+								a(href="#") Новости
+						ul
+							li
+								a(href="#") Курс СНТР
+							li
+								a(href="#") Компетенции в науке
+							li
+								a(href="#") Опросы
+							li
+								a(href="#") О проекте
+							li
+								a(href="#") Контакты
+							li
+								a(href="#") Карта СМУ и СНО
+							li
+								a(href="#") Помощь
+				.col-auto.order-2.order-lg-1
+					+e.tel(href="tel:+74951447437") +7 (495) 144 74 37
+					+e.mail(href="mailto:support@scienceid.net") support@scienceid.net
+			+e.bottom-row.row
+				.col-sm
+					+e.text &copy;&nbsp;#[span ] Science&nbsp;&mdash; ID
+				.col-sm-auto
+					+e.link(href="#") Политика конфиденциальности
+				.col-sm-auto
+					+e.text При поддержке Министерства науки и высшего образования РФ

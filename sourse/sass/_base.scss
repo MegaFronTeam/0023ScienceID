@@ -526,3 +526,14 @@ iframe {
 	--bs-btn-hover-color: #{$primary};
 	--bs-btn-active-color: #{$primary};
 }
+
+.img-wrap-center {
+	@include a-cent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img{
+		max-width: 100%;
+		height: auto;
+	}
+}

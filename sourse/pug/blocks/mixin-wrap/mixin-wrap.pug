@@ -52,24 +52,75 @@ mixin logo(img=true)
 		if img
 			+img('img/logo-img.png').img
 
-mixin sliderItem(img, title, date, city, customClass, ...tags)
-	+b.slider-item(class= customClass)
+mixin sliderItem(img, title, date, pin='true', city, customClass, online="Online", text, ...tags)
+	+b.news-item(class= customClass)&attributes(attributes)
 		+e.img-wrap(href="#")
 			+img(`img/${img}`, 'bg')
 		+e.content
 			+e.tags-row.row
-				.col-auto
-					+e.online
-						span
-						| Online
+				if online
+					.col-auto
+						+e.online(href="#")
+							span
+							!= online
 				each tag in tags
 					.col-auto
-						+e.tag!= tag
+						+e.tag(href="#")!= tag
 			a.h5(href="#")!= title
+			if text
+				+e.text!= text
 			+e.bottom-row.row
 				.col-auto
 					+e.date!= date
 				.col-auto
 					+e.city
-						+img('img/svg/pin.svg')
+						if pin
+							+img('img/svg/pin.svg')
 						!= city
+
+mixin vacanciesItem(label, price, title, text, customClass='swiper-slide')
+	+b.vacancies-item(class= customClass)
+		+e.head-row.row
+			.col
+				+e.label!= label
+			if price
+				.col-auto
+					+e.price!= price
+		a(href="#").h5!= title
+		+e.bottom-row.row
+			.col-auto
+				+e.text Science-ID
+			.col-auto
+				+e.text!= text
+
+mixin labSlide(img, title, text, detailed, customClass='swiper-slide')
+	+b.labSlide(class= customClass)
+		+e.img-wrap(href="#")
+			.img-wrap-center
+				+img(`img/${img}`)
+		+e.content
+			a(href="#").h6!= title
+			+e.row.row
+				.col-auto
+					span.active Ритм
+				.col-auto
+					span Новокузнецк
+			p
+				!= text
+				if detailed
+					span.dots ...
+					span.detailed Подробнее 
+					span.moreText Преобразователь напряжение-ток Я9-44 обеспечивает преобразование постоянного и&nbsp;переменного напряжения
+			+e.tags.row
+				+e.tag-col.col-auto
+					+e.tag(href="#") Оборудование
+				+e.tag-col.col-auto
+					+e.tag(href="#") Электроника
+				+e.tag-col.col-auto
+					+e.tag(href="#") Оборудование
+				+e.tag-col.col-auto
+					+e.tag(href="#") Электроника
+				+e.tag-col.col-auto
+					+e.tag(href="#") Оборудование
+				.col-auto
+					+e.show-more Еще 3

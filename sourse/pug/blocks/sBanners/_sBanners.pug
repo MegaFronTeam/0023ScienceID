@@ -1,0 +1,23 @@
+mixin sBanners(data)
+	// start sBanners
+	+b.SECTION.sBanners.section#sBanners&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-6
+					+e.item
+						h3 Научный туризм в&nbsp;России
+						+e.btn.btn.btn-primary(href="#") Узнать больше
+						+img('img/sBanners-img-1.png').img-1
+				.col-lg-6
+					+e.item.bg-wrap
+						h3 Научное волонтерство
+						+e.btn.btn.btn-primary(href="#") Узнать больше
+						+img('img/sBanners-img-2.png', 'bg').picture-bg
+						+img('img/sBanners-img-3.png').img-2
+				.col-lg-12
+					+e.item--big
+						h2 Карта Советов молодых ученых и&nbsp;Студенческих научных обществ
+						p Найди ближайшее объединение и&nbsp;развивайтесь вместе
+						+e.btn.btn.btn-primary(href="#") Открыть карту
+						+img('img/sBanners-img-4.png').img-3
+	// end sBanners

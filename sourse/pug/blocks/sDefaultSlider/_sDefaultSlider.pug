@@ -1,9 +1,9 @@
 mixin sDefaultSlider(title, btn, select)
 	// start sDefaultSlider
-	+b.SECTION.sDefaultSlider.section#sDefaultSlider&attributes(attributes)
+	+b.SECTION.sDefaultSlider.section&attributes(attributes)
 		.container
 			+b.section-title
-				h2!= title
+				h3!= title
 				if select
 					+e.select-row
 						+input('Выберите город', 'select')
