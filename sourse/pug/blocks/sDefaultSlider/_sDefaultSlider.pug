@@ -14,9 +14,10 @@ mixin sDefaultSlider(title, btn, select)
 			+e.slider--js.swiper
 				.swiper-wrapper
 					block
-				+e.row.row.align-items-center
-					.col
-						+e.btn.btn.btn-outline-primary(href='#')!= btn
-					.col-auto.d-flex
-						+arrow
+				+e.control-wrap
+					+e.row.row.align-items-center
+						.col
+							+e.btn.btn.btn-outline-primary(href='#')!= btn
+						.col-auto.d-flex
+							+arrow
 	// end sDefaultSlider

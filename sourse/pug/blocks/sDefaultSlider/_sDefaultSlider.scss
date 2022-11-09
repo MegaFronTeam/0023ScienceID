@@ -70,6 +70,10 @@
 	}
 	&__slider {
 		overflow: visible;
+		margin-right: rem(-32);
+	}
+	&__control-wrap {
+		margin-right: rem(32);
 	}
 	&__row {
 		padding-top: rem(32);
