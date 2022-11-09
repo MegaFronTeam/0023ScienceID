@@ -451,6 +451,12 @@ function eventHandler() {
 			filter.querySelector('.filter__body').classList.remove('active');
 			document.body.classList.remove('fixed');
 		});
+		window.addEventListener('resize', () => {
+			if (window.matchMedia("(min-width: 992px)").matches) {
+				filter.querySelector('.filter__body').classList.remove('active');
+				document.body.classList.remove('fixed');
+			};
+		}, { passive: true });
 	}
 
 };
