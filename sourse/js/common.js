@@ -436,6 +436,11 @@ function eventHandler() {
 		$('.section-title__filter-wrap').slideToggle();
 	});
 
+	$('.menu-item-has-children span').on('click', function() {
+		$('.menu-item-has-children').toggleClass('active');
+		$('.menu-item-has-children .sub-menu').slideToggle();
+	})
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

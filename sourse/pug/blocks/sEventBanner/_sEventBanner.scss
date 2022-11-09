@@ -12,9 +12,12 @@
 		position: relative;
 		background-color: $primary;
 		border-radius: 8px;
-		padding: rem(40);
+		padding: rem(20);
 		z-index: 1;
 		overflow: hidden;
+		@include media-breakpoint-up(lg) {
+			padding: rem(40);
+		}
 	}
 	&__img-wrap {
 		position: absolute;
@@ -41,7 +44,8 @@
 		}
 	}
 	&__headline-row {
-		--bs-gutter-x: #{rem(40)};
+		--bs-gutter-x: #{rem(46)};
+		--bs-gutter-y: #{rem(16)};
 
 		margin-bottom: rem(16);
 	}
@@ -49,6 +53,7 @@
 		display: flex;
 		align-items: center;
 		color: #fff;
+		font-size: rem(14);
 		.icon {
 			flex: 0 0 auto;
 			font-size: rem(16);
@@ -58,11 +63,12 @@
 	h3 {
 		color: #fff;
 		line-height: 1.2em;
-		margin-bottom: rem(16);
+		margin-bottom: rem(13);
 		max-width: rem(660);
 	}
 	&__tags-row {
-		--bs-gutter-x: 8px;
+		--bs-gutter-x: 9px;
+		--bs-gutter-y: 8px;
 
 		margin-bottom: rem(56);
 		position: relative;
@@ -70,13 +76,15 @@
 	}
 	&__online {
 		position: relative;
-		padding: 4.6px 4.9px 3.4px 23px;
+		padding: 6.6px 4.9px 5.4px 23px;
 		border: 1px solid #C2DCFB;
 		border-radius: 4px;
 		font-size: 11px;
 		line-height: 1;
 		height: 100%;
 		color: #fff;
+		display: flex;
+		align-items: center;
 		&:hover {
 			background-color: #fff;
 			color: $gray-700;
@@ -94,7 +102,7 @@
 		}
 	}
 	&__tag {
-		padding: 4.6px 4.9px 3.4px;
+		padding: 6.6px 6.6px 5.4px;
 		background-color: #fff;
 		border: 1px solid #fff;
 		color: $gray-700;
@@ -103,6 +111,8 @@
 		line-height: 1;
 		height: 100%;
 		border-radius: 2px;
+		display: flex;
+		align-items: center;
 	}
 	&__btn {
 		--bs-btn-padding-x: #{rem(24)};
