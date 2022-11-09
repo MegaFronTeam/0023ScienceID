@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Мероприятия</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body data-bg="04-events.jpg">
+		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-xl-none">
+				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				</div>
+				<div class="menu-mobile__inner">
+					<nav>
+						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="menu-item menu-item-has-children"><span>Лаба</span>
+								<ul class="sub-menu">
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Еще пункт меню</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Дополнительный пункт</a></li>
+								</ul>
+							</li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пользователи</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Группы</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мероприятия</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вакансии</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Туризм</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Волонтерство</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Карта СМУ и СНО</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Новости</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Компетенции</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Опросы</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О проекте</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Помощь</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+						</ul>
+					</nav>
+					<a class="menu-mobile__link text-center" href="#">Войти
+					</a>
+					<a class="menu-mobile__btn btn btn-primary text-center" href="#">Регистрация
+					</a>
+				</div>
+			</div>
+			<!--  мобильное меню-->
+			<!-- start header-->
+			<header class="header" id="header">
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="container">
+						<div class="top-nav__row row">
+							<div class="col-auto">
+								<a class="logo" href="#"><img class="text" src="img/svg/logo-text.svg" alt="" loading="lazy"/><img class="img" src="img/logo-img.png" alt="" loading="lazy"/>
+								</a>
+							</div>
+							<div class="col d-none d-xl-block">
+								<div class="menu-mobile menu-mobile--js">
+									<div class="menu-mobile__inner">
+										<div class="toggle-menu-mobile toggle-menu-mobile--js d-xl-none"><span></span>
+										</div>
+										<nav>
+											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+												<li class="menu-item menu-item-has-children"><span>Лаба</span>
+													<ul class="sub-menu">
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Еще пункт меню</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Дополнительный пункт</a></li>
+													</ul>
+												</li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пользователи</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Группы</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мероприятия</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вакансии</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Туризм</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Волонтерство</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Карта СМУ и СНО</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Новости</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Компетенции</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Опросы</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О проекте</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Помощь</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+							<div class="col-auto d-xl-none order-last">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js d-xl-none"><span></span>
+								</div>
+							</div>
+							<div class="col-auto ms-auto">
+								<div class="top-nav__wrap">
+									<a class="top-nav__link d-none d-xl-block" href="#">Войти
+									</a>
+									<a class="top-nav__btn btn btn-primary d-none d-xl-block" href="#">Регистрация
+									</a>
+									<a class="top-nav__search btn btn-primary" href="#">
+										<svg class="icon icon-search ">
+											<use xlink:href="img/svg/sprite.svg#search"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Мероприятия</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+						<div class="page-head__row row">
+							<div class="col">
+								<h1 class="h2">Мероприятия</h1>
+							</div>
+							<div class="col-auto">
+								<a class="page-head__calendar" href="#">
+									<svg class="icon icon-calendar ">
+										<use xlink:href="img/svg/sprite.svg#calendar"></use>
+									</svg>Мой календарь
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- start sEventBanner-->
+				<section class="sEventBanner section" id="sEventBanner">
+					<div class="container">
+						<div class="sEventBanner__wrap">
+							<div class="sEventBanner__headline-row row">
+								<div class="col-auto">
+									<div class="sEventBanner__headline">
+										<svg class="icon icon-calendar2 ">
+											<use xlink:href="img/svg/sprite.svg#calendar2"></use>
+										</svg>4 октября 2022, 10:00
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="sEventBanner__headline">
+										<svg class="icon icon-pin ">
+											<use xlink:href="img/svg/sprite.svg#pin"></use>
+										</svg>г. Салехард, Ямало-Ненецкий автономный округ
+									</div>
+								</div>
+							</div>
+							<h3>Мероприятие-спутник Конгресса молодых ученых в&nbsp;Ямало-Ненецком автономном округе</h3>
+							<div class="sEventBanner__tags-row row">
+								<div class="col-auto">
+									<a class="sEventBanner__online" href="#"><span></span>Offline
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="sEventBanner__tag" href="#">Природа
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="sEventBanner__tag" href="#">Продовольствие
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="sEventBanner__tag" href="#">Энергетика
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="sEventBanner__tag" href="#">Безопасность
+									</a>
+								</div>
+							</div>
+							<a class="sEventBanner__btn btn btn-outline-light" href="#">Подробнее
+							</a>
+							<div class="sEventBanner__img-wrap"><img src="img/sEventBanner-img-1.jpg" alt="" loading="lazy"/>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sEventBanner-->
+				<!-- start sEvents-->
+				<section class="sEvents section" id="sEvents">
+					<div class="container">
+						<div class="sEvents__head-row row">
+							<div class="col">
+								<div class="filter">
+									<div class="filter__head btn btn-primary">Фильтр
+									</div>
+									<div class="filter__body">
+										<div class="filter__cross">
+										</div>
+										<div class="select">
+											<div class="select__input-wrap form-group">
+												<select class="select__input form-select" name="select">
+													<option value="Выберите регион">Выберите регион</option>
+													<option value=" placeholder 1">placeholder 1</option>
+													<option value=" placeholder 2">placeholder 2</option>
+													<option value=" placeholder 3">placeholder 3</option>
+													<option value=" placeholder 4">placeholder 4</option>
+												</select>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="select__input-wrap form-group">
+												<select class="select__input form-select" name="select">
+													<option value="Тематика">Тематика</option>
+													<option value=" placeholder 1">placeholder 1</option>
+													<option value=" placeholder 2">placeholder 2</option>
+													<option value=" placeholder 3">placeholder 3</option>
+													<option value=" placeholder 4">placeholder 4</option>
+												</select>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="select__input-wrap form-group">
+												<select class="select__input form-select" name="select">
+													<option value="Области науки">Области науки</option>
+													<option value=" placeholder 1">placeholder 1</option>
+													<option value=" placeholder 2">placeholder 2</option>
+													<option value=" placeholder 3">placeholder 3</option>
+													<option value=" placeholder 4">placeholder 4</option>
+												</select>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="select__input-wrap form-group">
+												<select class="select__input form-select" name="select">
+													<option value="Даты проведения">Даты проведения</option>
+													<option value=" placeholder 1">placeholder 1</option>
+													<option value=" placeholder 2">placeholder 2</option>
+													<option value=" placeholder 3">placeholder 3</option>
+													<option value=" placeholder 4">placeholder 4</option>
+												</select>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<a class="filter__reset" href="#"><span></span>Сбросить фильтр
+										</a>
+										<div class="filter__filter-tags row">
+											<div class="col-auto">
+												<div class="filter__tag">Тегмероприятия<span></span>
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="filter__tag">Тегм<span></span>
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="filter__tag">Тегмероприятия<span></span>
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="filter__tag">Тегмероприятия<span></span>
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="filter__tag">Тегмероприятия длинный<span></span>
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="filter__tag">Тегмероприятия длинный<span></span>
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="filter__tag">Тегм<span></span>
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="filter__tag">Тегмероприятия длинный<span></span>
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="filter__tag">Тегм<span></span>
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="filter__tag">Тегм<span></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-auto">
+								<div class="sEvents__show-type">
+									<div class="sEvents__icon-wrap active">
+										<svg class="icon icon-list ">
+											<use xlink:href="img/svg/sprite.svg#list"></use>
+										</svg>
+									</div>
+									<div class="sEvents__icon-wrap">
+										<svg class="icon icon-dots ">
+											<use xlink:href="img/svg/sprite.svg#dots"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sEvents__row row">
+							<div class="col-sm-6 col-lg-4">
+								<div class="news-item">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-1.png" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__online" href="#"><span></span>Online
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег
+												</a>
+											</div>
+										</div><a class="h5" href="#">Первая летняя &laquo;Школа академического совершенства&raquo;</a>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">15 августа 2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4">
+								<div class="news-item">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-2.png" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__online news-item__online--2" href="#"><span></span>Offline
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег
+												</a>
+											</div>
+										</div><a class="h5" href="#">IX&nbsp;Международный форум технологического развития ТЕХНОПРОМ-2022</a>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">15 августа 2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4">
+								<div class="news-item">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-3.png" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__online news-item__online--2" href="#"><span></span>Offline
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег
+												</a>
+											</div>
+										</div><a class="h5" href="#">1-я Международная научно-техническая конференция &laquo;Скоростной транспорт будущего: перспективы, проблемы, решения&raquo;</a>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">28 - 29 августа 2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4">
+								<div class="news-item">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-3.png" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__online" href="#"><span></span>Online
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег
+												</a>
+											</div>
+										</div><a class="h5" href="#">1-я Международная научно-техническая конференция &laquo;Скоростной транспорт будущего: перспективы, проблемы, решения&raquo;</a>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">28 - 29 августа 2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4">
+								<div class="news-item">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-1.png" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__online news-item__online--2" href="#"><span></span>Offline
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег
+												</a>
+											</div>
+										</div><a class="h5" href="#">Первая летняя &laquo;Школа академического совершенства&raquo;</a>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">15 августа 2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4">
+								<div class="news-item">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-2.png" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__online" href="#"><span></span>Online
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег
+												</a>
+											</div>
+										</div><a class="h5" href="#">IX&nbsp;Международный форум технологического развития ТЕХНОПРОМ-2022</a>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">15 августа 2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4">
+								<div class="news-item">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-1.png" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__online" href="#"><span></span>Online
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег
+												</a>
+											</div>
+										</div><a class="h5" href="#">Первая летняя &laquo;Школа академического совершенства&raquo;</a>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">15 августа 2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4">
+								<div class="news-item">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-3.png" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__online news-item__online--2" href="#"><span></span>Offline
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег
+												</a>
+											</div>
+										</div><a class="h5" href="#">1-я Международная научно-техническая конференция &laquo;Скоростной транспорт будущего: перспективы, проблемы, решения&raquo;</a>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">28 - 29 августа 2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4">
+								<div class="news-item">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-2.png" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__online" href="#"><span></span>Online
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег
+												</a>
+											</div>
+										</div><a class="h5" href="#">IX&nbsp;Международный форум технологического развития ТЕХНОПРОМ-2022</a>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">15 августа 2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4">
+								<div class="news-item">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-2.png" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__online" href="#"><span></span>Online
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег
+												</a>
+											</div>
+										</div><a class="h5" href="#">IX&nbsp;Международный форум технологического развития ТЕХНОПРОМ-2022</a>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">15 августа 2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4">
+								<div class="news-item">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-1.png" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__online" href="#"><span></span>Online
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег
+												</a>
+											</div>
+										</div><a class="h5" href="#">Первая летняя &laquo;Школа академического совершенства&raquo;</a>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">15 августа 2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4">
+								<div class="news-item">
+									<a class="news-item__img-wrap" href="#"><img class="object-fit-js" src="img/sliderItem-img-3.png" alt="" loading="lazy"/>
+									</a>
+									<div class="news-item__content">
+										<div class="news-item__tags-row row">
+											<div class="col-auto">
+												<a class="news-item__online" href="#"><span></span>Online
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тегмероприятия
+												</a>
+											</div>
+											<div class="col-auto">
+												<a class="news-item__tag" href="#">Тег
+												</a>
+											</div>
+										</div><a class="h5" href="#">1-я Международная научно-техническая конференция &laquo;Скоростной транспорт будущего: перспективы, проблемы, решения&raquo;</a>
+										<div class="news-item__bottom-row row">
+											<div class="col-auto">
+												<div class="news-item__date">28 - 29 августа 2022
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="news-item__city"><img src="img/svg/pin.svg" alt="" loading="lazy"/>Санкт-Петербург
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 text-center">
+								<a class="sEvents__btn btn btn-outline-primary" href="#">Показать еще
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sEvents-->
+			</main>
+			<footer class="footer section">
+				<div class="container">
+					<div class="footer__row row">
+						<div class="col-auto order-1">
+							<a class="logo" href="#"><img class="text" src="img/svg/logo-text.svg" alt="" loading="lazy"/>
+							</a><img src="img/logo-2.png" alt="" loading="lazy"/>
+						</div>
+						<div class="col order-3 order-lg-1">
+							<div class="footer__list-wrap">
+								<ul>
+									<li><a href="#">Пользователи</a></li>
+									<li><a href="#">Мероприятия</a></li>
+									<li><a href="#">Вакансии</a></li>
+									<li><a href="#">Группы</a></li>
+									<li><a href="#">Новости</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">Курс СНТР</a></li>
+									<li><a href="#">Компетенции в науке</a></li>
+									<li><a href="#">Опросы</a></li>
+									<li><a href="#">О проекте</a></li>
+									<li><a href="#">Контакты</a></li>
+									<li><a href="#">Карта СМУ и СНО</a></li>
+									<li><a href="#">Помощь</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-auto order-2 order-lg-1">
+							<a class="footer__tel" href="tel:+74951447437">+7 (495) 144 74 37
+							</a>
+							<a class="footer__mail" href="mailto:support@scienceid.net">support@scienceid.net
+							</a>
+						</div>
+					</div>
+					<div class="footer__bottom-row row">
+						<div class="col-sm">
+							<div class="footer__text">&copy;&nbsp;<span></span> Science&nbsp;&mdash; ID
+							</div>
+						</div>
+						<div class="col-sm-auto">
+							<a class="footer__link" href="#">Политика конфиденциальности
+							</a>
+						</div>
+						<div class="col-sm-auto">
+							<div class="footer__text">При поддержке Министерства науки и высшего образования РФ
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div id="modal-call" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+							</div>
+							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+						</div>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn" type="submit"> 
+						</button>
+						<div class="form-wrap__policy">
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

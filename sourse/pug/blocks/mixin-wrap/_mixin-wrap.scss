@@ -174,6 +174,7 @@
 }
 
 .news-item {
+	@include mt;
 	max-width: rem(416);
 	margin-right: rem(32);
 	height: auto;

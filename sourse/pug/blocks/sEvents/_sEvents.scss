@@ -112,6 +112,11 @@
 		margin-right: 0;
 		height: 100%;
 		max-width: none;
+		box-shadow: 1px 1px 20px 0px transparent;
+    border-radius: 8px;
+		&:hover {
+			box-shadow: 1px 1px 20px 0px #71717173;
+		}
 		&__content {
 			padding: rem(15);
 			@include media-breakpoint-up(lg) {
