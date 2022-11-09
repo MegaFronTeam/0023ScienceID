@@ -6,15 +6,15 @@ include ../blocks/top-nav/_top-nav.pug
  
 include ../blocks/footer/_footer.pug
 
-include ../blocks/sEvents/_sEvents.pug
-include ../blocks/sEventBanner/_sEventBanner.pug
+include ../blocks/sDefaultSlider/_sDefaultSlider.pug
+include ../blocks/sCatalog/_sCatalog.pug
 
 block variables
 	- let  mainPage= null 
 	- let  bg= '04-events.jpg'
 
 block title
-	- let  title= 'Мероприятия'
+	- let  title= 'Каталог оборудования'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -24,7 +24,22 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+page-head('Мероприятия', 'true', 'Мероприятия')
-		+sEventBanner
-		+sEvents()
+		+page-head('', '', 'Каталог оборудования')
+		+sCatalog
+		+sDefaultSlider('Наши партнеры', 'Все партнеры')
+			+logoSlide('logoSlide-img-1.png')
+			+logoSlide('logoSlide-img-2.png')
+			+logoSlide('logoSlide-img-3.png')
+			+logoSlide('logoSlide-img-4.png')
+			+logoSlide('logoSlide-img-1.png')
+			+logoSlide('logoSlide-img-2.png')
+			+logoSlide('logoSlide-img-3.png')
+			+logoSlide('logoSlide-img-4.png')
+		+sDefaultSlider('Новости Лабы', 'Все новости').sDefaultSlider--news
+			+sliderItem('news-img-1.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+			+sliderItem('news-img-2.jpg', 'Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+			+sliderItem('news-img-3.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+			+sliderItem('news-img-1.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+			+sliderItem('news-img-2.jpg', 'Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+			+sliderItem('news-img-3.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
 	+footer()

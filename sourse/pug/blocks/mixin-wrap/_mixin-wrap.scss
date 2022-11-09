@@ -556,6 +556,70 @@
 		--bs-gutter-x: 8px;
 		--bs-gutter-y: 8px;
 	}
+
+	.dd-group {
+		&__item {
+			border: 1px solid #DADADA;
+			border-radius: 4px;
+			padding: rem(16);
+			&.active {
+				.dd-group__head {
+					&:before {
+						transform: translateY(-50%) rotate(90deg);
+					}
+				}
+			}
+		}
+		&__head {
+			cursor: pointer;
+			padding-left: rem(32);
+			position: relative;
+			display: flex;
+			align-items: center;
+			&:before {
+				@include mt;
+				content: '';
+				position: absolute;
+				display: block;
+				width: rem(24);
+				height: rem(24);
+				background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 17L15 12L10 7' stroke='%231972DB' stroke-width='2'/%3E%3C/svg%3E%0A");
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			p {
+				margin-right: 6px;
+				font-size: rem(16);
+				font-weight: 600;
+				line-height: 1.5em;
+				margin-bottom: 0;
+				color: $gray-800;
+			}
+			span {
+				font-size: 10px;
+				font-weight: 700;
+				line-height: 1.5em;
+				padding: 0.5px 5px;
+				background-color: #EEF3F7;
+				border-radius: 4px;
+				color: $primary;
+			}
+		}
+		&__reset {
+			margin-left: auto;
+			font-size: 11.4px;
+			line-height: 1.5em;
+		}
+		&__content {
+			padding-top: rem(16);
+			max-height: rem(321);
+			overflow: auto;
+		}
+	}
 	.select {
 		@include roww('8px', 'm');
 		--bs-gutter-y: 8px;
@@ -581,5 +645,13 @@
 		&__input {
 			padding: rem(11.75) rem(36) rem(11.75) rem(12);
 		}
+	}
+}
+
+.logoSlide {
+	max-width: rem(304);
+	margin-right: rem(32);
+	&__img-wrap {
+		@include block(304, 145);
 	}
 }

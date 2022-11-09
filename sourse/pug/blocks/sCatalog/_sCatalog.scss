@@ -8,17 +8,18 @@
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
-	.section-title{
-		
-	}
-	&__col{
-
-	}
-	&__item{
-
-	}
-	&__slide{
-		height: auto;
+	.filter {
+		&__row {
+			align-items: flex-end;
+			margin-bottom: rem(24);
+			.h4 {
+				margin-bottom: 0;
+			}
+		}
+		&__reset {
+			font-size: 11px;
+			line-height: 1.5em;
+		}
 	}
 
 	@include media-breakpoint-up(xl) {}
@@ -30,16 +31,16 @@
 	@include media-breakpoint-down(xl) {}
 } // end.sCatalog
 
-.img-wrap-center {
-	@include a-cent;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	img{
-		max-width: 100%;
-		height: auto;
-	}
-}
+// .img-wrap-center {
+// 	@include a-cent;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	img{
+// 		max-width: 100%;
+// 		height: auto;
+// 	}
+// }
 
 .product-item{
 	display: flex;

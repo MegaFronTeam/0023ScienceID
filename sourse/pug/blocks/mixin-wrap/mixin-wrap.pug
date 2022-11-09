@@ -144,3 +144,9 @@ mixin filter()
 		+e.body
 			+e.cross
 			block
+
+mixin logoSlide(img)
+	+b.logoSlide.swiper-slide
+		+e.img-wrap
+			.img-wrap-center
+				+img(`img/${img}`)
