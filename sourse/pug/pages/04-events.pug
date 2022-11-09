@@ -11,7 +11,7 @@ include ../blocks/sEventBanner/_sEventBanner.pug
 
 block variables
 	- let  mainPage= null 
-	- let  bg= '02-events.jpg'
+	- let  bg= '04-events.jpg'
 
 block title
 	- let  title= 'Мероприятия'
@@ -27,5 +27,4 @@ block pagecontent
 		+page-head('Мероприятия', 'true', 'Мероприятия')
 		+sEventBanner
 		+sEvents()
-		//- 	+sliderItem('sliderItem-img-1.png', 'Первая летняя &laquo;Школа академического совершенства&raquo;', '15 августа 2022', 'true', 'Санкт-Петербург', 'swiper-slide', 'Online', '', 'Тегмероприятия', 'Тег')
 	+footer()

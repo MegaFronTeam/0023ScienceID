@@ -441,6 +441,18 @@ function eventHandler() {
 		$('.menu-item-has-children .sub-menu').slideToggle();
 	})
 
+	let filter = document.querySelector('.filter');
+	if(filter) {
+		filter.querySelector('.filter__head').addEventListener('click', function() {
+			filter.querySelector('.filter__body').classList.add('active');
+			document.body.classList.add('fixed');
+		});
+		filter.querySelector('.filter__cross').addEventListener('click', function() {
+			filter.querySelector('.filter__body').classList.remove('active');
+			document.body.classList.remove('fixed');
+		});
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

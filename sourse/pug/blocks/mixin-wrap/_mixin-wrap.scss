@@ -247,6 +247,11 @@
 			top: 50%;
 			transform: translateY(-50%);
 		}
+		&--2 {
+			span {
+				background-color: #F74343;
+			}
+		}
 	}
 	&__tag {
 		padding: 6.6px 4.9px 5.4px;
@@ -289,9 +294,9 @@
 			&__tags-row {
 				margin-bottom: rem(11);
 			}
-			&__tag {
-				padding: 1.5px 3.1px 1.5px;
-			}
+			// &__tag {
+			// 	padding: 1.5px 3.1px 1.5px;
+			// }
 			&__content {
 				background-color: #fff;
 				border-radius: 8px;
@@ -477,6 +482,103 @@
 		}
 		&.hide {
 			display: none;
+		}
+	}
+}
+
+.filter {
+	&__head {
+		--bs-btn-padding-x: #{rem(24)};
+		--bs-btn-padding-y: #{rem(7)};
+		--bs-btn-font-size: #{rem(16)};
+		--bs-btn-font-weight: 700;
+		
+		width: 100%;
+		display: block;
+		margin-bottom: rem(16);
+		position: relative;
+		z-index: 3;
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+		@include media-breakpoint-up(xl) {
+			--bs-btn-font-size: #{rem(16)};
+		}
+	}
+	&__body {
+		@include media-breakpoint-down(lg) {
+			@include mt;
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: calc(var(--vh) * 100);
+			background-color: #fff;
+			z-index: 999;
+			padding: calc(env(safe-area-inset-top, 0px) + #{rem(40)}) rem(40) calc(env(safe-area-inset-bottom, 0px) + #{rem(40)});
+			transform: translateX(-100%);
+			&.active {
+				transform: translateX(0);
+			}
+		}
+	}
+	&__cross {
+		cursor: pointer;
+		position: absolute;
+		display: block;
+		width: 16px;
+		height: 16px;
+		top: 10px;
+		right: 10px;
+		&:before, &:after {
+			content: '';
+			@include a-cent;
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 2px;
+			border-radius: 2px;
+			background-color: $gray-700;
+		}
+		&:before {
+			transform: rotate(-45deg);
+		}
+		&:after {
+			transform: rotate(45deg);
+		}
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+	}
+
+	&__filter-tags {
+		--bs-gutter-x: 8px;
+		--bs-gutter-y: 8px;
+	}
+	.select {
+		@include roww('8px', 'm');
+		--bs-gutter-y: 8px;
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: calc(var(--bs-gutter-y) * -1);
+		& > * {
+			margin-top: var(--bs-gutter-y);
+		}
+		&__input-wrap {
+			width: 100%;
+			max-width: 100%;
+			@include media-breakpoint-up(lg) {
+				max-width: rem(190);
+			}
+			@include media-breakpoint-up(xl) {
+				max-width: rem(220);
+			}
+			@include media-breakpoint-up(xxl) {
+				max-width: rem(248);
+			}
+		}
+		&__input {
+			padding: rem(11.75) rem(36) rem(11.75) rem(12);
 		}
 	}
 }

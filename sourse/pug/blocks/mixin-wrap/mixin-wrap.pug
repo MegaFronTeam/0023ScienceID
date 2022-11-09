@@ -66,9 +66,14 @@ mixin sliderItem(img, title, date, pin='true', city, customClass, online="Online
 			+img(`img/${img}`, 'bg')
 		+e.content
 			+e.tags-row.row
-				if online
+				if online == 'Online'
 					.col-auto
 						+e.online(href="#")
+							span
+							!= online
+				if online == 'Offline'
+					.col-auto
+						+e.online--2(href="#")
 							span
 							!= online
 				each tag in tags
@@ -135,5 +140,7 @@ mixin labSlide(img, title, text, detailed, customClass='swiper-slide')
 
 mixin filter()
 	+b.filter
-		+e.head
+		+e.head.btn.btn-primary Фильтр
 		+e.body
+			+e.cross
+			block
