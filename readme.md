@@ -1,4 +1,4 @@
 # 0023ScienceID
  
-<https://megafronteam.github.io/0023ScienceID/public>
-<https://megafronteam.github.io/0023ScienceID/public/02-events.html>
+1. <https://megafronteam.github.io/0023ScienceID/public>
+2. <https://megafronteam.github.io/0023ScienceID/public/02-events.html>

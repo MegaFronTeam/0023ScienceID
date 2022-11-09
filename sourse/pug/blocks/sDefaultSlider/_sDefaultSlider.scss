@@ -10,12 +10,15 @@
 	}
 	.section-title{
 		h3 {
-			margin-bottom: rem(37.500);
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(37.500);
+			}
 		}
 		&__select-row {
-			@include roww('16px', 'm');
-			--bs-gutter-y: var(--bs-gutter-x);
+			--bs-gutter-y: #{rem(16)};
 			display: flex;
+			flex-direction: column;
 			flex-wrap: wrap;
 			align-items: center;
 			margin-top: calc(var(--bs-gutter-y) * -1);
@@ -23,17 +26,46 @@
 			& > * {
 				margin-top: var(--bs-gutter-y);
 			}
+			@include media-breakpoint-up(lg) {
+				@include roww('16px', 'm');
+				flex-direction: row;
+			}
 		}
 		&__input-wrap {
 			width: 100%;
 			border-radius: 8px;
 			border-color: #DADADA;
-			@include media-breakpoint-up(sm) {
+			@include media-breakpoint-up(lg) {
 				max-width: rem(248);
 			}
 		}
 		&__input {
 			padding: rem(12.5) rem(36) rem(11) rem(12);
+		}
+
+		&__filter-wrap {
+			display: none;
+			@include media-breakpoint-up(lg) {
+				display: block;
+			}
+		}
+		&__filter-btn {
+			--bs-btn-padding-x: #{rem(24)};
+			--bs-btn-padding-y: #{rem(7)};
+			--bs-btn-font-size: #{rem(16)};
+			--bs-btn-font-weight: 700;
+			
+			width: 100%;
+			display: block;
+			margin-bottom: rem(16);
+			position: relative;
+			z-index: 3;
+			@include media-breakpoint-up(lg) {
+				display: none;
+			}
+			@include media-breakpoint-up(xl) {
+				--bs-btn-font-size: #{rem(16)};
+			}
 		}
 	}
 	&__slider {

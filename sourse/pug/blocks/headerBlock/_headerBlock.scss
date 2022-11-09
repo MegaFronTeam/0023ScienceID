@@ -8,9 +8,12 @@
 	
 	
 	&__row{
-		--bs-gutter-x: #{rem(32)};
-		--bs-gutter-y: #{rem(32)};
-
+		--bs-gutter-x: #{rem(16)};
+		--bs-gutter-y: #{rem(16)};
+		@include media-breakpoint-up(xl) {
+			--bs-gutter-x: #{rem(32)};
+			--bs-gutter-y: #{rem(32)};
+		}
 	}
 	&__wrap {
 		border-radius: 8px;
@@ -136,7 +139,10 @@
 		}
 	}
 	&__inner-row {
-		--bs-gutter-y: #{rem(32)};
+		--bs-gutter-y: #{rem(16)};
+		@include media-breakpoint-up(xl) {
+			--bs-gutter-y: #{rem(32)};
+		}
 	}
 	&__slider {
 		border-radius: 8px;
@@ -144,9 +150,12 @@
 	&__wrapper {
 		width: 100%;
 		color: #fff;
-		padding: rem(40) rem(40) rem(60) rem(40);
+		padding: rem(20) rem(20) rem(40) rem(20);
 		position: relative;
 		height: auto;
+		@include media-breakpoint-up(xl) {
+			padding: rem(40) rem(40) rem(60) rem(40);
+		}
 		h4 {
 			color: #fff;
 			margin-bottom: rem(24);
@@ -178,7 +187,7 @@
 				margin-bottom: rem(20);
 				letter-spacing: 0.03em;
 			}
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(xl) {
 				min-height: rem(432);
 			}
 		}
@@ -304,7 +313,7 @@
 	&__control-wrap {
 		position: absolute;
 		left: 50%;
-		bottom: rem(35);
+		bottom: rem(14);
 		display: flex;
 		width: 100%;
 		transform: translateX(-50%);
@@ -312,6 +321,9 @@
 		align-items: center;
 		max-width: calc(100% - rem(80));
 		z-index: 2;
+		@include media-breakpoint-up(xl) {
+			bottom: rem(35);
+		}
 		.swiper-button-hand, .swiper-pagination {
 			position: static;
 		}

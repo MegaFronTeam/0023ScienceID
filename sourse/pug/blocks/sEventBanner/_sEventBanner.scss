@@ -1,0 +1,124 @@
+// start .sEventBanner
+.sEventBanner {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(32)};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	&__wrap {
+		position: relative;
+		background-color: $primary;
+		border-radius: 8px;
+		padding: rem(40);
+		z-index: 1;
+		overflow: hidden;
+	}
+	&__img-wrap {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		max-width: rem(983);
+		z-index: -1;
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background-image: linear-gradient(90deg, #1972DB 0%, rgba(25, 114, 219, 0) 68.73%);
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__headline-row {
+		--bs-gutter-x: #{rem(40)};
+
+		margin-bottom: rem(16);
+	}
+	&__headline {
+		display: flex;
+		align-items: center;
+		color: #fff;
+		.icon {
+			flex: 0 0 auto;
+			font-size: rem(16);
+			margin-right: rem(12);
+		}
+	}
+	h3 {
+		color: #fff;
+		line-height: 1.2em;
+		margin-bottom: rem(16);
+		max-width: rem(660);
+	}
+	&__tags-row {
+		--bs-gutter-x: 8px;
+
+		margin-bottom: rem(56);
+		position: relative;
+		z-index: 3;
+	}
+	&__online {
+		position: relative;
+		padding: 4.6px 4.9px 3.4px 23px;
+		border: 1px solid #C2DCFB;
+		border-radius: 4px;
+		font-size: 11px;
+		line-height: 1;
+		height: 100%;
+		color: #fff;
+		&:hover {
+			background-color: #fff;
+			color: $gray-700;
+		}
+		span {
+			position: absolute;
+			display: block;
+			width: 9px;
+			height: 9px;
+			border-radius: 50%;
+			background-color: #F74343;
+			left: 6px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	&__tag {
+		padding: 4.6px 4.9px 3.4px;
+		background-color: #fff;
+		border: 1px solid #fff;
+		color: $gray-700;
+		border-radius: 2px;
+		font-size: 11px;
+		line-height: 1;
+		height: 100%;
+		border-radius: 2px;
+	}
+	&__btn {
+		--bs-btn-padding-x: #{rem(24)};
+		--bs-btn-padding-y: #{rem(7)};
+		--bs-btn-font-size: #{rem(16)};
+		--bs-btn-font-weight: 700;
+		
+		@include media-breakpoint-up(xl) {
+			--bs-btn-font-size: #{rem(16)};
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sEventBanner

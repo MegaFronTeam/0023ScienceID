@@ -432,6 +432,10 @@ function eventHandler() {
 		}
 	};
 
+	$('.section-title__filter-btn').on('click', function() {
+		$('.section-title__filter-wrap').slideToggle();
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

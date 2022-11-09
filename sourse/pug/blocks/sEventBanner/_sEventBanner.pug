@@ -1,0 +1,32 @@
+mixin sEventBanner(data)
+	// start sEventBanner
+	+b.SECTION.sEventBanner.section#sEventBanner&attributes(attributes)
+		.container
+			+e.wrap
+				+e.headline-row.row
+					.col-auto
+						+e.headline
+							+icon('calendar2')
+							| 4 октября 2022, 10:00
+					.col-auto
+						+e.headline
+							+icon('pin')
+							| г. Салехард, Ямало-Ненецкий автономный округ
+				h3 Мероприятие-спутник Конгресса молодых ученых в&nbsp;Ямало-Ненецком автономном округе
+				+e.tags-row.row
+					.col-auto
+						+e.online(href="#")
+							span
+							| Offline
+					.col-auto
+						+e.tag(href="#") Природа
+					.col-auto
+						+e.tag(href="#") Продовольствие
+					.col-auto
+						+e.tag(href="#") Энергетика
+					.col-auto
+						+e.tag(href="#") Безопасность
+				+e.btn.btn.btn-outline-light(href="#") Подробнее
+				+e.img-wrap
+					+img('img/sEventBanner-img-1.jpg')
+	// end sEventBanner
