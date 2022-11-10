@@ -34,9 +34,11 @@ mixin addblock()
 mixin search()
 	+b.search-block
 		form
-			input(type="text" placeholder="Поиск по номеру или названию запчасти")
+			input(type="text" placeholder="Начните вводить")
 			button 
 				+icon("search")
+			+e.delete-text
+				+icon('close')
 
 mixin page-head(t, calendar, ...items)
 	+b.page-head

@@ -31,6 +31,14 @@
 	font-size:math.div(27,10)*1rem;
 	width: math.div(27,27)*1em;
 }
+.icon-close {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-conversation {
+	font-size:math.div(32,10)*1rem;
+	width: math.div(32,32)*1em;
+}
 .icon-dots {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
@@ -47,6 +55,14 @@
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
 }
+.icon-info-1 {
+	font-size:math.div(32,10)*1rem;
+	width: math.div(32,32)*1em;
+}
+.icon-info-2 {
+	font-size:math.div(32,10)*1rem;
+	width: math.div(32,32)*1em;
+}
 .icon-instagram {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
@@ -54,6 +70,10 @@
 .icon-list {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
+}
+.icon-mail {
+	font-size:math.div(32,10)*1rem;
+	width: math.div(32,32)*1em;
 }
 .icon-pin {
 	font-size:math.div(17,10)*1rem;
@@ -64,8 +84,8 @@
 	width: math.div(16,16)*1em;
 }
 .icon-telegram {
-	font-size:math.div(16,10)*1rem;
-	width: math.div(16,16)*1em;
+	font-size:math.div(32,10)*1rem;
+	width: math.div(32,32)*1em;
 }
 .icon-viber {
 	font-size:math.div(16,10)*1rem;

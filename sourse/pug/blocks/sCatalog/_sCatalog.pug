@@ -1,14 +1,48 @@
-//- mixin product-item(i, t, p ,pr)
-//- 	+b.ARTICLE.product-item
-//- 		+e.img-wrap(href="#")
-//- 			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
-//- 			.img-wrap-center 
-//- 				+img(`img/prod-${i}.jpg`)
-//- 		+e.caption
-//- 			+e.title!= t
-//- 			+e.text!= p
-//- 			+e.price!= pr
-//- 			+e.btn(href='#')
+mixin product-item(i, t)
+	+b.ARTICLE.product-item
+		+e.img-wrap(href="#")
+			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
+			.img-wrap-center 
+				+img(`img/product-item-img-${i}.png`)
+		+e.caption
+			+e.title(href="#")!= t
+			+e.link-row.row
+				.col-auto
+					+e.link(href="#") Ритм
+				.col-auto
+					+e.link(href="#") Новокузнецк
+			p
+				| Преобразователь напряжение-ток Я9-44 обеспечивает преобразование постоянного и&nbsp;переменного напряжения (синусоидальной формы) до&nbsp;30&nbsp;В в&nbsp;силу тока до&nbsp;30&nbsp;А (соответственного постоянного и&nbsp;переменного) с&nbsp;коэффициентом преобразования
+				span.dots ...
+				span.detailed Подробнее 
+				span.moreText &nbsp;Преобразователь напряжение-ток Я9-44 обеспечивает преобразование постоянного и&nbsp;переменного напряжения
+			+e.tags.row
+				+e.tag-col.col-auto
+					+e.tag(href="#") Оборудование
+				+e.tag-col.col-auto
+					+e.tag(href="#") Электроника
+				+e.tag-col.col-auto
+					+e.tag(href="#") Инженерное_дело
+				+e.tag-col.col-auto
+					+e.tag(href="#") Преобразователь
+				+e.tag-col.col-auto
+					+e.tag(href="#") Электротехника
+				+e.tag-col.col-auto
+					+e.tag(href="#") Электричество
+				+e.tag-col.col-auto
+					+e.tag(href="#") Оборудование
+				+e.tag-col.col-auto
+					+e.tag(href="#") Электроника
+				+e.tag-col.col-auto
+					+e.tag(href="#") Инженерное_дело
+				+e.tag-col.col-auto
+					+e.tag(href="#") Преобразователь
+				+e.tag-col.col-auto
+					+e.tag(href="#") Электротехника
+				+e.tag-col.col-auto
+					+e.tag(href="#") Электричество
+				.col-auto
+					+e.show-more Еще 12
 //- 	// /.product-item
 
 mixin sCatalog(data)
@@ -16,7 +50,7 @@ mixin sCatalog(data)
 	+b.sCatalog.section&attributes(attributes)
 		.container 
 			+e.row.row
-				.col-lg-3
+				.col-lg-4.col-xl-3
 					+filter()
 						+e.row.row
 							.col
@@ -25,5 +59,169 @@ mixin sCatalog(data)
 								+e.reset(href='#') Сбросить все
 						+ddGroup()
 							+ddGroupItem('Компания', 5, 'true', 'active')
-				.col-lg-9
+								+search()
+								+e.chekbox-wrap
+									+in-c('checkbox', 'Комплектующие')
+									+in-c('checkbox', 'Лабораторная посуда')
+									+in-c('checkbox', 'Мебель')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Программное обеспечение')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Комплектующие')
+									+in-c('checkbox', 'Лабораторная посуда')
+									+in-c('checkbox', 'Мебель')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Программное обеспечение')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+							+ddGroupItem('Тип', 5, 'true')
+								+search()
+								+e.chekbox-wrap
+									+in-c('checkbox', 'Комплектующие')
+									+in-c('checkbox', 'Лабораторная посуда')
+									+in-c('checkbox', 'Мебель')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Программное обеспечение')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Комплектующие')
+									+in-c('checkbox', 'Лабораторная посуда')
+									+in-c('checkbox', 'Мебель')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Программное обеспечение')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+							+ddGroupItem('Производство', 5, 'true')
+								+search()
+								+e.chekbox-wrap
+									+in-c('checkbox', 'Комплектующие')
+									+in-c('checkbox', 'Лабораторная посуда')
+									+in-c('checkbox', 'Мебель')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Программное обеспечение')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Комплектующие')
+									+in-c('checkbox', 'Лабораторная посуда')
+									+in-c('checkbox', 'Мебель')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Программное обеспечение')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+							+ddGroupItem('Применение', '', '')
+								+search()
+								+e.chekbox-wrap
+									+in-c('checkbox', 'Комплектующие')
+									+in-c('checkbox', 'Лабораторная посуда')
+									+in-c('checkbox', 'Мебель')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Программное обеспечение')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Комплектующие')
+									+in-c('checkbox', 'Лабораторная посуда')
+									+in-c('checkbox', 'Мебель')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Программное обеспечение')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+							+ddGroupItem('Название', '', '')
+								+search()
+								+e.chekbox-wrap
+									+in-c('checkbox', 'Комплектующие')
+									+in-c('checkbox', 'Лабораторная посуда')
+									+in-c('checkbox', 'Мебель')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Программное обеспечение')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Комплектующие')
+									+in-c('checkbox', 'Лабораторная посуда')
+									+in-c('checkbox', 'Мебель')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Программное обеспечение')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+							+ddGroupItem('Дополнительно', 5, 'true')
+								+search()
+								+e.chekbox-wrap
+									+in-c('checkbox', 'Комплектующие')
+									+in-c('checkbox', 'Лабораторная посуда')
+									+in-c('checkbox', 'Мебель')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Программное обеспечение')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Комплектующие')
+									+in-c('checkbox', 'Лабораторная посуда')
+									+in-c('checkbox', 'Мебель')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Программное обеспечение')
+									+in-c('checkbox', 'Пластик')
+									+in-c('checkbox', 'Оборудование')
+									+in-c('checkbox', 'Пластик')
+						+e.btn-row.row
+							.col-6.col-lg-12.col-xxl-6
+								+e.btn.btn.btn-primary(href="#") Показать (25)
+							.col-6.col-lg-12.col-xxl-6
+								+e.btn--outline.btn.btn-outline-primary(href="#") Сбросить все
+					+e.banner
+						+img('img/banner-bg-1.jpg')
+						h4 Заголовок для благодарности
+						p Согласен с&nbsp;политикой обработки персональных данных
+						+e.btn.btn.btn-outline-light(href="#") Перейти
+				.col-lg-8.col-xl-9
+					+e.product-row.row
+						.col-sm-6.col-md-12
+							+product-item(1, 'Cтанция радиационного контроля Застава-1')
+						.col-sm-6.col-md-12
+							+product-item(2, 'Cтанция радиационного контроля Застава-1')
+						.col-sm-6.col-md-12
+							+product-item(1, 'Cтанция радиационного контроля Застава-1')
+						.col-sm-6.col-md-12
+							+product-item(3, 'Cтанция радиационного контроля Застава-1')
+						.col-sm-6.col-md-12
+							+product-item(4, 'Cтанция радиационного контроля Застава-1')
+						.col-sm-6.col-md-12
+							+product-item(5, 'Cтанция радиационного контроля Застава-1')
+					+e.footer
+						.row
+							.col-auto
+								+e.counter
+									p Найдено товаров: 
+										span 4818
+									p Найдено товаров: 
+										span.text-primary 101
+							.col
+								+e.show
+									span Отображать по:
+									+e.num.active 20
+									+e.num 40
+									+e.num 60
+							.col-auto
+								+pugin()
 	// end sCatalog

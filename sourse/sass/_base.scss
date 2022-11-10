@@ -465,7 +465,7 @@ iframe {
 .custom-scroll {
 	/* ===== Scrollbar CSS ===== */
   /* Firefox */
-	--bs-primary: #DEDEDE;
+	--bs-primary: #{$primary};
  
   & {
     scrollbar-width: auto;
@@ -541,5 +541,11 @@ iframe {
 .main-page {
 	.header {
 		border-bottom: none;
+	}
+}
+
+.catalog-page {
+	.page-head {
+		padding-bottom: 0;
 	}
 }

@@ -1,0 +1,110 @@
+// start .sFastPassage
+.sFastPassage {
+	--sPT: #{rem(31)};
+	--sPB: #{rem(29)};
+	// --sTPB: #{rem()};
+	&__row {
+		--bs-gutter-y: #{rem(20)};
+	}
+	&__title {
+		font-size: rem(16);
+		font-weight: 600;
+		padding-bottom: rem(14);
+	}
+	&__tags {
+		@include roww('8px', 'm');
+		--bs-gutter-y: 8px;
+		margin-top: calc(var(--bs-gutter-y) * -1);
+		max-width: rem(510);
+		& > * {
+			margin-top: var(--bs-gutter-y);
+		}
+	}
+	&__tag {
+		display: inline-block;
+		font-size: rem(16);
+		font-weight: 600;
+		padding: rem(7) rem(12);
+		background-color: #EEF3F7;
+		border-radius: 2px;
+		color: $gray-700;
+		border: 1px solid transparent;
+		&:hover {
+			background-color: #fff;
+			color: $primary;
+			border-color: $primary;
+		}
+	}
+	&__wrap {
+		position: relative;
+		display: flex;
+		box-shadow: 0px 4px 43px rgba(0, 0, 0, 0.12);
+		border-radius: 4px;
+		flex-direction: column;
+		border: 1px solid transparent;
+		@include media-breakpoint-up(sm) {
+			align-items: center;
+			flex-direction: row;
+		}
+		&:hover {
+			box-shadow: 0px 4px 43px transparent;
+			border-color: $gray-200;
+		}
+	}
+	&__label {
+		position: absolute;
+		left: 0;
+		top: rem(21);
+		background-color: #F74343;
+		border-radius: 0 3px 3px 0;
+		z-index: 3;
+		color: #fff;
+		font-size: 12px;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding: 3px 12px;
+	}
+	&__img-wrap {
+		@include block(257, 170);
+		@include media-breakpoint-up(sm) {
+			min-width: rem(257);
+		}
+		.img-wrap-center {
+			@include media-breakpoint-up(sm) {
+				justify-content: flex-start;
+			}
+			img {
+				padding-left: rem(14);
+			}
+		}
+	}
+	&__content {
+		max-width: rem(319);
+		text-align: center;
+		padding: rem(15);
+		margin-left: auto;
+		margin-right: auto;
+		@include media-breakpoint-up(sm) {
+			text-align: left;
+			margin-left: 0;
+			margin-right: 0;
+		}
+		h5 {
+			margin-bottom: rem(8);
+			line-height: 1.2em;
+			color: $gray-800;
+		}
+		p {
+			font-size: 11px;
+			color: $primary;
+			margin-bottom: 0;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sFastPassage

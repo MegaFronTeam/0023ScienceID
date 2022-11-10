@@ -1,0 +1,25 @@
+mixin sFastPassage(data)
+	// start sFastPassage
+	+b.SECTION.sFastPassage.section#sFastPassage&attributes(attributes)
+		.container
+			+e.row.row 
+				.col
+					+e.title Быстрый переход! Меня интересует ..
+					+e.tags
+						+e.tag(href="#") Оборудование
+						+e.tag(href="#") Комплектующие
+						+e.tag(href="#") Посуда
+						+e.tag(href="#") Стекло
+						+e.tag(href="#") Мебель
+						+e.tag(href="#") Пластик
+						+e.tag(href="#") Расходные материалы
+				.col-lg-6
+					+e.wrap(href='#')
+						+e.label Товар дня
+						+e.img-wrap
+							.img-wrap-center
+								+img('img/sFastPassage-img-1.png')
+						+e.content
+							h5 Cтанция радиационного контроля Застава-1
+							p 27 товаров в каталоге от 5 производителей
+	// end sFastPassage

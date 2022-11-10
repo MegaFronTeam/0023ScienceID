@@ -267,12 +267,12 @@ const JSCCommon = {
 								$(this).toggleClass('active');
 							});
 						}
-						else {
-							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.dd-content-js').slideUp(function () {
-								$(this).removeClass('active');
-							});
-						}
+						// else {
+						// 	$(this.parentElement).removeClass('active');
+						// 	$(this.parentElement).find('.dd-content-js').slideUp(function () {
+						// 		$(this).removeClass('active');
+						// 	});
+						// }
 					});
 
 				});
@@ -432,6 +432,31 @@ function eventHandler() {
 		}
 	};
 
+	let productItems = document.querySelectorAll('.product-item');
+	if(productItems) {
+		for (let productItem of productItems) {
+			let productItemDots = productItem.querySelector('.dots'),
+					productItemDetailed = productItem.querySelector('.detailed'),
+					productItemMoreText = productItem.querySelector('.moreText');
+			if(productItemDetailed) {
+				productItemDetailed.addEventListener('click', function() {
+					productItemMoreText.classList.add('active');
+					$(productItemDots).hide();
+					$(productItemDetailed).hide();
+				});
+			}
+
+			let tagBtns = productItem.querySelectorAll('.product-item__show-more');
+			for (let tagBtn of tagBtns) {
+				tagBtn.addEventListener('click', function () {
+					this.classList.add('hide');
+					let tagCols = this.closest('.product-item__tags').querySelectorAll(`.product-item__tag-col`);
+					$(tagCols).slideDown();
+				});
+			}
+		}
+	};
+
 	$('.section-title__filter-btn').on('click', function() {
 		$('.section-title__filter-wrap').slideToggle();
 	});
@@ -457,6 +482,23 @@ function eventHandler() {
 				document.body.classList.remove('fixed');
 			};
 		}, { passive: true });
+	}
+
+	let searchBlocks = document.querySelectorAll('.search-block');
+	if(searchBlocks) {
+		for (let searchBlock of searchBlocks) {
+			searchBlock.querySelector('input').addEventListener('input', function() {
+				if(this.value.split('').length > 0) {
+					searchBlock.querySelector('.search-block__delete-text').classList.add('active');
+				} else {
+					searchBlock.querySelector('.search-block__delete-text').classList.remove('active');
+				}
+			});
+			searchBlock.querySelector('.search-block__delete-text').addEventListener('click', function() {
+				searchBlock.querySelector('input').value = '';
+				this.classList.remove('active');
+			});
+		}
 	}
 
 };

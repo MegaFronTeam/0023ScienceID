@@ -81,22 +81,27 @@
 
 .search-block{
 	position: relative;
+	border: 1px solid #DADADA;
+	border-radius: 8px;
 	input{
-		font-size: 14px;
+		font-size: rem(15);
 		width: 100%;
 		border: none !important;
 		outline: none !important;
-		padding-left: rem(30);
-		padding-top: rem(14);
-		padding-bottom: rem(14);
+		padding-left: rem(36);
+		padding-right: rem(30);
+		padding-top: rem(4.5);
+		padding-bottom: rem(4.5);
+		border-radius: 8px;
 	}
 	.icon{
-		font-size: rem(20);
+		font-size: rem(14);
 		border: none !important;
+		color: $primary;
 	}
 	button{
 		position: absolute;
-		left: 0;
+		left: 4px;
 		top: 0;
 		height: 100%;
 		display: flex;
@@ -104,6 +109,27 @@
 		align-items: center;
 		background: none !important;
 		border: none !important;
+	}
+	&__delete-text {
+		@include mt;
+		cursor: pointer;
+		position: absolute;
+		color: $primary;
+		right: 4px;
+		top: 50%;
+		transform: translateY(-50%);
+		pointer-events: none;
+		opacity: 0;
+		&.active {
+			pointer-events: all;
+			opacity: 1;
+		}
+		.icon {
+			font-size: rem(24);
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 1px;
+		}
 	}
 }
 
@@ -518,6 +544,7 @@
 			z-index: 999;
 			padding: calc(env(safe-area-inset-top, 0px) + #{rem(40)}) rem(40) calc(env(safe-area-inset-bottom, 0px) + #{rem(40)});
 			transform: translateX(-100%);
+			overflow: auto;
 			&.active {
 				transform: translateX(0);
 			}
@@ -558,11 +585,21 @@
 	}
 
 	.dd-group {
+		--bs-gutter-y: 8px;
+		margin-top: calc(var(--bs-gutter-y) * -1);
+		& > * {
+			margin-top: var(--bs-gutter-y);
+		}
 		&__item {
+			@include mt;
 			border: 1px solid #DADADA;
 			border-radius: 4px;
-			padding: rem(16);
+			// padding: rem(16);
 			&.active {
+				background-color: #fff;
+				box-shadow: 0px 4px 43px rgba(0, 0, 0, 0.12);
+				border-radius: 4px;
+				border-color: transparent;
 				.dd-group__head {
 					&:before {
 						transform: translateY(-50%) rotate(90deg);
@@ -571,11 +608,13 @@
 			}
 		}
 		&__head {
+			padding: rem(16);
 			cursor: pointer;
-			padding-left: rem(32);
+			padding-left: rem(48);
 			position: relative;
 			display: flex;
 			align-items: center;
+			flex-wrap: wrap;
 			&:before {
 				@include mt;
 				content: '';
@@ -587,11 +626,12 @@
 				background-repeat: no-repeat;
 				background-size: contain;
 				background-position: center;
-				left: 0;
+				left: rem(16);
 				top: 50%;
 				transform: translateY(-50%);
 			}
 			p {
+				@include mt;
 				margin-right: 6px;
 				font-size: rem(16);
 				font-weight: 600;
@@ -602,22 +642,57 @@
 			span {
 				font-size: 10px;
 				font-weight: 700;
-				line-height: 1.5em;
-				padding: 0.5px 5px;
+				line-height: 1em;
+				padding: 3px 5px;
 				background-color: #EEF3F7;
 				border-radius: 4px;
 				color: $primary;
+				margin-right: auto;
+			}
+			&:hover {
+				p {
+					color: $primary;
+				}
 			}
 		}
 		&__reset {
-			margin-left: auto;
+			// margin-left: auto;
 			font-size: 11.4px;
 			line-height: 1.5em;
 		}
 		&__content {
-			padding-top: rem(16);
+			padding: 0 rem(16) rem(16) rem(16);
+			display: none;
+			&.active {
+				display: block;
+			}
+			.search-block {
+				margin-bottom: rem(16);
+			}
+			.custom-input {
+				&__input {
+					background-size: 14px;
+					&:focus {
+						box-shadow: none;
+						border-color: $primary;
+					}
+				}
+				&__text {
+					font-size: rem(14);
+				}
+			}
+		}
+		&__chekbox-wrap {
+			@extend .custom-scroll;
+			--bs-gutter-y: #{rem(14)};
+			margin-top: calc(var(--bs-gutter-y) * -1);
+			// padding-top: rem(16);
 			max-height: rem(321);
 			overflow: auto;
+			& > * {
+				margin-top: var(--bs-gutter-y);
+				margin-bottom: 1px;
+			}
 		}
 	}
 	.select {
@@ -653,5 +728,37 @@
 	margin-right: rem(32);
 	&__img-wrap {
 		@include block(304, 145);
+	}
+}
+
+.pagination-wrapper {
+	.page-numbers {
+		margin-bottom: 0;
+	}
+	ul {
+		@include roww('8px', 'm');
+		li {
+			display: flex;
+			align-items: center;
+			.page-numbers {
+				@include mt;
+				cursor: pointer;
+				color: #000;
+				line-height: 1.5em;
+				padding: 4px 7px;
+				border: 1px solid #DADADA;
+				border-radius: 4px;
+				min-width: 32px;
+				text-align: center;
+				&.current, &:hover {
+					background-color: rgba(67, 150, 247, 0.2);
+					border-color: $primary;
+					color: #000;
+				}
+			}
+			.dots {
+				align-self: flex-end;
+			}
+		}
 	}
 }

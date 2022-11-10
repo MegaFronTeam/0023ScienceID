@@ -1,0 +1,67 @@
+mixin sForStaff(data)
+	// start sForStaff
+	+b.SECTION.sForStaff.section#sForStaff&attributes(attributes)
+		.container
+			+e.wrap 
+				+e.left-side
+					+e.logo
+						+img('img/microscope2.png')
+						+e.logo-text НАША ЛАБА
+					h1.h4 Народный каталог научного оборудования и&nbsp;расходных материалов
+				+e.right-side
+					h5 Как помочь проекту
+					a(href="#") 
+						| Если вы Производитель
+						+icon('arrow-right')
+					a(href="#")
+						| Если вы Волонтёр
+						+icon('arrow-right')
+					a(href="#") 
+						| Если вы Ученый
+						+icon('arrow-right')
+					+img('img/microscope3.png')
+			+e.info-row.row
+				+e.info-col.col-sm-6.col-lg
+					+e.info
+						+icon('info-1')
+						p Позиций:
+						span 4 815
+				+e.info-col.col-sm-6.col-lg
+					+e.info
+						+icon('info-2')
+						p Производителей:
+						span 101
+				.col-4.col-sm-auto
+					+e.button(href='#')
+						+icon('mail')
+				.col-4.col-sm-auto
+					+e.button(href='#')
+						+icon('telegram')
+				.col-4.col-sm-auto
+					+e.button(href='#')
+						+icon('conversation')
+				.col
+					+e.btn(href='#')
+						+img('img/svg/support.svg')
+						span Помочь производителю
+			+e.footer-row.row
+				+e.search-col.col-lg
+					+search()
+				.col-lg
+					+e.footer
+						.row
+							.col-auto
+								+e.counter
+									p Найдено товаров: 
+										span 4818
+									p Найдено товаров: 
+										span.text-primary 101
+							.col
+								+e.show
+									span Отображать по:
+									+e.num.active 20
+									+e.num 40
+									+e.num 60
+							.col-auto
+								+pugin()
+	// end sForStaff
