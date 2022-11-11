@@ -1,0 +1,79 @@
+// start .sJobs
+.sJobs {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(30)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(66)};
+	}
+	&__search-wrap {
+		margin-bottom: rem(37);
+		.search-block {
+			border: none;
+			box-shadow: 0px 4px 43px rgba(0, 0, 0, 0.12);
+			input {
+				padding: rem(20) rem(16) rem(20) rem(48);
+			}
+			button {
+				left: 12px;
+			}
+		}
+	}
+	.dd-group {
+		margin-bottom: rem(24);
+	}
+	&__wrap {
+		--bs-gutter-y: #{rem(16)};
+		margin-top: calc(var(--bs-gutter-y) * -1);
+		& > * {
+			margin-top: var(--bs-gutter-y);
+		}
+	}
+	&__item {
+		padding: rem(23.994) rem(24);
+		background-color: #fff;
+		border: 1px solid $gray-400;
+		border-radius: 8px;
+		display: block;
+		&:hover {
+			border-color: transparent;
+			box-shadow: 0px 4px 43px rgba(0, 0, 0, 0.12);
+		}
+		.row {
+			--bs-gutter-x: #{rem(25)};
+		}
+		p {
+			font-size: 10px;
+			line-height: 1.5em;
+			color: $gray-700;
+			margin-bottom: 0;
+		}
+	}
+	&__title {
+		padding-top: rem(16);
+		margin-bottom: rem(11);
+		font-weight: 600;
+	}
+	&__label {
+		font-size: rem(11);
+		color: $gray-800;
+		background: rgba(67, 150, 247, 0.2);
+		border-radius: 2px;
+		line-height: 1;
+		padding: rem(6.5) rem(6);
+	}
+	&__price {
+		line-height: 1.2em;
+		color: $primary;
+		margin-bottom: 0;
+		font-weight: 600;
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sJobs

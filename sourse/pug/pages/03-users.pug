@@ -6,14 +6,11 @@ include ../blocks/top-nav/_top-nav.pug
  
 include ../blocks/footer/_footer.pug
 
-include ../blocks/sDefaultSlider/_sDefaultSlider.pug
-include ../blocks/sCatalog/_sCatalog.pug
-include ../blocks/sForStaff/_sForStaff.pug
-include ../blocks/sFastPassage/_sFastPassage.pug
+include ../blocks/sUsers/_sUsers.pug
 
 block variables
-	- let  mainPage= 'catalog-page'
-	- let  bg= '04-events.jpg'
+	- let  mainPage= 'users-page'
+	- let  bg= '03-users.jpg'
 
 block title
 	- let  title= 'Мероприятия'
@@ -26,5 +23,6 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+page-head('Пользователи', '', 'Мероприятия')
+		+page-head('Пользователи', '', true, 'Мероприятия')
+		+sUsers(true)
 	+footer()

@@ -1,4 +1,4 @@
-mixin sDefaultSlider(title, btn, select)
+mixin sDefaultSlider(title, btn, select, notSlider)
 	// start sDefaultSlider
 	+b.SECTION.sDefaultSlider.section&attributes(attributes)
 		.container
@@ -11,13 +11,16 @@ mixin sDefaultSlider(title, btn, select)
 							+input('Выберите город', 'select')
 							+input('Тематика', 'select')
 							+input('Даты проведения', 'select')
-			+e.slider--js.swiper
-				.swiper-wrapper
-					block
-				+e.control-wrap
-					+e.row.row.align-items-center
-						.col
-							+e.btn.btn.btn-outline-primary(href='#')!= btn
-						.col-auto.d-flex
-							+arrow
+			if notSlider 
+				block
+			else
+				+e.slider--js.swiper
+					.swiper-wrapper
+						block
+					+e.control-wrap
+						+e.row.row.align-items-center
+							.col
+								+e.btn.btn.btn-outline-primary(href='#')!= btn
+							.col-auto.d-flex
+								+arrow
 	// end sDefaultSlider

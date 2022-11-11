@@ -94,8 +94,8 @@
 	}
 	&__icon-wrap {
 		@include mt;
-		border: 1px solid #DADADA;
-		color: #DADADA;
+		border: 1px solid $gray-400;
+		color: $gray-400;
 		border-radius: 8px;
 		padding: rem(11);
 		cursor: pointer;

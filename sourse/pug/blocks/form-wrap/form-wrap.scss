@@ -179,7 +179,7 @@ input::-webkit-inner-spin-button {
 // 		font-family: $default-font;
 // 		font-size: rem(14); 
 // 		text-align: left;
-// 		border: 1px solid #dadada;
+// 		border: 1px solid $gray-400;
 // 		background-color: #fff;
 // 		padding-top: rem(12);
 // 		padding-bottom: rem(12);
@@ -199,7 +199,7 @@ input::-webkit-inner-spin-button {
 // 	}
 // 	&__trigger{
 // 		border: none;
-// 		background-color: #dadada; 
+// 		background-color: $gray-400; 
 // 		height: 100%;
 // 		width: 40px;
 // 		border-radius: rem(6);

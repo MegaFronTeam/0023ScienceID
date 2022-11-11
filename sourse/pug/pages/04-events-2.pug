@@ -1,0 +1,82 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug
+ 
+include ../blocks/footer/_footer.pug
+
+include ../blocks/sEvents/_sEvents.pug
+include ../blocks/sEventBanner/_sEventBanner.pug
+include ../blocks/sEventContent/_sEventContent.pug
+include ../blocks/sDefaultSlider/_sDefaultSlider.pug
+
+block variables
+	- let  mainPage= 'event-page' 
+	- let  bg= '04-events-2.jpg'
+
+block title
+	- let  title= 'Мероприятия'
+	title= title
+block pagecontent
+	+mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		//- +topLine
+	main
+		+page-head('', '', 'Мероприятия', false, 'Мероприятие-спутник Конгресса молодых ученых в Ямало-Ненецком автономном округе')
+		+sEventBanner2
+		+sEventContent
+		+sDefaultSlider('Похожие мероприятия', '', '', 'true')
+			+e.cards-row.row
+				.col-sm-6.col-lg-4
+					+sliderItem('sliderItem-img-1.png', 'Первая летняя &laquo;Школа академического совершенства&raquo;', '15 августа 2022', 'true', 'Санкт-Петербург', '', 'Online', '', 'Тегмероприятия', 'Тег')
+				.col-sm-6.col-lg-4
+					+sliderItem('sliderItem-img-2.png', 'IX&nbsp;Международный форум технологического развития ТЕХНОПРОМ-2022', '15 августа 2022', 'true', 'Санкт-Петербург', '', 'Offline', '', 'Тегмероприятия', 'Тег')
+				.col-sm-6.col-lg-4
+					+sliderItem('sliderItem-img-3.png', '1-я Международная научно-техническая конференция &laquo;Скоростной транспорт будущего: перспективы, проблемы, решения&raquo;', '28 - 29 августа 2022', 'true', 'Санкт-Петербург', '', 'Offline', '', 'Тегмероприятия', 'Тег')
+	+footer()
+
+block scripts
+	<script src="https://yastatic.net/share2/share.js"></script>
+	script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+	script.
+		ymaps.ready(function () {
+			var myMap = new ymaps.Map('map', {
+				center: [55.675950912418095,37.57133427116388],
+				zoom: 17,
+				controls: ['zoomControl']
+			}, {
+				//searchControlProvider: 'yandex#search'
+			}),
+				// Создаём макет содержимого.
+				// MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+				// 		'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+				// ),
+
+			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+				// hintContent: 'Поволжская Металлоломная Компания',
+				// balloonContent: 'г. Самара, ул. Земеца, д. 32'
+			}, {
+				// Опции.
+				// Необходимо указать данный тип макета.
+				iconLayout: 'default#image',
+				// Своё изображение иконки метки.
+				iconImageHref: 'img/svg/map-mark.svg',
+				// Размеры метки.
+				iconImageSize: [23, 30],
+				// Смещение левого верхнего угла иконки относительно
+				// её "ножки" (точки привязки).
+				iconImageOffset: [-21, -30]
+			});
+			myMap.behaviors.disable('scrollZoom');
+			//на мобильных устройствах... (проверяем по userAgent браузера)
+			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+				//... отключаем перетаскивание карты
+				myMap.behaviors.disable('drag');
+			}
+			myMap.geoObjects
+				.add(myPlacemark);
+		});

@@ -549,3 +549,33 @@ iframe {
 		padding-bottom: 0;
 	}
 }
+
+.event-page {
+	.page-head {
+		padding-bottom: 0;
+	}
+	.sDefaultSlider {
+		--sPT: #{rem(32)};
+    --sPB: #{rem(32)};
+		background-color: $gray-100;
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(64)};
+			--sPB: #{rem(64)};
+		}
+		.news-item__content {
+			background-color: #fff;
+		}
+	}
+}
+
+.users-page {
+	.page-head {
+		background-color: $gray-100;
+	}
+}
+
+.groups-page {
+	.page-head {
+		background-color: $gray-100;
+	}
+}

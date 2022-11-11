@@ -30,3 +30,45 @@ mixin sEventBanner(data)
 				+e.img-wrap
 					+img('img/sEventBanner-img-1.jpg')
 	// end sEventBanner
+
+mixin sEventBanner2(data)
+	// start sEventBanner
+	+b.SECTION.sEventBanner--2.section#sEventBanner&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg
+					+e.left-side
+						+e.headline-row.row
+							.col-auto
+								+e.headline
+									+icon('calendar2')
+									| 4 октября 2022, 10:00
+							.col-auto
+								+e.headline
+									+icon('pin')
+									| г. Салехард, Ямало-Ненецкий автономный округ
+						h3 Мероприятие-спутник Конгресса молодых ученых в&nbsp;Ямало-Ненецком автономном округе
+						+e.tags-row.row
+							.col-auto
+								+e.online(href="#")
+									span
+									| Offline
+							.col-auto
+								+e.tag(href="#") Природа
+							.col-auto
+								+e.tag(href="#") Продовольствие
+							.col-auto
+								+e.tag(href="#") Энергетика
+							.col-auto
+								+e.tag(href="#") Безопасность
+						+e.bottom-row.row
+							.col-auto
+								+e.btn.btn.btn-primary(href="#") Зарегистрироваться
+							.col-auto
+								+e.simple-btn.btn(href="#") Сохранить в Google Calendar
+							.col-auto
+								+e.share
+									| Поделиться:
+									.ya-share2(data-curtain='' data-shape='round' data-services='vkontakte,odnoklassniki,twitter')
+				+e.img-col.col-lg
+					+img('img/sEventBanner-img-2.jpg', 'bg')

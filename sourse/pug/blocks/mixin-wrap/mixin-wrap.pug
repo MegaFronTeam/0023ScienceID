@@ -31,16 +31,16 @@ mixin addblock()
 
 
 
-mixin search()
+mixin search(placeholder="Начните вводить")
 	+b.search-block
 		form
-			input(type="text" placeholder="Начните вводить")
+			input(type="text" placeholder=placeholder)
 			button 
 				+icon("search")
 			+e.delete-text
 				+icon('close')
 
-mixin page-head(t, calendar, ...items)
+mixin page-head(t, calendar, switcher, ...items)
 	+b.page-head
 		- let l = items.length
 		.container
@@ -54,6 +54,13 @@ mixin page-head(t, calendar, ...items)
 							+e.calendar(href='#')
 								+icon('calendar')
 								| Мой календарь
+					if switcher
+						.col-auto
+							+e.show-type
+								+e.icon-wrap.active
+									+icon('list')
+								+e.icon-wrap
+									+icon('dots')
 
 
 mixin logo(img=true)
@@ -140,9 +147,9 @@ mixin labSlide(img, title, text, detailed, customClass='swiper-slide')
 				.col-auto
 					+e.show-more Еще 3
 
-mixin filter()
+mixin filter(filter="Фильтр")
 	+b.filter
-		+e.head.btn.btn-primary Фильтр
+		+e.head.btn.btn-primary!= filter
 		+e.body
 			+e.cross
 			block

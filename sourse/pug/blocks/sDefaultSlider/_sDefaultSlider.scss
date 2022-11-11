@@ -34,7 +34,7 @@
 		&__input-wrap {
 			width: 100%;
 			border-radius: 8px;
-			border-color: #DADADA;
+			border-color: $gray-400;
 			@include media-breakpoint-up(lg) {
 				max-width: rem(248);
 			}
@@ -105,7 +105,7 @@
 		--sPT: #{rem(32)};
 		--sPB: #{rem(32)};
 		
-		background-color: #EEF3F7;
+		background-color: $gray-100;
 		@include media-breakpoint-up(lg) {
 			--sPT: #{rem(64)};
 			--sPB: #{rem(64)};
@@ -126,13 +126,33 @@
 		--sPT: #{rem(32)};
 		--sPB: #{rem(32)};
 		
-		background-color: #EEF3F7;
+		background-color: $gray-100;
 		@include media-breakpoint-up(lg) {
 			--sPT: #{rem(64)};
 			--sPB: #{rem(64)};
 		}
 		.sDefaultSlider__row {
 			padding-top: rem(36.500);
+		}
+	}
+	&__cards-row{
+		--bs-gutter-x: #{rem(32)};
+		--bs-gutter-y: #{rem(32)};
+		.news-item {
+			margin-right: 0;
+			height: 100%;
+			max-width: none;
+			box-shadow: 1px 1px 20px 0px transparent;
+			border-radius: 8px;
+			&:hover {
+				box-shadow: 1px 1px 20px 0px #71717173;
+			}
+			&__content {
+				padding: rem(15);
+				@include media-breakpoint-up(lg) {
+					padding: rem(24);
+				}
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

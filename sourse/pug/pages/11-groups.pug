@@ -1,0 +1,28 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug
+ 
+include ../blocks/footer/_footer.pug
+
+include ../blocks/sGroups/_sGroups.pug
+
+block variables
+	- let  mainPage= 'groups-page'
+	- let  bg= '05-jobs.jpg'
+
+block title
+	- let  title= 'Группы'
+	title= title
+block pagecontent
+	+mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		//- +topLine
+	main
+		+page-head('Группы', '', '', 'Группы')
+		+sGroups
+	+footer()

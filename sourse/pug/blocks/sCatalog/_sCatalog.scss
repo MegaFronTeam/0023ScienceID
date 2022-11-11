@@ -9,19 +9,19 @@
 
 	}
 	.filter {
-		&__row {
-			align-items: flex-end;
-			margin-bottom: rem(24);
-			.h4 {
-				margin-bottom: 0;
-			}
-		}
-		&__btn-row {
-			--bs-gutter-x: #{rem(24)};
-			--bs-gutter-y: #{rem(16)};
+		// &__row {
+		// 	align-items: flex-end;
+		// 	margin-bottom: rem(24);
+		// 	.h4 {
+		// 		margin-bottom: 0;
+		// 	}
+		// }
+		// &__btn-row {
+		// 	--bs-gutter-x: #{rem(24)};
+		// 	--bs-gutter-y: #{rem(16)};
 			
-			margin-bottom: rem(24);
-		}
+		// 	margin-bottom: rem(24);
+		// }
 		&__reset {
 			font-size: 11px;
 			line-height: 1.5em;
@@ -29,23 +29,23 @@
 		.dd-group {
 			margin-bottom: rem(24);
 		}
-		&__btn {
-			width: 100%;
-			--bs-btn-padding-x: #{rem(13)};
-			--bs-btn-padding-y: #{rem(7)};
-			--bs-btn-font-weight: 700;
-			--bs-btn-font-size: #{rem(16)};
-			box-shadow: 0px 4px 8px rgba(67, 150, 247, 0.47);
-			@include media-breakpoint-up(xl) {
-				--bs-btn-font-size: #{rem(16)};
-			}
-			&:hover {
-				box-shadow: 0px 4px 8px transparent;
-			}
-			&--outline {
-				box-shadow: 0px 4px 8px rgba(67, 150, 247, 0.47);
-			}
-		}
+		// &__btn {
+		// 	width: 100%;
+		// 	--bs-btn-padding-x: #{rem(13)};
+		// 	--bs-btn-padding-y: #{rem(7)};
+		// 	--bs-btn-font-weight: 700;
+		// 	--bs-btn-font-size: #{rem(16)};
+		// 	box-shadow: 0px 4px 8px rgba(67, 150, 247, 0.47);
+		// 	@include media-breakpoint-up(xl) {
+		// 		--bs-btn-font-size: #{rem(16)};
+		// 	}
+		// 	&:hover {
+		// 		box-shadow: 0px 4px 8px transparent;
+		// 	}
+		// 	&--outline {
+		// 		box-shadow: 0px 4px 8px rgba(67, 150, 247, 0.47);
+		// 	}
+		// }
 	}
 	&__banner {
 		position: relative;
@@ -128,7 +128,7 @@
 		color: #000;
 		line-height: 1.5em;
 		padding: 4.5px 7px;
-		border: 1px solid #DADADA;
+		border: 1px solid $gray-400;
 		border-radius: 4px;
 		&.active, &:hover {
 			background-color: rgba(67, 150, 247, 0.2);
@@ -245,7 +245,7 @@
 		font-size: 10px;
 		font-weight: 700;
 		padding: 4px 8px;
-		background-color: #EEF3F7;
+		background-color: $gray-100;
 		color: $primary;
 		border-radius: 4px;
 		display: inline;
@@ -261,7 +261,7 @@
 		font-weight: 700;
 		padding: 4px 8px;
 		border-radius: 4px;
-		background-color: #EEF3F7;
+		background-color: $gray-100;
 		color: $primary;
 		cursor: pointer;
 		&:hover {

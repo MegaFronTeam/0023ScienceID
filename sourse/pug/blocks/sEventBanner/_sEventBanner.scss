@@ -1,7 +1,7 @@
 // start .sEventBanner
 .sEventBanner {
 	--sPT: #{rem(0)};
-	--sPB: #{rem(32)};
+	--sPB: #{rem(39.500)};
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
@@ -122,6 +122,85 @@
 		
 		@include media-breakpoint-up(xl) {
 			--bs-btn-font-size: #{rem(16)};
+		}
+	}
+	&--2 {
+		.sEventBanner {
+			&__row {
+				--bs-gutter-x: 0;
+			}
+			&__left-side {
+				display: flex;
+				flex-direction: column;
+				background-color: $gray-100;
+				border-radius: 8px;
+				overflow: hidden;
+				padding: rem(20);
+				height: 100%;
+				@include media-breakpoint-up(lg) {
+					padding: rem(40);
+				}
+			}
+			&__img-col {
+				border-radius: 8px;
+				overflow: hidden;
+				@include media-breakpoint-up(lg) {
+					max-width: rem(640);
+				}
+			}
+			&__headline {
+				color: $gray-700;
+				.icon {
+					color: $primary;
+				}
+			}
+			&__tags-row {
+				margin-bottom: auto;
+			}
+			&__online {
+				color: $gray-800;
+			}
+			&__tag {
+				color: $gray-700;
+				background-color: rgba(67, 150, 247, 0.2);
+				border-color: transparent;
+				&:hover {
+					border-color: rgba(67, 150, 247, 0.2);
+					background-color: transparent;
+				}
+			}
+			&__bottom-row {
+				--bs-gutter-x: #{rem(16)};
+				--bs-gutter-y: #{rem(16)};
+
+				padding-top: rem(20);
+			}
+			&__share {
+				display: flex;
+				align-items: center;
+				.ya-share2 {
+					margin-left: rem(24);
+				}
+			}
+			&__simple-btn {
+				--bs-btn-padding-x: #{rem(0)};
+				--bs-btn-padding-y: #{rem(7)};
+				--bs-btn-font-size: #{rem(16)};
+				--bs-btn-font-weight: 700;
+				--bs-btn-color: #0096EB;
+				
+				@include media-breakpoint-up(xxl) {
+					--bs-btn-font-size: #{rem(16)};
+					--bs-btn-padding-x: #{rem(24)};
+				}
+				@include media-breakpoint-up(xl) {
+					--bs-btn-font-size: #{rem(16)};
+					--bs-btn-padding-x: #{rem(9)};
+				}
+			}
+		}
+		h3 {
+			color: $gray-800;
 		}
 	}
 	@include media-breakpoint-up(xl) {}

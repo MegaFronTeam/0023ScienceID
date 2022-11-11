@@ -1,0 +1,109 @@
+mixin sGroups(data)
+	// start sGroups
+	+b.SECTION.sGroups.section#sGroups&attributes(attributes)
+		.container
+			+b.group-control
+				.row
+					.col-auto
+						+e.btn.btn.btn-primary(href='#') Все группы
+					.col-auto
+						+e.btn--secondary.btn.btn-primary(href='#') Мои группы
+					.col-auto.ms-sm-auto
+						+e.create(href='#')
+							+icon('plus')
+							| Создать группу
+			+e.row.row
+				.col-lg-4.col-xl-3
+					+filter()
+						+e.head-search
+							+search('Найти группу')
+						+ddGroup()
+							+ddGroupItem('Тип доступа', '', '', 'active')
+								+search()
+								+e.chekbox-wrap
+									+in-c('checkbox', 'АНО Цифровые технологии')
+									+in-c('checkbox', 'Рувентс')
+									+in-c('checkbox', 'Наименование')
+									+in-c('checkbox', 'НаукаСегодня')
+									+in-c('checkbox', 'РБК')
+									+in-c('checkbox', 'Сбер')
+									+in-c('checkbox', 'Альфа')
+									+in-c('checkbox', 'Ростелеком')
+									+in-c('checkbox', 'Название компании')
+									+in-c('checkbox', 'АНО Цифровые технологии')
+									+in-c('checkbox', 'Рувентс')
+									+in-c('checkbox', 'Наименование')
+									+in-c('checkbox', 'НаукаСегодня')
+									+in-c('checkbox', 'РБК')
+									+in-c('checkbox', 'Сбер')
+									+in-c('checkbox', 'Альфа')
+									+in-c('checkbox', 'Ростелеком')
+									+in-c('checkbox', 'Название компании')
+							+ddGroupItem('Вызовы', '', '', '')
+								+search()
+								+e.chekbox-wrap
+									+in-c('checkbox', 'АНО Цифровые технологии')
+									+in-c('checkbox', 'Рувентс')
+									+in-c('checkbox', 'Наименование')
+									+in-c('checkbox', 'НаукаСегодня')
+									+in-c('checkbox', 'РБК')
+									+in-c('checkbox', 'Сбер')
+									+in-c('checkbox', 'Альфа')
+									+in-c('checkbox', 'Ростелеком')
+									+in-c('checkbox', 'Название компании')
+									+in-c('checkbox', 'АНО Цифровые технологии')
+									+in-c('checkbox', 'Рувентс')
+									+in-c('checkbox', 'Наименование')
+									+in-c('checkbox', 'НаукаСегодня')
+									+in-c('checkbox', 'РБК')
+									+in-c('checkbox', 'Сбер')
+									+in-c('checkbox', 'Альфа')
+									+in-c('checkbox', 'Ростелеком')
+									+in-c('checkbox', 'Название компании')
+						+e.btns-row.row
+							.col-auto
+								+e.link.btn.btn-outline-primary(href="#") Все группы
+							.col-auto
+								+e.link.btn.btn-outline-primary(href="#") Продовольствие
+							.col-auto
+								+e.link.btn.btn-outline-primary(href="#") Природа
+							.col-auto
+								+e.link.btn.btn-outline-primary(href="#") Экономика
+							.col-auto
+								+e.link.btn.btn-outline-primary(href="#") Энергетика
+							.col-auto
+								+e.link.btn.btn-outline-primary(href="#") Пространство
+							.col-auto
+								+e.link.btn.btn-outline-primary(href="#") Безопасность
+							.col-auto
+								+e.link.btn.btn-outline-primary(href="#") Демография
+				.col-lg-8.col-xl-9
+					mixin group(i, title, text, open, btn, disabled)
+						+e.group&attributes(attributes)
+							+e.group-row.row
+								.col-12.col-md-auto
+									+e.img-wrap
+										+img(`img/sGroups-img-${i}.jpg`, 'bg')
+								.col-12.col-md
+									+e.tag-row.row
+										.col-auto 
+											if open
+												+e.tag(style="--bgColor: rgba(81, 247, 67, 0.2);") Открытая группа
+											else
+												+e.tag(style="--bgColor: rgba(247, 78, 67, 0.2);") Открытая группа
+										.col-auto 
+											+e.tag Тег новости
+										.col-auto 
+											+e.tag Тегновый
+									.h6!= title
+									p!= text
+									+e.author
+										| Автор группы:
+										a(href="#")
+											+img('img/person.jpg')
+											| Юратина Александра
+								.col-auto.col-lg-12.col-xl-auto
+									+e.btn.btn.btn-primary(href="#" class=(disabled=="disabled" ? 'disabled' : ''))!= btn
+					+group(1, 'Химическая и&nbsp;нефтехимическая промышленность России', 'DH-технологии, агробактериальная трансформация растений, микроклональное размножение растений и&nbsp;др. Подходы и&nbsp;методы, связанные с&nbsp;данной областью.', 'true', 'Вступить')
+					+e.show.btn.btn-outline-primary(href="#") Показать еще
+	// end sGroups

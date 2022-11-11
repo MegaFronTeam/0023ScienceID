@@ -81,7 +81,7 @@
 
 .search-block{
 	position: relative;
-	border: 1px solid #DADADA;
+	border: 1px solid $gray-400;
 	border-radius: 8px;
 	input{
 		font-size: rem(15);
@@ -157,6 +157,27 @@
 			margin-right: rem(16);
 		}
 	}
+	&__show-type {
+		@include roww('16px', 'm');
+		display: flex;
+	}
+	&__icon-wrap {
+		@include mt;
+		border: 1px solid $gray-400;
+		color: $gray-400;
+		background-color: #fff;
+		border-radius: 8px;
+		padding: rem(11);
+		cursor: pointer;
+		.icon {
+			font-size: rem(24);
+		}
+		&.active, &:hover {
+			border-color: $primary;
+			color: $primary;
+			background-color: rgba(67, 150, 247, 0.2);
+		}
+	}
 }
 
 .breadcrumb {
@@ -173,6 +194,7 @@
 			}
 		}
 		&:not(.active) {
+			background-color: #fff;
 			border: 1px solid rgba(67, 150, 247, 0.2);
 			border-radius: 4px;
 		}
@@ -223,7 +245,7 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		background-color: #EEF3F7;
+		background-color: $gray-100;
 		border-radius: 0px 0px 8px 8px;
 		padding: rem(24);
 		flex-grow: 1;
@@ -403,7 +425,7 @@
 }
 
 .labSlide {
-	border: 1px solid #DADADA;
+	border: 1px solid $gray-400;
 	border-radius: 8px;
 	max-width: rem(305);
 	margin-right: rem(32);
@@ -484,7 +506,7 @@
 		font-size: 10px;
 		font-weight: 700;
 		padding: 4px 8px;
-		background-color: #EEF3F7;
+		background-color: $gray-100;
 		color: $primary;
 		border-radius: 4px;
 		display: inline;
@@ -504,7 +526,7 @@
 		color: #fff;
 		cursor: pointer;
 		&:hover {
-			background-color: #EEF3F7;
+			background-color: $gray-100;
 			color: $primary;
 		}
 		&.hide {
@@ -592,7 +614,7 @@
 		}
 		&__item {
 			@include mt;
-			border: 1px solid #DADADA;
+			border: 1px solid $gray-400;
 			border-radius: 4px;
 			// padding: rem(16);
 			&.active {
@@ -644,7 +666,7 @@
 				font-weight: 700;
 				line-height: 1em;
 				padding: 3px 5px;
-				background-color: #EEF3F7;
+				background-color: $gray-100;
 				border-radius: 4px;
 				color: $primary;
 				margin-right: auto;
@@ -721,6 +743,60 @@
 			padding: rem(11.75) rem(36) rem(11.75) rem(12);
 		}
 	}
+
+	&__btn-row {
+		--bs-gutter-x: #{rem(24)};
+		--bs-gutter-y: #{rem(16)};
+		
+		margin-bottom: rem(24);
+	}
+	&__btn {
+		width: 100%;
+		--bs-btn-padding-x: #{rem(13)};
+		--bs-btn-padding-y: #{rem(7)};
+		--bs-btn-font-weight: 700;
+		--bs-btn-font-size: #{rem(16)};
+		box-shadow: 0px 4px 8px rgba(67, 150, 247, 0.47);
+		@include media-breakpoint-up(xl) {
+			--bs-btn-font-size: #{rem(16)};
+		}
+		&:hover {
+			box-shadow: 0px 4px 8px transparent;
+		}
+		&--outline {
+			box-shadow: 0px 4px 8px rgba(67, 150, 247, 0.47);
+		}
+	}
+	&__row {
+		align-items: flex-end;
+		margin-bottom: rem(30);
+		.h4 {
+			margin-bottom: 0;
+		}
+	}
+	&__reset {
+		font-size: 11px;
+		line-height: 1.5em;
+	}
+
+	&__btns-row {
+		--bs-gutter-x: #{rem(8)};
+		--bs-gutter-y: #{rem(8)};
+	}
+	&__link {
+		--bs-btn-padding-x: #{rem(15.3)};
+    --bs-btn-padding-y: #{rem(7.125)};
+		--bs-btn-font-size: #{rem(16)};
+		--bs-btn-font-weight: 600;
+		--bs-btn-border-color: rgba(67, 150, 247, 0.2);
+		--bs-btn-hover-color: #{$primary};
+		--bs-btn-hover-bg: rgba(67, 150, 247, 0.2);
+    --bs-btn-hover-border-color: rgba(67, 150, 247, 0.2);
+
+		@include media-breakpoint-up(xl) {
+			--bs-btn-font-size: #{rem(16)};
+		}
+	}
 }
 
 .logoSlide {
@@ -746,7 +822,7 @@
 				color: #000;
 				line-height: 1.5em;
 				padding: 4px 7px;
-				border: 1px solid #DADADA;
+				border: 1px solid $gray-400;
 				border-radius: 4px;
 				min-width: 32px;
 				text-align: center;

@@ -1,0 +1,196 @@
+// start .sGroups
+.sGroups {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(39)};
+	// --sTPB: #{rem()};
+	background-color: $gray-100;
+	.filter {
+		&__head-search {
+			margin-bottom: rem(33);
+			.search-block {
+				border: none;
+				box-shadow: 0px 4px 43px rgba(0, 0, 0, 0.12);
+				input {
+					padding: rem(16) rem(16) rem(16) rem(48);
+				}
+				button {
+					left: 12px;
+				}
+			}
+		}
+	}
+	.dd-group {
+		margin-bottom: rem(24);
+		&__item {
+			background-color: #fff;
+			border-radius: 8px;
+			&.active {
+				.dd-group__head {
+					&:before {
+						transform: translateY(-50%) rotate(-90deg);
+					}
+				}
+			}
+		}
+		&__head {
+			padding: rem(11) rem(36) rem(11) rem(12);
+			&:before {
+				background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_3202_10180)'%3E%3Cpath d='M7.70492 8.29498L12.2949 12.875L16.8849 8.29498L18.2949 9.70498L12.2949 15.705L6.29492 9.70498L7.70492 8.29498Z' fill='%232B2B2B'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_3202_10180'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+				left: unset;
+				right: 8px;
+
+			}
+			p {
+				font-size: rem(15);
+				color: $gray-700;
+			}
+		}
+	}
+	&__group {
+		background-color: #fff;
+		border-radius: 8px;
+		padding: rem(24);
+		.h6 {
+			font-size: rem(16);
+			color: $primary;
+			font-weight: 600;
+			margin-bottom: rem(11);
+		}
+		p {
+			font-size: rem(14);
+			line-height: 1.5em;
+			color: $gray-700;
+			max-width: rem(508);
+			margin-bottom: rem(11);
+		}
+	}
+	&__group-row {
+		--bs-gutter-x: #{rem(24)};
+		--bs-gutter-y: #{rem(18)};
+	}
+	&__img-wrap {
+		width: 100%;
+		width: rem(117);
+		height: rem(117);
+		border-radius: 50%;
+		overflow: hidden;
+		z-index: 1;
+		img {
+			position: relative;
+			z-index: 2;
+		}
+	}
+	&__tag-row {
+		--bs-gutter-x: #{rem(11)};
+		--bs-gutter-y: #{rem(8)};
+
+		margin-bottom: rem(11);
+	}
+	&__tag {
+		font-size: 11px;
+		color: $gray-700;
+		line-height: 1;
+		padding: 4.5px 5px;
+		border-radius: 2px;
+		background-color: var(--bgColor, rgba(67, 150, 247, 0.2));
+	}
+	&__author {
+		display: flex;
+		align-items: center;
+		font-size: 10px;
+		color: $gray-700;
+		a {
+			margin-left: rem(9);
+			font-size: rem(14);
+			font-weight: 600;
+			display: flex;
+			align-items: center;
+			img {
+				flex: 0 0 auto;
+				width: rem(24);
+				height: rem(24);
+				border-radius: 50%;
+				margin-right: rem(12);
+				object-fit: cover;
+			}
+		}
+	}
+	&__btn {
+    --bs-btn-padding-x: #{rem(24)};
+		--bs-btn-padding-y: #{rem(7)};
+		--bs-btn-font-size: #{rem(16)};
+    --bs-btn-font-weight: 700;
+		--bs-btn-disabled-color: #{$primary};
+    --bs-btn-disabled-bg: rgba(67, 150, 247, 0.2);
+    --bs-btn-disabled-border-color: transparent;
+		--bs-btn-disabled-opacity: 1;
+		@include media-breakpoint-up(xl) {
+			--bs-btn-font-size: #{rem(16)};
+		}
+	}
+	&__show {
+		--bs-btn-padding-x: #{rem(23)};
+		--bs-btn-padding-y: #{rem(7)};
+		--bs-btn-font-size: #{rem(16)};
+		--bs-btn-font-weight: 700;
+		
+		display: block;
+		width: 100%;
+		max-width: rem(158);
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: rem(32);
+		@include media-breakpoint-up(xl) {
+			--bs-btn-font-size: #{rem(16)};
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sGroups
+
+.group-control {
+	background-color: #fff;
+	border-radius: 8px;
+	padding: rem(8) rem(8) rem(8) rem(8);
+	margin-bottom: rem(40);
+	@include media-breakpoint-up(sm) {
+		padding: rem(8) rem(32) rem(8) rem(8);
+	}
+	&__btn {
+		--bs-btn-padding-x: #{rem(29)};
+		--bs-btn-padding-y: #{rem(9)};
+    --bs-btn-font-size: #{rem(14)};
+    --bs-btn-font-weight: 600;
+		@include media-breakpoint-up(xl) {
+			--bs-btn-font-size: #{rem(14)};
+		}
+		&--secondary {
+			--bs-btn-color: #{$primary};
+			--bs-btn-bg: rgba(67, 150, 247, 0.2);
+			--bs-btn-border-color: transparent;
+		}
+	}
+	.row {
+		--bs-gutter-x: #{rem(8)};
+		--bs-gutter-y: #{rem(8)};
+		align-items: center;
+	}
+	&__create {
+		display: flex;
+		align-items: center;
+		color: #0096EB;
+		font-size: rem(16);
+		font-weight: 700;
+		line-height: 1.5em;
+		.icon {
+			flex: 0 0 auto;
+			margin-right: rem(10);
+			font-size: rem(24);
+		}
+	}
+}

@@ -1,0 +1,28 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug
+ 
+include ../blocks/footer/_footer.pug
+
+include ../blocks/sUsers/_sUsers.pug
+
+block variables
+	- let  mainPage= 'users-page'
+	- let  bg= '03-users.jpg'
+
+block title
+	- let  title= 'Мероприятия'
+	title= title
+block pagecontent
+	+mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		//- +topLine
+	main
+		+page-head('Пользователи', '', true, 'Мероприятия')
+		+sUsers
+	+footer()
