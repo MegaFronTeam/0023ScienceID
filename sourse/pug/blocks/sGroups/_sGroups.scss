@@ -96,7 +96,7 @@
 		line-height: 1;
 		padding: 4.5px 5px;
 		border-radius: 2px;
-		background-color: var(--bgColor, rgba(67, 150, 247, 0.2));
+		background: var(--bgColor, rgba(67, 150, 247, 0.2));
 	}
 	&__author {
 		display: flex;

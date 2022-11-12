@@ -5,22 +5,37 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
-
+	h3 {
+		margin-bottom: rem(32);
+		color: $gray-800;
 	}
-	.section-title{
-		
+	h5 {
+		margin-bottom: rem(16);
+		color: $gray-800;
 	}
-	&__col{
-
+	p {
+		line-height: 1.5em;
+		color: $gray-800;
+		margin-bottom: rem(32);
 	}
-	&__item{
-
-	}
-	&__slide{
-		height: auto;
+	ul {
+		list-style-type: none;
+		margin-bottom: rem(30);
+		li {
+			position: relative;
+			padding-left: rem(22);
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				width: 6px;
+				height: 6px;
+				background-color: $gray-800;
+				left: 8px;
+				top: 8px;
+				border-radius: 50%;
+			}
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
