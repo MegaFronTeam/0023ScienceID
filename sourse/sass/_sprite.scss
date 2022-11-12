@@ -31,6 +31,14 @@
 	font-size:math.div(27,10)*1rem;
 	width: math.div(27,27)*1em;
 }
+.icon-chevron-right {
+	font-size:math.div(25,10)*1rem;
+	width: math.div(24,25)*1em;
+}
+.icon-children {
+	font-size:math.div(40,10)*1rem;
+	width: math.div(40,40)*1em;
+}
 .icon-close {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
@@ -39,7 +47,19 @@
 	font-size:math.div(32,10)*1rem;
 	width: math.div(32,32)*1em;
 }
+.icon-document {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
+}
 .icon-dots {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-email {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
+}
+.icon-facebook {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
 }
@@ -63,6 +83,10 @@
 	font-size:math.div(32,10)*1rem;
 	width: math.div(32,32)*1em;
 }
+.icon-inst {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
 .icon-instagram {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
@@ -74,6 +98,10 @@
 .icon-mail {
 	font-size:math.div(32,10)*1rem;
 	width: math.div(32,32)*1em;
+}
+.icon-ok {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
 }
 .icon-pin {
 	font-size:math.div(17,10)*1rem;
@@ -91,6 +119,18 @@
 	font-size:math.div(32,10)*1rem;
 	width: math.div(32,32)*1em;
 }
+.icon-telescope {
+	font-size:math.div(40,10)*1rem;
+	width: math.div(40,40)*1em;
+}
+.icon-tg {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-travelMap {
+	font-size:math.div(40,10)*1rem;
+	width: math.div(40,40)*1em;
+}
 .icon-viber {
 	font-size:math.div(16,10)*1rem;
 	width: math.div(16,16)*1em;
@@ -102,4 +142,8 @@
 .icon-whatsapp {
 	font-size:math.div(16,10)*1rem;
 	width: math.div(16,16)*1em;
+}
+.icon-youtube {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
 }

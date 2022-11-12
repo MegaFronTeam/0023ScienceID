@@ -1,0 +1,91 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug
+ 
+include ../blocks/footer/_footer.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sDefaultSlider/_sDefaultSlider.pug
+
+block variables
+	- let  mainPage= 'tourism-page'
+	- let  bg= '06-tourism.jpg'
+
+block title
+	- let  title= 'Волонтерство'
+	title= title
+block pagecontent
+	+mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		//- +topLine
+	main
+		+page-head('', '', '', 'true', 'Волонтерство')
+		.container
+			+banner("Научное волонтерство", 'Научное волонтерство&nbsp;&mdash; это уникальная возможность для каждого человека принять участие в&nbsp;настоящих научных исследованиях под руководством учёных и&nbsp;заглянуть в&nbsp;такой загадочный и&nbsp;сложный мир науки!', 'Развитие научного волонтерства&nbsp;&mdash; одна из&nbsp;инициатив', 'bg').--tourism
+		+sContent
+			.container
+				+e.row.row 
+					.col-lg-7
+						+e.tell-us.bg-wrap 
+							h3 Расскажите о своем проекте!
+							p Привлеките к работе волонтеров, запустите собственный проект.
+							+e.btn.btn.btn-primary(href="#") Стать волонтером науки!
+							+e.btn--outline.btn.btn-outline-primary(href="#") Я ищу волонтеров науки!
+							+img('img/tell-us-bg-1.jpg', 'bg').picture-bg
+							+img('img/tell-us-img-1.jpg').img
+						+e.welcome
+							h4 Проекты совместно с Добро.ру
+							+e.btn.btn.btn-outline-light(href="#") Я ищу волонтеров науки!
+							+img('img/welcome-img-1.png').img
+						h5 Волонтеры могут принять участие в&nbsp;сборе, обработке и&nbsp;анализе данных, фотофиксации объектов культурного наследия, видов растений и&nbsp;животных, обучении искусственного интеллекта и&nbsp;многом другом.
+						p Стать научным волонтером и&nbsp;внести свой вклад в&nbsp;исследовательскую работу может каждый!
+						+e.soc-wrap
+							p Поделиться в соц. сетях:
+							+soc()
+								+item-sos('vk')
+								+item-sos('tg')
+								+item-sos('ok')
+					.col-lg-4.ms-lg-auto
+						+e.link-wrap
+							mixin link(text)
+								+e.link.btn.btn-outline-primary(href='#')
+									!= text
+									+icon('chevron-right')
+							+link('Все проекты')
+							+link('Текущие проекты')
+							+link('Завершенные проекты')
+							+link('Проекты по итогам съезда')
+							+link('Можно участвовать из дома')
+						+e.interview
+							h4 Заголовок опроса
+							p Волонтеры могут принять участие в&nbsp;сборе, обработке и&nbsp;анализе данных, фотофиксации объектов культурного наследия, видов растений и&nbsp;животных, обучении искусственного интеллекта и&nbsp;многом другом.
+							+in-c('checkbox', 'Вариант ответа в&nbsp;одну строку')
+							+in-c('checkbox', 'Видов растений и&nbsp;животных, обучении искусственного')
+							+in-c('checkbox', 'Вариант ответа в одну строку')
+							+img('img/banner-bg-1.jpg').bg
+		+sDefaultSlider('Актуальные новости', '', '', 'true').sDefaultSlider--news
+			+e.cards-row.row
+				.col-sm-6.col-lg-3
+					+sliderItem('news-img-4.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', '', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+				.col-sm-6.col-lg-3
+					+sliderItem('news-img-2.jpg', 'Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?', '14.05.2022', '', 'Разработки', '', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+				.col-sm-6.col-lg-3
+					+sliderItem('news-img-3.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', '', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+				.col-sm-6.col-lg-3
+					+sliderItem('news-img-5.jpg', 'Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?', '14.05.2022', '', 'Разработки', '', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+				.col-sm-6.col-lg-3
+					+sliderItem('news-img-6.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', '', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+				.col-sm-6.col-lg-3
+					+sliderItem('news-img-1.jpg', 'Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?', '14.05.2022', '', 'Разработки', '', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+				.col-sm-6.col-lg-3
+					+sliderItem('news-img-7.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', '', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+				.col-sm-6.col-lg-3
+					+sliderItem('news-img-8.jpg', 'Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?', '14.05.2022', '', 'Разработки', '', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+				.col-12.text-center
+					+e.btn.btn.btn-outline-primary(href='#') Показать еще
+	+footer()

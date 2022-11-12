@@ -1,0 +1,25 @@
+mixin sProjects(data)
+	// start sProjects
+	+b.SECTION.sProjects.section#sProjects&attributes(attributes)
+		.container
+			+e.wrap
+				+e.wrap-row.row
+					.col-sm
+						h3 Проекты совместно с&nbsp;АНО &laquo;Россия&nbsp;&mdash; страна возможностей&raquo;
+						+e.btn.btn.btn-outline-light(href="#") Подробнее
+					.col-sm-auto
+						+img('img/russia.png')
+			h3 Tри направления научно-популярного туризма:
+			+e.row.row 
+				mixin item(i, title)
+					+e.item
+						h4!= title 
+						+e.more-info.btn.btn-primary(href="#") Подробнее
+						+img(`img/sProjects-img-${i}.png`)
+				.col-lg-4
+					+item(1, 'Туризм в&nbsp;регионах России')
+				.col-lg-4
+					+item(2, 'Туризм на&nbsp;курортных направления')
+				.col-lg-4
+					+item(3, 'Детский и&nbsp;молодежный туризм')
+	// end sProjects

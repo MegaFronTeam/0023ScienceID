@@ -40,7 +40,7 @@ mixin search(placeholder="Начните вводить")
 			+e.delete-text
 				+icon('close')
 
-mixin page-head(t, calendar, switcher, ...items)
+mixin page-head(t, calendar, switcher, morecontrol, ...items)
 	+b.page-head
 		- let l = items.length
 		.container
@@ -61,6 +61,16 @@ mixin page-head(t, calendar, switcher, ...items)
 									+icon('list')
 								+e.icon-wrap
 									+icon('dots')
+			if morecontrol
+				+e.morecontrol-row.row
+					.col
+						+input('Выберите регион', 'select')
+					.col-auto
+						+e.show-type
+							+e.icon-wrap.active
+								+icon('list')
+							+e.icon-wrap
+								+icon('dots')
 
 
 mixin logo(img=true)
@@ -74,31 +84,34 @@ mixin sliderItem(img, title, date, pin='true', city, customClass, online="Online
 		+e.img-wrap(href="#")
 			+img(`img/${img}`, 'bg')
 		+e.content
-			+e.tags-row.row
-				if online == 'Online'
-					.col-auto
-						+e.online(href="#")
-							span
-							!= online
-				if online == 'Offline'
-					.col-auto
-						+e.online--2(href="#")
-							span
-							!= online
-				each tag in tags
-					.col-auto
-						+e.tag(href="#")!= tag
+			if (tags.length != 0 && (online!="Online" || online!= "Offline"))
+				+e.tags-row.row
+					if online == 'Online'
+						.col-auto
+							+e.online(href="#")
+								span
+								!= online
+					if online == 'Offline'
+						.col-auto
+							+e.online--2(href="#")
+								span
+								!= online
+					each tag in tags
+						.col-auto
+							+e.tag(href="#")!= tag
 			a.h5(href="#")!= title
 			if text
 				+e.text!= text
-			+e.bottom-row.row
-				.col-auto
-					+e.date!= date
-				.col-auto
-					+e.city
-						if pin
-							+img('img/svg/pin.svg')
-						!= city
+			if date || city
+				+e.bottom-row.row
+					if date
+						.col-auto
+							+e.date!= date
+					.col-auto
+						+e.city
+							if pin
+								+img('img/svg/pin.svg')
+							!= city
 
 mixin vacanciesItem(label, price, title, text, customClass='swiper-slide')
 	+b.vacancies-item(class= customClass)
@@ -159,3 +172,17 @@ mixin logoSlide(img)
 		+e.img-wrap
 			.img-wrap-center
 				+img(`img/${img}`)
+
+mixin banner(title, text, subtext, bg)
+	+b.banner&attributes(attributes)
+		h1.h2!= title
+		p!= text
+		+e.link
+			+img('img/logo-img.png')
+			+e.text!= subtext
+				a(href="#")  Десятилетия науки и технологий
+		if bg
+			+img('img/sBanners-img-2.png').bg
+			img(src='img/sBanners-img-5.png' alt='').img.img--2
+		else
+			+img('img/banner-img-1.png').img

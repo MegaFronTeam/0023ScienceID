@@ -2,15 +2,16 @@ mixin sDefaultSlider(title, btn, select, notSlider)
 	// start sDefaultSlider
 	+b.SECTION.sDefaultSlider.section&attributes(attributes)
 		.container
-			+b.section-title
-				h3!= title
-				if select
-					+e.filter-btn.btn.btn-primary Фильтр
-					+e.filter-wrap
-						+e.select-row
-							+input('Выберите город', 'select')
-							+input('Тематика', 'select')
-							+input('Даты проведения', 'select')
+			if title
+				+b.section-title
+					h3!= title
+					if select
+						+e.filter-btn.btn.btn-primary Фильтр
+						+e.filter-wrap
+							+e.select-row
+								+input('Выберите город', 'select')
+								+input('Тематика', 'select')
+								+input('Даты проведения', 'select')
 			if notSlider 
 				block
 			else

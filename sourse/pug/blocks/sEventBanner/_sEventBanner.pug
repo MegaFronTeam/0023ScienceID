@@ -72,3 +72,34 @@ mixin sEventBanner2(data)
 									.ya-share2(data-curtain='' data-shape='round' data-services='vkontakte,odnoklassniki,twitter')
 				+e.img-col.col-lg
 					+img('img/sEventBanner-img-2.jpg', 'bg')
+
+mixin sEventBanner3(i, title, tag, btn='true', organization='true')
+	// start sEventBanner
+	+b.SECTION.sEventBanner--2.section#sEventBanner&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg
+					+e.left-side
+						+e.headline-row.row
+							if tag 
+								.col-auto
+									+e.tag(href="#") Природа
+							else
+								.col-auto
+									+e.headline
+										+icon('pin')
+										| Республика Крым
+						h3.mb-auto!= title
+						+e.bottom-row.row
+							if btn
+								.col-auto
+									+e.btn.btn.btn-primary(href="#") Зарегистрироваться
+							.col-auto
+								+e.share
+									| Поделиться:
+									.ya-share2(data-curtain='' data-shape='round' data-services='vkontakte,odnoklassniki,twitter')
+							if organization
+								.col-auto
+									+e.organization #[span Организатор:] Общенациональный союз индустрии гостеприимства
+				+e.img-col.col-lg
+					+img(`img/sEventBanner-img-${i}.jpg`, 'bg')

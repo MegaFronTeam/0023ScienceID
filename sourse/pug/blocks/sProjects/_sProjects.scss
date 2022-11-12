@@ -1,0 +1,107 @@
+// start .sProjects
+.sProjects {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(37)};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: #{rem(20)};
+
+	}
+	h3 {
+		margin-bottom: rem(25);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(56);
+		}
+	}
+	&__wrap {
+		background-color: $primary;
+		padding: rem(24);
+		border-radius: 8px;
+		margin-bottom: rem(25);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(56);
+			padding: rem(39) rem(68) rem(24) rem(24);
+		}
+		h3 {
+			color: #fff;
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(27.500);
+			}
+		}
+		img {
+			width: 100%;
+			max-width: rem(180);
+		}
+	}
+	&__wrap-row {
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: #{rem(20)};
+
+		align-items: center;
+	}
+	&__btn {
+		--bs-btn-padding-x: #{rem(24)};
+    --bs-btn-padding-y: #{rem(11)};
+		--bs-btn-font-weight: 700;
+		--bs-btn-font-size: 0.9999999995rem;
+
+		width: 100%;
+		max-width: rem(266);
+		@include media-breakpoint-up(xl) {
+			--bs-btn-font-size: 0.9999999995rem;
+		}
+	}
+	&__item {
+		padding: rem(33) rem(40) rem(35);
+		background-color: #C2DCFB;
+		border-radius: 8px;
+		position: relative;
+		overflow: hidden;
+		z-index: 1;
+		h4 {
+			margin-bottom: rem(37);
+			max-width: rem(200);
+		}
+		img {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			opacity: .4;
+			@include media-breakpoint-up(sm) {
+				opacity: 1;
+			}
+			@include media-breakpoint-up(lg) {
+				opacity: .4;
+			}
+			@include media-breakpoint-up(xl) {
+				opacity: .6;
+			}
+			@include media-breakpoint-up(xxl) {
+				opacity: 1;
+			}
+		}
+	}
+	&__more-info {
+		--bs-btn-padding-x: #{rem(24)};
+    --bs-btn-padding-y: #{rem(7)};
+		--bs-btn-font-size: #{rem(16)};
+    --bs-btn-font-weight: 700;
+
+		box-shadow: 0px 4px 8px rgba(67, 150, 247, 0.47);
+		&:hover {
+			box-shadow: 0px 4px 8px transparent;
+		}
+		@include media-breakpoint-up(xl) {
+			--bs-btn-font-size: #{rem(16)};
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sProjects

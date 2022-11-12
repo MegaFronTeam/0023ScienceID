@@ -538,6 +538,10 @@ iframe {
 	}
 }
 
+.mb-32 {
+	margin-bottom: rem(32);
+}
+
 .main-page {
 	.header {
 		border-bottom: none;
@@ -578,5 +582,44 @@ iframe {
 	.page-head {
 		background-color: $gray-100;
 		padding-bottom: rem(27.500);
+	}
+}
+
+.tourism-page {
+	.page-head {
+		padding-bottom: 0;
+	}
+}
+
+.detailed-page {
+	.page-head {
+		.breadcrumb {
+			margin-bottom: 0 !important;
+		}
+	}
+	.sDefaultSlider {
+		--sPT: #{rem(32)};
+    --sPB: #{rem(32)};
+		background-color: $gray-100;
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(64)};
+			--sPB: #{rem(64)};
+		}
+		.news-item {
+			&__content {
+				background-color: #fff;
+			}
+			.h5 {
+				margin-bottom: rem(11);
+				flex-grow: 0;
+			}
+			&__text {
+				flex-grow: 1;
+				margin-bottom: rem(10);
+			}
+		}
+	}
+	.sContent {
+		padding-bottom: 0;
 	}
 }

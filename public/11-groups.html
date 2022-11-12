@@ -118,15 +118,41 @@
 					<div class="container">
 						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
 							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 										<meta itemprop="position" content="1"/></a></li>
-								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Группы</span>
-										<meta itemprop="position" content="2"/></a></li>
 							</ol>
 						</nav>
 						<div class="page-head__row row">
 							<div class="col">
 								<h1 class="h2">Группы</h1>
+							</div>
+						</div>
+						<div class="page-head__morecontrol-row row">
+							<div class="col">
+								<div class="page-head__input-wrap form-group">
+									<select class="page-head__input form-select" name="select">
+										<option value="Выберите регион">Выберите регион</option>
+										<option value=" placeholder 1">placeholder 1</option>
+										<option value=" placeholder 2">placeholder 2</option>
+										<option value=" placeholder 3">placeholder 3</option>
+										<option value=" placeholder 4">placeholder 4</option>
+									</select>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-auto">
+								<div class="page-head__show-type">
+									<div class="page-head__icon-wrap active">
+										<svg class="icon icon-list ">
+											<use xlink:href="img/svg/sprite.svg#list"></use>
+										</svg>
+									</div>
+									<div class="page-head__icon-wrap">
+										<svg class="icon icon-dots ">
+											<use xlink:href="img/svg/sprite.svg#dots"></use>
+										</svg>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

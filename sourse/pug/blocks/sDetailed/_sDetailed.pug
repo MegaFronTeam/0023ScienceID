@@ -1,0 +1,37 @@
+mixin sDetailed(first)
+	// start sDetailed
+	+b.SECTION.sDetailed.section#sDetailed&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-7.col-xl-7
+					+sContent
+						block
+				.col-lg-5.col-xl-4.ms-lg-auto
+					mixin item(subtitle, title, link, text)
+						+e.item
+							+e.subtitle!= subtitle
+							if title
+								h5!= title
+							if link
+								block
+							if text
+								p!= text
+					if first
+						+e.side-block
+							h4 Контакты
+							+item('Организатор', 'Общенациональный союз индустрии гостеприимства')
+							+item('Сайт', '', 'true')
+								a(href="#") Sample.com
+							+item('Представитель', 'Козловская Татьяна Сергеевна', '', 'вице-президент Общенационального союза индустрии гостеприимства')
+							+item('Номер телефона', '', 'true')
+								+e.tel(href="tel:+79859988899") +7 985 998 88 99
+							+item('E-mail', '', 'true')
+								a(href="mailto:Sample@sample.com") Sample@sample.com
+					else
+						+e.side-block
+							h4 Информация
+							+item('Начало работы проекта', '28 сентября 2022 г')
+							+item('Руководитель проекта', 'Журавлева Екатерина Васильевна', '', 'д.с.-х.н., профессор РАН, советник Председателя Совета директоров ГК «ЭФКО»')
+							+item('Участие в проекте могут принять', 'школьники, студенты, все желающие')
+							+item('Для участия необходимо иметь', 'телефон/планшет с выходом в интернет', '')
+	// end sDetailed

@@ -1,0 +1,109 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug
+ 
+include ../blocks/footer/_footer.pug
+
+include ../blocks/sGroups/_sGroups.pug
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sDefaultSlider/_sDefaultSlider.pug
+
+block variables
+	- let  mainPage= 'tourism-page'
+	- let  bg= '06-tourism.jpg'
+
+block title
+	- let  title= 'Туризм'
+	title= title
+block pagecontent
+	+mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		//- +topLine
+	main
+		+page-head('', '', '', '', 'Туризм')
+		.container
+			+banner("Научно-популярный туризм", 'Научно-популярный туризм&nbsp;&mdash; это синтез путешествия и&nbsp;науки, это возможность побывать в&nbsp;передовых лабораториях и&nbsp;на&nbsp;уникальных научных установках, лично познакомиться с&nbsp;людьми, которые совершили научные открытия!', 'Развитие научно-популярного туризма&nbsp;&mdash; одна из&nbsp;инициатив')
+		+sContent
+			.container
+				+e.row.row 
+					.col-lg-7
+						h5 Координационный совет по&nbsp;делам молодежи в&nbsp;научной и&nbsp;образовательной сферах проводит научную экспертизу и&nbsp;поиск новых проектов, которые будут аккумулироваться в&nbsp;этом разделе. Проекты разделены на&nbsp;три группы:
+						+e.UL.list
+							li
+								+icon('telescope')
+								| Развитие научно-популярного туризма в&nbsp;регионах&nbsp;&mdash; возможность попасть на&nbsp;уникальные объекты научно-исследовательской инфраструктуры, на&nbsp;которые раньше не&nbsp;было доступа.
+							li
+								+icon('children')
+								| Развитие научно-популярного туризма на&nbsp;традиционных туристических направлениях&nbsp;&mdash; экскурсии в&nbsp;научные центры в&nbsp;популярных курортах.
+							li
+								+icon('travelMap')
+								| Развитие детского и&nbsp;молодежного туризма&nbsp;&mdash; организация научных смен в&nbsp;детских оздоровительных лагерях и&nbsp;молодежных мероприятий
+						p Стать научным туристом, больше узнать о&nbsp;научно-исследовательских центрах и&nbsp;заглянуть в&nbsp;такой загадочный и&nbsp;сложный мир науки может каждый!
+						+e.offer
+							h4 Есть предложения<br>по развитию научно-популярного туризма?
+							+e.offer-row.row
+								.col-lg-12.col-xl
+									+e.send
+										p Напишите нам 
+										a(href="mailto:sciencetourism@korsovet.ru")
+											+icon('document')
+											| sciencetourism@korsovet.ru
+								.col-lg-12.col-xl
+									+e.send
+										p Скачайте форму для описания проекта
+										a(href="#")
+											+icon('email')
+											| скачать форму
+						+e.soc-wrap
+							p Поделиться в соц. сетях:
+							+soc()
+								+item-sos('vk')
+								+item-sos('facebook')
+								+item-sos('inst')
+								+item-sos('youtube')
+								+item-sos('ok')
+					.col-lg-4.ms-lg-auto
+						+e.link-wrap
+							mixin link(text)
+								+e.link.btn.btn-outline-primary(href='#')
+									!= text
+									+icon('chevron-right')
+							+link('Все проекты')
+							+link('Текущие проекты')
+							+link('Завершенные проекты')
+							+link('Проекты по итогам съезда')
+						+e.interview
+							h4 Заголовок опроса
+							p Волонтеры могут принять участие в&nbsp;сборе, обработке и&nbsp;анализе данных, фотофиксации объектов культурного наследия, видов растений и&nbsp;животных, обучении искусственного интеллекта и&nbsp;многом другом.
+							+in-c('checkbox', 'Вариант ответа в&nbsp;одну строку')
+							+in-c('checkbox', 'Видов растений и&nbsp;животных, обучении искусственного')
+							+in-c('checkbox', 'Вариант ответа в одну строку')
+							+img('img/banner-bg-1.jpg').bg
+		+sProjects
+		+sDefaultSlider('Актуальные новости', '', '', 'true').sDefaultSlider--news
+			+e.cards-row.row
+				.col-sm-6.col-lg-4.col-xl-3
+					+sliderItem('news-img-4.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', '', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+				.col-sm-6.col-lg-4.col-xl-3
+					+sliderItem('news-img-2.jpg', 'Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?', '14.05.2022', '', 'Разработки', '', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+				.col-sm-6.col-lg-4.col-xl-3
+					+sliderItem('news-img-3.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', '', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+				.col-sm-6.col-lg-4.col-xl-3
+					+sliderItem('news-img-5.jpg', 'Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?', '14.05.2022', '', 'Разработки', '', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+				.col-sm-6.col-lg-4.col-xl-3
+					+sliderItem('news-img-6.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', '', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+				.col-sm-6.col-lg-4.col-xl-3
+					+sliderItem('news-img-1.jpg', 'Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?', '14.05.2022', '', 'Разработки', '', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+				.col-sm-6.col-lg-4.col-xl-3
+					+sliderItem('news-img-7.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', '', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+				.col-sm-6.col-lg-4.col-xl-3
+					+sliderItem('news-img-8.jpg', 'Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?', '14.05.2022', '', 'Разработки', '', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+				.col-12.text-center
+					+e.btn.btn.btn-outline-primary(href='#') Показать еще
+	+footer()
