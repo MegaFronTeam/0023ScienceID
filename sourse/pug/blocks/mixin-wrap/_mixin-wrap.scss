@@ -373,6 +373,9 @@
 					flex-grow: 0;
 				}
 			}
+			&__text {
+				flex-grow: 1;
+			}
 		}
 		&__text {
 			flex-grow: 1;
