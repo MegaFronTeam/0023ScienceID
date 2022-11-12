@@ -51,10 +51,14 @@
 		border-radius: 8px;
 		padding: rem(24);
 		.h6 {
+			display: block;
 			font-size: rem(16);
 			color: $primary;
 			font-weight: 600;
 			margin-bottom: rem(11);
+			&:hover {
+				color: #0096eb;
+			}
 		}
 		p {
 			font-size: rem(14);
@@ -84,7 +88,7 @@
 		--bs-gutter-x: #{rem(11)};
 		--bs-gutter-y: #{rem(8)};
 
-		margin-bottom: rem(11);
+		margin-bottom: rem(14);
 	}
 	&__tag {
 		font-size: 11px;
@@ -139,9 +143,16 @@
 		max-width: rem(158);
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: rem(32);
+		margin-top: rem(39.500);
 		@include media-breakpoint-up(xl) {
 			--bs-btn-font-size: #{rem(16)};
+		}
+	}
+	&__wrap {
+		--bs-gutter-y: #{rem(17.500)};
+		margin-top: calc(var(--bs-gutter-y) * -1);
+		& > * {
+			margin-top: var(--bs-gutter-y);
 		}
 	}
 	@include media-breakpoint-up(xl) {}
@@ -166,6 +177,7 @@
 		--bs-btn-padding-y: #{rem(9)};
     --bs-btn-font-size: #{rem(14)};
     --bs-btn-font-weight: 600;
+		--bs-btn-border-radius: 3px;
 		@include media-breakpoint-up(xl) {
 			--bs-btn-font-size: #{rem(14)};
 		}
