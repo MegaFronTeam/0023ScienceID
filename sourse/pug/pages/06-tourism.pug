@@ -62,12 +62,13 @@ block pagecontent
 											| скачать форму
 						+e.soc-wrap
 							p Поделиться в соц. сетях:
-							+soc()
-								+item-sos('vk')
-								+item-sos('facebook')
-								+item-sos('inst')
-								+item-sos('youtube')
-								+item-sos('ok')
+							.ya-share2(data-curtain='' data-shape='round' data-services='vkontakte,odnoklassniki')
+							//- +soc()
+							//- 	+item-sos('vk')
+							//- 	+item-sos('facebook')
+							//- 	+item-sos('inst')
+							//- 	+item-sos('youtube')
+							//- 	+item-sos('ok')
 					.col-lg-4.ms-lg-auto
 						+e.link-wrap
 							mixin link(text)
@@ -107,3 +108,5 @@ block pagecontent
 				.col-12.text-center
 					+e.btn.btn.btn-outline-primary(href='#') Показать еще
 	+footer()
+block scripts
+	<script src="https://yastatic.net/share2/share.js"></script>

@@ -24,7 +24,7 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+page-head('', '', '', 'true', 'Волонтерство')
+		+page-head('', '', '', '', 'Волонтерство')
 		.container
 			+banner("Научное волонтерство", 'Научное волонтерство&nbsp;&mdash; это уникальная возможность для каждого человека принять участие в&nbsp;настоящих научных исследованиях под руководством учёных и&nbsp;заглянуть в&nbsp;такой загадочный и&nbsp;сложный мир науки!', 'Развитие научного волонтерства&nbsp;&mdash; одна из&nbsp;инициатив', 'bg').--tourism
 		+sContent
@@ -46,10 +46,11 @@ block pagecontent
 						p Стать научным волонтером и&nbsp;внести свой вклад в&nbsp;исследовательскую работу может каждый!
 						+e.soc-wrap
 							p Поделиться в соц. сетях:
-							+soc()
-								+item-sos('vk')
-								+item-sos('tg')
-								+item-sos('ok')
+							.ya-share2(data-curtain='' data-shape='round' data-services='vkontakte,odnoklassniki')
+							//- +soc()
+							//- 	+item-sos('vk')
+							//- 	+item-sos('tg')
+							//- 	+item-sos('ok')
 					.col-lg-4.ms-lg-auto
 						+e.link-wrap
 							mixin link(text)
@@ -89,3 +90,5 @@ block pagecontent
 				.col-12.text-center
 					+e.btn.btn.btn-outline-primary(href='#') Показать еще
 	+footer()
+block scripts
+	<script src="https://yastatic.net/share2/share.js"></script>

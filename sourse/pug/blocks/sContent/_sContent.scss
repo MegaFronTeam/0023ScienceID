@@ -278,6 +278,17 @@
 		max-width: 100%;
 		height: auto;
 	}
+	.ya-share2 {
+		&__list {
+			margin-bottom: 0;
+		}
+		&__item {
+			margin-right: rem(16) !important;
+		}
+		&__badge {
+			background-color: $primary !important;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
