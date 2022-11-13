@@ -135,7 +135,7 @@
 
 .page-head {
 	padding-top: rem(16.500);
-	padding-bottom: rem(29);
+	padding-bottom: rem(26);
 	&__row {
 		--bs-gutter-y: #{rem(16)};
 
@@ -193,6 +193,9 @@
 		padding: 3px 8px;
 		font-size: 10px;
 		line-height: 1.5em;
+		height: auto;
+    display: flex;
+    align-items: center;
 		& + .breadcrumb-item {
 			margin-left: 4px;
 			&::before {

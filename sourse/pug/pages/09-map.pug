@@ -6,15 +6,14 @@ include ../blocks/top-nav/_top-nav.pug
  
 include ../blocks/footer/_footer.pug
 
-include ../blocks/sGroups/_sGroups.pug
 include ../blocks/sContent/_sContent.pug
 
 block variables
-	- let  mainPage= 'groups-page'
-	- let  bg= '11-groups.jpg'
+	- let  mainPage= ''
+	- let  bg= ''
 
 block title
-	- let  title= 'Группы'
+	- let  title= 'Карта СМУ и СНО'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -24,6 +23,5 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+page-head('Группы', '', '', '', 'Группы')
-		+sGroups
+		+page-head('Карта СМУ и СНО', '', '', '', 'Карта СМУ и СНО')
 	+footer()

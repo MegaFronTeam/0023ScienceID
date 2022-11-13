@@ -1,0 +1,108 @@
+mixin sNews(inRow)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		.container
+			.row
+				.col-lg-4.col-xl-3
+					+filter()
+						+e.head-search
+							+search('Найти новость')
+						+ddGroup()
+							+ddGroupItem('Даты от до', '', '', 'active')
+								+search()
+								+e.chekbox-wrap
+									+in-c('checkbox', 'АНО Цифровые технологии')
+									+in-c('checkbox', 'Рувентс')
+									+in-c('checkbox', 'Наименование')
+									+in-c('checkbox', 'НаукаСегодня')
+									+in-c('checkbox', 'РБК')
+									+in-c('checkbox', 'Сбер')
+									+in-c('checkbox', 'Альфа')
+									+in-c('checkbox', 'Ростелеком')
+									+in-c('checkbox', 'Название компании')
+									+in-c('checkbox', 'АНО Цифровые технологии')
+									+in-c('checkbox', 'Рувентс')
+									+in-c('checkbox', 'Наименование')
+									+in-c('checkbox', 'НаукаСегодня')
+									+in-c('checkbox', 'РБК')
+									+in-c('checkbox', 'Сбер')
+									+in-c('checkbox', 'Альфа')
+									+in-c('checkbox', 'Ростелеком')
+									+in-c('checkbox', 'Название компании')
+							+ddGroupItem('Вызовы', '', '', '')
+								+search()
+								+e.chekbox-wrap
+									+in-c('checkbox', 'АНО Цифровые технологии')
+									+in-c('checkbox', 'Рувентс')
+									+in-c('checkbox', 'Наименование')
+									+in-c('checkbox', 'НаукаСегодня')
+									+in-c('checkbox', 'РБК')
+									+in-c('checkbox', 'Сбер')
+									+in-c('checkbox', 'Альфа')
+									+in-c('checkbox', 'Ростелеком')
+									+in-c('checkbox', 'Название компании')
+									+in-c('checkbox', 'АНО Цифровые технологии')
+									+in-c('checkbox', 'Рувентс')
+									+in-c('checkbox', 'Наименование')
+									+in-c('checkbox', 'НаукаСегодня')
+									+in-c('checkbox', 'РБК')
+									+in-c('checkbox', 'Сбер')
+									+in-c('checkbox', 'Альфа')
+									+in-c('checkbox', 'Ростелеком')
+									+in-c('checkbox', 'Название компании')
+						+e.btns-row.row
+							.col-auto
+								+e.link.btn.btn-outline-primary(href="#") Все группы
+							.col-auto
+								+e.link.btn.btn-outline-primary(href="#") Продовольствие
+							.col-auto
+								+e.link.btn.btn-outline-primary(href="#") Природа
+							.col-auto
+								+e.link.btn.btn-outline-primary(href="#") Экономика
+							.col-auto
+								+e.link.btn.btn-outline-primary(href="#") Энергетика
+							.col-auto
+								+e.link.btn.btn-outline-primary(href="#") Пространство
+							.col-auto
+								+e.link.btn.btn-outline-primary(href="#") Безопасность
+							.col-auto
+								+e.link.btn.btn-outline-primary(href="#") Демография
+				.col-lg-8.col-xl-9
+					+e.row.row
+						if inRow
+							.col-s12
+								+sliderItem('news-img-3.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant.--in-row
+							.col-12
+								+sliderItem('news-img-2.jpg', 'Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant.--in-row
+							.col-12
+								+sliderItem('news-img-1.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant.--in-row
+							.col-12
+								+sliderItem('news-img-2.jpg', 'Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant.--in-row
+							.col-12
+								+sliderItem('news-img-1.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant.--in-row
+							.col-12
+								+sliderItem('news-img-3.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant.--in-row
+							.col-12
+								+sliderItem('news-img-1.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant.--in-row
+						else
+							.col-sm-6.col-xl-4
+								+sliderItem('news-img-3.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+							.col-sm-6.col-xl-4
+								+sliderItem('news-img-2.jpg', 'Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+							.col-sm-6.col-xl-4
+								+sliderItem('news-img-1.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+							.col-sm-6.col-xl-4
+								+sliderItem('news-img-2.jpg', 'Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+							.col-sm-6.col-xl-4
+								+sliderItem('news-img-1.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+							.col-sm-6.col-xl-4
+								+sliderItem('news-img-3.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+							.col-sm-6.col-xl-4
+								+sliderItem('news-img-1.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+							.col-sm-6.col-xl-4
+								+sliderItem('news-img-3.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+							.col-sm-6.col-xl-4
+								+sliderItem('news-img-2.jpg', 'Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
+						.col-12.text-center
+							+e.show.btn.btn-outline-primary(href="#") Показать еще
+	// end sNews

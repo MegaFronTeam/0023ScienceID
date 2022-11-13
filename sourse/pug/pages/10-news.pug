@@ -6,15 +6,15 @@ include ../blocks/top-nav/_top-nav.pug
  
 include ../blocks/footer/_footer.pug
 
-include ../blocks/sGroups/_sGroups.pug
+include ../blocks/sNews/_sNews.pug
 include ../blocks/sContent/_sContent.pug
 
 block variables
-	- let  mainPage= 'groups-page'
+	- let  mainPage= 'news-page'
 	- let  bg= '11-groups.jpg'
 
 block title
-	- let  title= 'Группы'
+	- let  title= 'Новости'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -24,6 +24,6 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+page-head('Группы', '', '', '', 'Группы')
-		+sGroups
+		+page-head('Новости', '', 'true', '', 'Новости')
+		+sNews
 	+footer()
