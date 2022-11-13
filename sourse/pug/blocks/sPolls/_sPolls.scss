@@ -80,6 +80,9 @@
 			z-index: -1;
 			pointer-events: none;
 			opacity: .5;
+			width: 100%;
+			max-width: rem(864);
+			max-height: rem(354);
 			@include media-breakpoint-up(md) {
 				opacity: 1;
 			}
