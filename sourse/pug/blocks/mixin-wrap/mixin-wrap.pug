@@ -186,3 +186,20 @@ mixin banner(title, text, subtext, bg)
 			img(src='img/sBanners-img-5.png' alt='').img.img--2
 		else
 			+img('img/banner-img-1.png').img
+
+mixin callBack(title, subtext, customClass)
+	+b.call-back
+		+b.section-title
+			h4!= title
+			if subtext
+				p!= subtext
+		+form-wrap
+			+e.row.row
+				div(class=customClass)
+					+input('Text', 'text', `Ваше ФИО`, 'text', true)(required)
+				div(class=customClass)
+					+input('Text', 'email', 'E-mail', 'email', true)(required)
+				.col-12
+					+input('Text', 'textarea', 'Ваш вопрос', 'textarea', true)(required)
+			+e.btn.btn.btn-primary(type='submit') Отправить
+			+policy

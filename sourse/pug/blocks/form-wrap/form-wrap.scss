@@ -2,19 +2,50 @@
  	&__input-wrap{
 			// @extend .form-group;
 			
-		}
-		&__input{
-			// @extend .form-control;
-		//  outline: 0 !important;
-		 resize: none;
+	}
+	&__input{
+		// @extend .form-control;
+	//  outline: 0 !important;
+		resize: none;
  	}
+	&__input-title {
+		font-size: rem(14);
+		line-height: 1.5em;
+		margin-bottom: 4px;
+		color: $gray-800;
+		.star {
+			color: #EB3333;
+			font-size: rem(12);
+		}
+	}
+	&__row {
+		--bs-gutter-x: #{rem(16)};
+		--bs-gutter-y: #{rem(16)};
+	}
  	&__btn{
- 		cursor: pointer;
+		--bs-btn-padding-x: #{rem(24)};
+    --bs-btn-padding-y: #{rem(15)};
+		--bs-btn-font-size: #{rem(16)};
+    --bs-btn-font-weight: 700;
+		
+		width: 100%;
+		cursor: pointer;
+		@include media-breakpoint-up(xl) {
+			--bs-btn-font-size: #{rem(16)};
+		}
  	}
  	label{
  		width: 100%;
  		display: block;
  	}
+	&__policy {
+		font-size: 11px;
+		line-height: 1.5em;
+		color: #535353;
+	}
+	textarea {
+		min-height: rem(159);
+	}
 }
 
 

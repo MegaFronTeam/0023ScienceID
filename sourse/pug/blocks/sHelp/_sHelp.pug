@@ -1,0 +1,59 @@
+mixin sHelp(data)
+	// start sHelp
+	+b.SECTION.sHelp.section#sHelp&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-8.col-xl-7
+					+e.wrap
+						h3 Профиль
+						+ddGroup()
+							mixin content()
+								p.mb-24 1. Находим пункт &laquo;Управление мероприятиями&raquo;.
+								+img('img/sHelp-img-1.png').mb-24.res-i.img
+								p 2. Нажимаем &laquo;#[a(href="#") Создать мероприятие]&raquo;.
+								p.mb-24 3. Заполняем все поля, пишем ключевые слова. Затем нажимаем &laquo;Сохранить&raquo;. Вы&nbsp;должны увидеть такое сообщение.
+								+img('img/sHelp-img-2.png').mb-24.res-i
+								p 4. Мероприятие становится доступным после модерации в&nbsp;течение 24&nbsp;часов
+							+ddGroupItem('Регистрация аккаунта в качестве пользователя')
+								+content()
+							+ddGroupItem('Объединить профили')
+								+content()
+							+ddGroupItem('Скрыть информацию из профиля')
+								+content()
+							+ddGroupItem('Отписаться от рассылок')
+								+content()
+					+e.wrap
+						h3 Мероприятия
+						+ddGroup()
+							mixin content()
+								p.mb-24 1. Находим пункт &laquo;Управление мероприятиями&raquo;.
+								+img('img/sHelp-img-1.png').mb-24.res-i.img
+								p 2. Нажимаем &laquo;#[a(href="#") Создать мероприятие]&raquo;.
+								p.mb-24 3. Заполняем все поля, пишем ключевые слова. Затем нажимаем &laquo;Сохранить&raquo;. Вы&nbsp;должны увидеть такое сообщение.
+								+img('img/sHelp-img-2.png').mb-24.res-i
+								p 4. Мероприятие становится доступным после модерации в&nbsp;течение 24&nbsp;часов
+							+ddGroupItem('Создание мероприятия', '', '', 'active')
+								+content()
+							+ddGroupItem('Управление мероприятием')
+								+content()
+							+ddGroupItem('Совместный доступ к редактированию мероприятия')
+								+content()
+					+e.wrap
+						h3 Организация
+						+ddGroup()
+							mixin content()
+								p.mb-24 1. Находим пункт &laquo;Управление мероприятиями&raquo;.
+								+img('img/sHelp-img-1.png').mb-24.res-i.img
+								p 2. Нажимаем &laquo;#[a(href="#") Создать мероприятие]&raquo;.
+								p.mb-24 3. Заполняем все поля, пишем ключевые слова. Затем нажимаем &laquo;Сохранить&raquo;. Вы&nbsp;должны увидеть такое сообщение.
+								+img('img/sHelp-img-2.png').mb-24.res-i
+								p 4. Мероприятие становится доступным после модерации в&nbsp;течение 24&nbsp;часов
+							+ddGroupItem('Личный кабинет организации')
+								+content()
+							+ddGroupItem('Создание вакансии')
+								+content()
+							+ddGroupItem('Работа с соискателями')
+								+content()
+				.col-lg-4.ms-lg-auto
+					+callBack('Остались вопросы?', 'Напишите нам и мы ответим на них', 'col-12')
+	// end sHelp

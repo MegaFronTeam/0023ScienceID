@@ -2,8 +2,18 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
 			+e.row.row
+				.col-lg-6
+					+e.head
+						p Уважаемые Коллеги, мы&nbsp;рады будем услышать от&nbsp;Вас обратную связь о&nbsp;работе платформы, а&nbsp;также готовы рассмотреть любые предложения и&nbsp;замечания.
+						+e.link
+							span Наш телефон в Москве:
+							a(href="tel:+74951447437") +7 (495) 144 74 37
+					+e.bottom
+						h5 Обращаем Ваше внимание, что платформа находится в&nbsp;стадии разработки, в&nbsp;связи с&nbsp;чем могут наблюдаться сбои в&nbsp;работе. Сервисы и&nbsp;блоки, включая визуальные решения по&nbsp;отображению информации, будут дорабатываться и&nbsp;формироваться в&nbsp;течении всего срока разработки платформы
+						+e.email
+							span По техническим вопросам пишите:
+							a(href="mailto:support@scienceid.net") support@scienceid.net
+				.col-lg-6
+					+callBack('Форма обратной связи', '', 'col-6')
 	// end sContact

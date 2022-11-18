@@ -3,7 +3,7 @@ mixin form-head()
 		input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
 		block
 
-mixin input(placeholder,  t='text', label, name= t)
+mixin input(placeholder,  t='text', label, name= t, star)
 	mixin t(t='text',placeholder, name= t)
 		if t== "textarea"
 			+e.TEXTAREA.input.form-control(name=name placeholder=placeholder)
@@ -25,6 +25,8 @@ mixin input(placeholder,  t='text', label, name= t)
 		if label
 			label
 				+e.SPAN.input-title= label
+					if star
+						span.star &nbsp;*
 				+t(t,placeholder, name)&attributes(attributes)
 				block
 		else
@@ -74,6 +76,5 @@ mixin add-file(n)
 
 
 mixin policy()
-	+e.policy
-		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+	+e.policy Отправляя форму я даю согласие на обработку персональных данных, в соответствии с пунктом 3 статьи 3 
+		a(href="#") Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»

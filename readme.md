@@ -19,4 +19,7 @@
 17. <https://megafronteam.github.io/0023ScienceID/public/10-news-2.html>
 18. <https://megafronteam.github.io/0023ScienceID/public/11-groups.html>
 19. 
-18. <https://megafronteam.github.io/0023ScienceID/public/13-polls.html>
+20. <https://megafronteam.github.io/0023ScienceID/public/13-polls.html>
+21. <https://megafronteam.github.io/0023ScienceID/public/14-about.html>
+22. <https://megafronteam.github.io/0023ScienceID/public/15-help.html>
+23. <https://megafronteam.github.io/0023ScienceID/public/16-contacts.html>
