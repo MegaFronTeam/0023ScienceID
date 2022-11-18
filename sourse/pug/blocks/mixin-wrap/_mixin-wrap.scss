@@ -1014,3 +1014,49 @@
 		}
 	}
 }
+
+.upload-field {
+	&__title {
+		position: relative;
+		top: unset;
+		padding-bottom: rem(16);
+		margin-bottom: 0;
+	}
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		--bs-gutter-y: #{rem(16)};
+		margin-top: calc(var(--bs-gutter-y) * -1);
+		& > * {
+			margin-top: var(--bs-gutter-y);
+		}
+		@include media-breakpoint-up(md) {
+			flex-direction: row;
+			align-items: center;
+		}
+	}
+	&__btn {
+		--bs-btn-padding-x: #{rem(24)};
+    --bs-btn-padding-y: #{rem(15)};
+		--bs-btn-font-size: #{rem(16)};
+    --bs-btn-font-weight: 700;
+		--bs-btn-color: #{$primary};
+    --bs-btn-bg: rgba(67, 150, 247, 0.2);
+    --bs-btn-border-color: transparent;
+		@include media-breakpoint-up(xl) {
+			--bs-btn-font-size: #{rem(16)};
+		}
+	}
+	&__input-wrap {
+		@include media-breakpoint-up(md) {
+			margin-right: rem(20);
+		}
+	}
+	&__file-name {
+		line-height: calc(20 / 16);
+	}
+}
+.input-upload {
+	display: none;
+}

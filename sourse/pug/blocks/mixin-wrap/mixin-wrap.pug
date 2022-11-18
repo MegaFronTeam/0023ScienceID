@@ -187,7 +187,7 @@ mixin banner(title, text, subtext, bg)
 		else
 			+img('img/banner-img-1.png').img
 
-mixin callBack(title, subtext, customClass)
+mixin callBack(title, subtext, customClass, isUploadField)
 	+b.call-back
 		+b.section-title
 			h4!= title
@@ -201,5 +201,18 @@ mixin callBack(title, subtext, customClass)
 					+input('Text', 'email', 'E-mail', 'email', true)(required)
 				.col-12
 					+input('Text', 'textarea', 'Ваш вопрос', 'textarea', true)(required)
+				if isUploadField
+					.col-12
+						+upload-field('Прикрепить файл')
 			+e.btn.btn.btn-primary(type='submit') Отправить
 			+policy
+
+mixin upload-field(title)
+	+b.upload-field
+		+e.title.form-wrap__input-title!=title
+		+e.wrap
+			+e.input-wrap
+				+e.LABEL.btn.btn.btn-primary
+					input.input-upload(type='file' name='file')
+					span Выбрать файл
+			+e.file-name Название файла.pdf

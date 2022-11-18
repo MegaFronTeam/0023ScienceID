@@ -3,7 +3,7 @@ mixin sContact()
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
 			+e.row.row
-				.col-lg-6
+				.col-lg-6.order-2.order-lg-1
 					+e.head
 						p Уважаемые Коллеги, мы&nbsp;рады будем услышать от&nbsp;Вас обратную связь о&nbsp;работе платформы, а&nbsp;также готовы рассмотреть любые предложения и&nbsp;замечания.
 						+e.link
@@ -14,6 +14,6 @@ mixin sContact()
 						+e.email
 							span По техническим вопросам пишите:
 							a(href="mailto:support@scienceid.net") support@scienceid.net
-				.col-lg-6
+				.col-lg-6.order-1.order-lg-2
 					+callBack('Форма обратной связи', '', 'col-6')
 	// end sContact

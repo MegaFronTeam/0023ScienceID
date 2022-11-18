@@ -18,6 +18,9 @@
 			margin-bottom: rem(35);
 		}
 	}
+	&__row {
+		--bs-gutter-y: #{rem(24)};
+	}
 	.dd-group {
 		&__item {
 			@include mt;
