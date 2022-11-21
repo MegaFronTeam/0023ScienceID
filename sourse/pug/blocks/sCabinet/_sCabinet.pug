@@ -1,0 +1,170 @@
+mixin sCabinetItem(subtitle, title, text)
+	+b.sCabinet-item&attributes(attributes)
+		+e.subtitle!= subtitle
+		+e.title(href="#")!= title
+		+e.text!= text
+
+mixin sCabinet(data)
+	// start sCabinet
+	+b.SECTION.sCabinet.section#sCabinet&attributes(attributes)
+		.container
+			+e.head-row.row
+				.col-xxl-9
+					+e.about
+						+e.about-row.row
+							.col-md-auto
+								+e.img-wrap
+									+img('img/avatar-1.jpg').res-i
+							.col-md
+								+e.about-content
+									+e.label-row.row
+										.col-auto
+											+e.label--id ID 18118-100010
+										.col-auto
+											+e.label 32 года
+										.col-auto.ms-sm-auto
+											+e.edit(href="#")
+												+icon('pencil')
+												| Редактировать профиль
+									+e.label-row.row
+										.col-auto
+											+e.label--outline.--fill Демография
+										.col-auto
+											+e.label--outline Кандидат физико-математических наук
+										.col-auto
+											+e.label--outline Кандидат военных наук
+									h1.h4 Владиславский Александр Викторович
+									p Федеральное государственное бюджетное учреждение "Национальный исследовательский центр "Курчатовский институт"  •  И.о. руководителя Курчатовского комплекса синхротронно-нейтронных исследований
+									+e.statistic-row.row
+										.col-lg-6
+											+e.about-title Количество публикаций
+											ul
+												li 
+													span РИНЦ
+													+e.num 140
+												li 
+													span WoS
+													+e.num 5
+												li 
+													span Scopus
+													+e.num 20
+										.col-lg-6
+											+e.about-title Индекс Хирша
+											ul
+												li 
+													span РИНЦ
+													+e.num 140
+												li 
+													span WoS
+													+e.num 5
+												li 
+													span Scopus
+													+e.num 20
+				.col-xxl-3
+					+e.data
+						+e.data-item
+							+e.data-name ORCID
+							+e.data-info 32555-8863
+							+e.edit(href='#')
+								+icon('pencil')
+						+e.data-item
+							+e.data-name ScopusAuthorID
+							+e.data-info--empty Нет данных
+							+e.edit(href='#')
+								+icon('pencil')
+						+e.data-item
+							+e.data-name ORCID
+							+e.data-info--empty Нет данных
+							+e.edit(href='#')
+								+icon('pencil')
+						+e.data-item
+							+e.data-name ResearcherID
+							+e.data-info 32555-8863
+							+e.edit(href='#')
+								+icon('pencil')
+						+e.data-item
+							+e.data-name ФИПС
+							+e.data-link(href='#') Обновить
+						+e.data-item
+							+e.data-name НИОКТР
+							+e.data-link(href='#') Обновить
+			+e.body-row.row
+				.col-lg-8
+					+e.publications
+						.h5 Публикации
+						.tabs
+							.tabs__caption
+								.tabs__btn.active Все
+								.tabs__btn Ринц
+							.tabs__content.active
+								+sCabinetItem('2020', 'МОДЕЛИРОВАНИЕ КАРТ ОБРАТНОГО ПРОСТРАНСТВА С&nbsp;ИСПОЛЬЗОВАНИЕМ СПЕКТРАЛЬНО-УГЛОВЫХ ДИАГРАММ В&nbsp;ТРЕХКРИСТАЛЬНОЙ СХЕМЕ РЕНТГЕНОВСКОЙ ДИФРАКЦИИ', 'Аткнин И.И., Марченков Н.В., Куликов А.Г., Благов А.Е., Ковальчук М.В. МОДЕЛИРОВАНИЕ КАРТ ОБРАТНОГО ПРОСТРАНСТВА С&nbsp;ИСПОЛЬЗОВАНИЕМ СПЕКТРАЛЬНО-УГЛОВЫХ ДИАГРАММ В&nbsp;ТРЕХКРИСТАЛЬНОЙ СХЕМЕ РЕНТГЕНОВСКОЙ ДИФРАКЦИИ. Журнал экспериментальной и&nbsp;теоретической физики.&nbsp;2020. Т. 157. &#8470;&nbsp;1. С. 12-19')
+								+sCabinetItem('2020', 'Time-resolved X-ray reciprocal space mapping of&nbsp;a&nbsp;crystal in&nbsp;an&nbsp;external electric field', 'Marchenkov N.V., Kulikov A.G., Atknin I.I., Petrenko A.A., Blagov A.E., Kovalchuk M.V. Time-resolved X-ray reciprocal space mapping of&nbsp;a&nbsp;crystal in&nbsp;an&nbsp;external electric field. Physics-Uspekhi.&nbsp;2019. Т. 62. &#8470;&nbsp;2. С. 179-185')
+								+sCabinetItem('2020', 'LiNbO 3 -based bimorph piezoactuator for fast X-ray experiments: Static and quasistatic modes', 'Kulikov&nbsp;A., Blagov&nbsp;A., Marchenkov&nbsp;N., Targonsky&nbsp;A., Eliovich&nbsp;Y., Pisarevsky&nbsp;Y., Kovalchuk M. LiNbO 3 -based bimorph piezoactuator for fast X-ray experiments: Static and quasistatic modes. Sensors and Actuators A: Physical.&nbsp;2019. Т. 291. С. 68-74')
+								+e.show-more(href='#') Еще 10 публикаций
+							.tabs__content
+								+sCabinetItem('2020', 'LiNbO 3 -based bimorph piezoactuator for fast X-ray experiments: Static and quasistatic modes', 'Kulikov&nbsp;A., Blagov&nbsp;A., Marchenkov&nbsp;N., Targonsky&nbsp;A., Eliovich&nbsp;Y., Pisarevsky&nbsp;Y., Kovalchuk M. LiNbO 3 -based bimorph piezoactuator for fast X-ray experiments: Static and quasistatic modes. Sensors and Actuators A: Physical.&nbsp;2019. Т. 291. С. 68-74')
+								+sCabinetItem('2020', 'Time-resolved X-ray reciprocal space mapping of&nbsp;a&nbsp;crystal in&nbsp;an&nbsp;external electric field', 'Marchenkov N.V., Kulikov A.G., Atknin I.I., Petrenko A.A., Blagov A.E., Kovalchuk M.V. Time-resolved X-ray reciprocal space mapping of&nbsp;a&nbsp;crystal in&nbsp;an&nbsp;external electric field. Physics-Uspekhi.&nbsp;2019. Т. 62. &#8470;&nbsp;2. С. 179-185')
+								+sCabinetItem('2020', 'МОДЕЛИРОВАНИЕ КАРТ ОБРАТНОГО ПРОСТРАНСТВА С&nbsp;ИСПОЛЬЗОВАНИЕМ СПЕКТРАЛЬНО-УГЛОВЫХ ДИАГРАММ В&nbsp;ТРЕХКРИСТАЛЬНОЙ СХЕМЕ РЕНТГЕНОВСКОЙ ДИФРАКЦИИ', 'Аткнин И.И., Марченков Н.В., Куликов А.Г., Благов А.Е., Ковальчук М.В. МОДЕЛИРОВАНИЕ КАРТ ОБРАТНОГО ПРОСТРАНСТВА С&nbsp;ИСПОЛЬЗОВАНИЕМ СПЕКТРАЛЬНО-УГЛОВЫХ ДИАГРАММ В&nbsp;ТРЕХКРИСТАЛЬНОЙ СХЕМЕ РЕНТГЕНОВСКОЙ ДИФРАКЦИИ. Журнал экспериментальной и&nbsp;теоретической физики.&nbsp;2020. Т. 157. &#8470;&nbsp;1. С. 12-19')
+								+e.show-more(href='#') Еще 10 публикаций
+					+e.participation
+						.h5 Публикации
+						.tabs
+							.tabs__caption
+								.tabs__btn.active Все
+								.tabs__btn РФФИ5
+							.tabs__content.active
+								+e.slider--js.swiper
+									.swiper-wrapper
+										+sCabinetItem('РФФИ 5', '15-33-50724', 'В&nbsp;рамках проведения Десятилетия науки и&nbsp;технологий в&nbsp;России в&nbsp;2022 году в&nbsp;Ямало-Ненецком автономном округе и&nbsp;Камчатском крае пройдут мероприятия&nbsp;&mdash; спутники Конгресса молодых ученых.').--slide.swiper-slide
+										+sCabinetItem('РФФИ 5', '15-33-50724', 'В&nbsp;рамках проведения Десятилетия науки и&nbsp;технологий в&nbsp;России в&nbsp;2022 году в&nbsp;Ямало-Ненецком автономном округе и&nbsp;Камчатском крае пройдут мероприятия&nbsp;&mdash; спутники Конгресса молодых ученых.').--slide.swiper-slide
+										+sCabinetItem('РФФИ 5', '15-33-50724', 'В&nbsp;рамках проведения Десятилетия науки и&nbsp;технологий в&nbsp;России в&nbsp;2022 году в&nbsp;Ямало-Ненецком автономном округе и&nbsp;Камчатском крае пройдут мероприятия&nbsp;&mdash; спутники Конгресса молодых ученых.').--slide.swiper-slide
+										+sCabinetItem('РФФИ 5', '15-33-50724', 'В&nbsp;рамках проведения Десятилетия науки и&nbsp;технологий в&nbsp;России в&nbsp;2022 году в&nbsp;Ямало-Ненецком автономном округе и&nbsp;Камчатском крае пройдут мероприятия&nbsp;&mdash; спутники Конгресса молодых ученых.').--slide.swiper-slide
+										+sCabinetItem('РФФИ 5', '15-33-50724', 'В&nbsp;рамках проведения Десятилетия науки и&nbsp;технологий в&nbsp;России в&nbsp;2022 году в&nbsp;Ямало-Ненецком автономном округе и&nbsp;Камчатском крае пройдут мероприятия&nbsp;&mdash; спутники Конгресса молодых ученых.').--slide.swiper-slide
+								+e.show-more(href='#') Смотреть все
+							.tabs__content
+								+e.slider--js.swiper
+									.swiper-wrapper
+										+sCabinetItem('РФФИ 5', '15-33-50724', 'В&nbsp;рамках проведения Десятилетия науки и&nbsp;технологий в&nbsp;России в&nbsp;2022 году в&nbsp;Ямало-Ненецком автономном округе и&nbsp;Камчатском крае пройдут мероприятия&nbsp;&mdash; спутники Конгресса молодых ученых.').--slide.swiper-slide
+										+sCabinetItem('РФФИ 5', '15-33-50724', 'В&nbsp;рамках проведения Десятилетия науки и&nbsp;технологий в&nbsp;России в&nbsp;2022 году в&nbsp;Ямало-Ненецком автономном округе и&nbsp;Камчатском крае пройдут мероприятия&nbsp;&mdash; спутники Конгресса молодых ученых.').--slide.swiper-slide
+										+sCabinetItem('РФФИ 5', '15-33-50724', 'В&nbsp;рамках проведения Десятилетия науки и&nbsp;технологий в&nbsp;России в&nbsp;2022 году в&nbsp;Ямало-Ненецком автономном округе и&nbsp;Камчатском крае пройдут мероприятия&nbsp;&mdash; спутники Конгресса молодых ученых.').--slide.swiper-slide
+										+sCabinetItem('РФФИ 5', '15-33-50724', 'В&nbsp;рамках проведения Десятилетия науки и&nbsp;технологий в&nbsp;России в&nbsp;2022 году в&nbsp;Ямало-Ненецком автономном округе и&nbsp;Камчатском крае пройдут мероприятия&nbsp;&mdash; спутники Конгресса молодых ученых.').--slide.swiper-slide
+										+sCabinetItem('РФФИ 5', '15-33-50724', 'В&nbsp;рамках проведения Десятилетия науки и&nbsp;технологий в&nbsp;России в&nbsp;2022 году в&nbsp;Ямало-Ненецком автономном округе и&nbsp;Камчатском крае пройдут мероприятия&nbsp;&mdash; спутники Конгресса молодых ученых.').--slide.swiper-slide
+								+e.show-more(href='#') Смотреть все
+					+e.patents
+						.h5 Патенты
+						.text-center
+							+e.patent-title У вас еще нет добавленных патентов
+							+e.patent-text Оставьте свой цифровой след
+							+e.patent-btn.btn.btn-primary(href='#') Добавить патент
+				.col-lg-4
+					mixin infoItem(title, label, text, subtext, link)
+						+e.info
+							.row
+								.col
+									.h5!= title
+								.col-auto
+									+e.info-link(href='#'): +icon('pencil')
+							if label || text || subtext
+								+e.label--info!= label
+								+e.info-text!= text
+								+e.info-subtext!= subtext
+							else 
+								block
+							+e.info-show-more(href="#")!= link
+					+e.info-wrap
+						+infoItem('Место работы', 'Июль 2021&nbsp;&mdash; по&nbsp;настоящее время', 'Федеральное государственное бюджетное учреждение &laquo;Национальный исследовательский центр &laquo;Курчатовский институт&raquo;', 'и.о. руководителя Курчатовского комплекса синхротронно-нейтронных исследований', 'Еще 1&nbsp;запись об&nbsp;месте работы')
+						+infoItem('Образование', 'Июль 2018&nbsp;&mdash; Август 2022', 'Национальный исследовательский ядерный университет &laquo;МИФИ&raquo;', 'факультет экспериментальной и&nbsp;теоретической физики', 'Еще 1&nbsp;запись об&nbsp;образовании')
+						+infoItem('Область знаний', '', '', '', 'Еще 10 областей знаний')
+							+e.info-event
+								+e.label--info 29.03.45
+								| Обработка данных физического эксперимента
+							+e.info-event
+								+e.label--info 29.03.45
+								| Структура твердых тел
+							+e.info-event
+								+e.label--info 29.03.45
+								| Диэлектрики
+							+e.info-event
+								+e.label--info 29.03.45
+								| Структура твердых тел
+	// end sCabinet

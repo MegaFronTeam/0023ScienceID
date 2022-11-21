@@ -308,7 +308,7 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -512,6 +512,10 @@ function eventHandler() {
 	}
 	inputFile();
 
+	const sCabinetSwiper = new Swiper('.sCabinet__slider--js', {
+		slidesPerView: 'auto',
+		observer: true,
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

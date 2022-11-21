@@ -277,11 +277,11 @@ ul {
 	}
 
 	&__content {
-		opacity: 0;
-		@include mt;
+		// opacity: 0;
+		// @include mt;
 		&.active {
 			display: block;
-			opacity: 1;
+			// opacity: 1;
 		}
 
 		display: none;
@@ -635,5 +635,19 @@ iframe {
 		.breadcrumb {
 			margin-bottom: 0 !important;
 		}
+	}
+}
+
+.cabinet-page {
+	.logo {
+		@include media-breakpoint-down(sm) {
+			.img {
+				display: none;
+			}
+		}
+	}
+	.page-head {
+		padding-bottom: 0;
+		background-color: $gray-100;
 	}
 }

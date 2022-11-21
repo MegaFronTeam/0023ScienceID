@@ -18,7 +18,9 @@
 		display: flex;
 		align-items: center;
 		@include roww('16px', 'm');
-
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-x: 7px;
+		}
 	}
 	&__link {
 		font-size: rem(16);
@@ -77,6 +79,59 @@
 				max-width: 55px;
 			}
 		}
+	}
+	&__messenger-btn {
+		--bs-btn-color: #{$primary};
+    --bs-btn-bg: rgba(67, 150, 247, 0.2);
+    --bs-btn-border-color: transparent;
+		--bs-btn-padding-x: #{rem(12)};
+    --bs-btn-padding-y: #{rem(12)};
+		--bs-btn-line-height: 1;
+		--bs-btn-font-size: 0;
+
+		position: relative;
+		@include media-breakpoint-up(xl) {
+			--bs-btn-font-size: 0;
+		}
+		.icon {
+			font-size: rem(16);
+		}
+	}
+	&__num {
+		position: absolute;
+		background-color: #F74343;
+		color: #fff;
+		border-radius: 5px;
+		font-size: 10px;
+		font-weight: 700;
+		line-height: 1;
+		padding: 3px 3px 3px 3px;
+    right: -7px;
+    top: -2px;
+	}
+	&__cabinet-btn {
+		display: flex;
+		align-items: center;
+		--bs-btn-color: #{$primary};
+    --bs-btn-bg: rgba(67, 150, 247, 0.2);
+    --bs-btn-border-color: transparent;
+		--bs-btn-line-height: 1;
+
+		padding: 3px 6px 3px 3px;
+		.icon {
+			flex: 0 0 auto;
+			font-size: rem(16);
+			stroke: currentColor;
+			stroke-width: 2px;
+			fill: none;
+		}
+	}
+	&__img-wrap {
+		max-width: rem(34);
+		border-radius: 8px;
+		overflow: hidden;
+		flex: 0 0 auto;
+		margin-right: 6px;
 	}
 	@include media-breakpoint-up(md) {}
 

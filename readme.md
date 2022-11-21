@@ -23,3 +23,6 @@
 21. <https://megafronteam.github.io/0023ScienceID/public/14-about.html>
 22. <https://megafronteam.github.io/0023ScienceID/public/15-help.html>
 23. <https://megafronteam.github.io/0023ScienceID/public/16-contacts.html>
+
+### Личный кабинет
+24. <https://megafronteam.github.io/0023ScienceID/public/17-cabinet.html>

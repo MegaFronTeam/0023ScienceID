@@ -19,7 +19,7 @@ mixin mob-mnu()
 			+e.link(href='#').text-center Войти
 			+e.btn.btn.btn-primary(href='#').text-center Регистрация
 	//  мобильное меню
-mixin top-nav() 
+mixin top-nav(isCabinet) 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
@@ -35,8 +35,18 @@ mixin top-nav()
 				.col-auto.d-xl-none.order-last
 					+menu-toggle()
 				.col-auto.ms-auto
-					+e.wrap
-						+e.link(href='#').d-none.d-xl-block Войти
-						+e.btn.btn.btn-primary(href='#').d-none.d-xl-block Регистрация
-						//- +e.search.btn.btn-primary(href='#'): +icon('search')
+					if isCabinet
+						+e.wrap
+							+e.messenger-btn.btn.btn-primary(href="#")
+								+e.num 123
+								+icon('messenger')
+							+e.cabinet-btn.btn.btn-primary(href="#")
+								+e.img-wrap
+									+img('img/avatar-1.jpg').res-i
+								+icon('chevron-down')
+					else
+						+e.wrap
+							+e.link(href='#').d-none.d-xl-block Войти
+							+e.btn.btn.btn-primary(href='#').d-none.d-xl-block Регистрация
+							//- +e.search.btn.btn-primary(href='#'): +icon('search')
 	// end top-nav
