@@ -233,21 +233,45 @@
 			</footer>
 		</div>
 		<!--  start modals-->
-		<div id="modal-call" style="display: none">
-			<div class="modal-win">
+		<div id="modal-signIn" style="display: none">
+			<div class="modal-win modal-win--sign-in">
 				<div class="form-wrap">
 					<form>
-						<div class="text-center">
-							<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+						<div class="form-wrap__row row">
+							<div class="col-12">
+								<div class="form-wrap__title form-data h4">Войти на сайт
+								</div>
 							</div>
-							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
-						</div>
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
-						</div>
-						<!-- +e.input-wrap-->
-						<button class="form-wrap__btn btn" type="submit"> 
-						</button>
-						<div class="form-wrap__policy">Отправляя форму я даю согласие на обработку персональных данных, в соответствии с пунктом 3 статьи 3 <a href="#">Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»</a>
+							<div class="col-12">
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Ваш логин<span class="star">&nbsp;*</span></span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Text" required="required"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-12">
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Пароль<span class="star">&nbsp;*</span></span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Text" required="required"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-lg-6">
+								<button class="form-wrap__btn btn btn-primary" type="submit"> Войти
+								</button>
+							</div>
+							<div class="col-lg-6 text-center">
+								<a class="form-wrap__forget-btn btn" href="#"> Забыли пароль?
+								</a>
+							</div>
+							<div class="col-lg-12">
+								<a class="form-wrap__btn btn btn-outline-primary" href="#">Войти через Leader-ID
+								</a>
+							</div>
+							<div class="col-lg-12">
+								<a class="form-wrap__btn form-wrap__btn--secondary btn btn-primary" href="#">Зарегистрироваться
+								</a>
+							</div>
 						</div>
 					</form>
 				</div>

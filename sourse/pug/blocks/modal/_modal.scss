@@ -13,7 +13,7 @@
 	position: relative;
 	width: rem(1500);
 	// min-height: 100%; 
-	padding: 40px;
+	padding: rem(32);
 
 	.modal-content {
 		// max-width: 485px;
@@ -24,6 +24,62 @@
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
+	}
+	&--sign-in {
+		width: rem(480);
+	}
+	.form-wrap {
+		&__row {
+			--bs-gutter-x: #{rem(16)};
+			--bs-gutter-y: #{rem(24)};
+
+			align-items: center;
+		}
+		&__title {
+			padding-right: rem(30);
+			margin-bottom: 0;
+		}
+		&__input {
+			padding: rem(11.75) rem(12);
+		}
+		&__forget-btn {
+			--bs-btn-font-size: #{rem(16)};
+			--bs-btn-font-weight: 700;
+			--bs-btn-color: #{$primary};
+			--bs-btn-hover-color: #1561ba;
+			--bs-btn-active-color: #1561ba;
+
+			@include media-breakpoint-up(xl) {
+				--bs-btn-font-size: 0.9999999995rem;
+			}
+		}
+		&__btn {
+			&--secondary {
+				--bs-btn-color: #{$primary};
+				--bs-btn-bg: rgba(67, 150, 247, 0.2);
+				--bs-btn-border-color: transparent;
+			}
+		}
+	}
+}
+
+.fancybox__content>.carousel__button.is-close {
+	@include mt;
+	--fancybox-color: #BBBBBB;
+	--carousel-button-width: #{rem(28)};
+	--carousel-button-height: #{rem(28)};
+	--carousel-button-svg-width: #{rem(14)};
+	--carousel-button-svg-height: #{rem(14)};
+	--carousel-button-bg: #FAFAFA;
+	--carousel-button-border-radius: 50%;
+
+	top: rem(32);
+	right: rem(32);
+	&:hover {
+		--fancybox-color: #{$primary};
+	}
+	svg {
+		filter: none;
 	}
 }
 
