@@ -175,8 +175,11 @@
 				right: -23px;
 			}
 			&--2 {
-				max-width: rem(366);
-				right: -72px;
+				// max-width: rem(366);
+				// right: -72px;
+				max-width: rem(435);
+				right: -150px;
+				bottom: -20px;
 			}
 		}
 		&--slider {
