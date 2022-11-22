@@ -73,33 +73,42 @@ mixin sEventBanner2(data)
 				+e.img-col.col-lg
 					+img('img/sEventBanner-img-2.jpg', 'bg')
 
-mixin sEventBanner3(i, title, tag, btn='true', organization='true')
+mixin sEventBanner3(data)
 	// start sEventBanner
-	+b.SECTION.sEventBanner--2.section#sEventBanner&attributes(attributes)
+	+b.SECTION.sEventBanner--3.section#sEventBanner&attributes(attributes)
 		.container
-			+e.row.row
-				.col-lg
-					+e.left-side
-						+e.headline-row.row
-							if tag 
-								.col-auto
-									+e.tag(href="#") Природа
-							else
-								.col-auto
-									+e.headline
-										+icon('pin')
-										| Республика Крым
-						h3.mb-auto!= title
-						+e.bottom-row.row
-							if btn
-								.col-auto
-									+e.btn.btn.btn-primary(href="#") Зарегистрироваться
-							.col-auto
-								+e.share
-									| Поделиться:
-									.ya-share2(data-curtain='' data-shape='round' data-services='vkontakte,odnoklassniki,twitter')
-							if organization
-								.col-auto
-									+e.organization #[span Организатор:] Общенациональный союз индустрии гостеприимства
-				+e.img-col.col-lg
-					+img(`img/sEventBanner-img-${i}.jpg`, 'bg')
+			+e.img-wrap-bg.bg-wrap
+				+img(`img/${data.bg}`, 'bg').picture-bg
+			+e.wrapper
+				+e.row.row
+					+e.col.col-lg-4
+						+e.logo
+							.img-wrap-center
+								+img(`img/${data.logo.src}`, data.logo.bg)
+						+e.name!= data.name
+						if data.text
+							+e.text!= data.text
+						if data.personName
+							+e.contancts
+								span Контакты для связи: 
+								+e.person-name!= data.personName
+						div(class=(data.links == 'horizontal' ? 'sEventBanner__links--horizontal' : 'sEventBanner__links'))
+							+e.tel(href="tel:+79859988899") +7 985 998 88 99
+							+e.email(href='mailto:Sample@sample.com') Sample@sample.com
+					.col-lg-8
+						+e.content
+							if data.location
+								+e.location
+									+icon('pin')
+									!= data.location
+							h1!= data.title
+							.row.align-items-center.gy-3
+								.col-sm
+									+e.btn.btn.btn-primary(href="#")!= data.btn
+								.col-sm-auto
+									if data.label
+										+e.label!= data.label
+									+e.share
+										| Поделиться:
+										.ya-share2(data-curtain='' data-shape='round' data-services='vkontakte,odnoklassniki,twitter')
+

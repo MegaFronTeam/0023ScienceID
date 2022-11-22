@@ -189,6 +189,7 @@
 
 .breadcrumb {
 	margin-bottom: rem(26) !important;
+	flex-wrap: nowrap;
 	&-item{
 		width: auto;
 		padding: 3px 8px;
