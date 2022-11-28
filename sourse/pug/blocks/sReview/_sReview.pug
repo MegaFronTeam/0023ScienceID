@@ -7,24 +7,30 @@ mixin sReview(data)
 					h2 Отзывы
 				.col-auto
 					+e.stars
-						+img('img/svg/stars.svg')
+						+e.stars-wrap
+							+icon('star-filled')
+							+icon('star-filled')
+							+icon('star-filled')
+							+icon('star-filled')
+							+icon('star-half-filled')
 						span 4.5
 				.col-auto.ms-sm-auto
 					+e.add-review(href="#") Добавить отзыв
 			+e.row.row
 				.col-lg-4
-					mixin rate(num, count)
-						+e.rate(style=`--activeLine: ${count}`)
+					mixin rate(num, count, activeLine)
+						+e.rate(style=`--activeLine: ${activeLine}`)
 							span!= num
-							+img('img/svg/star.svg')
+							+icon('star-filled')
+							//- +img('img/svg/star.svg')
 							+e.line
 							+e.count!= count
 					+e.rate-wrap
-						+rate(5, 150)
-						+rate(4, 25)
-						+rate(3, 15)
-						+rate(2, 2)
-						+rate(1, 1)
+						+rate(5, 150, '70%')
+						+rate(4, 25, '50%')
+						+rate(3, 15, '30%')
+						+rate(2, 2, '20%')
+						+rate(1, 1, '5%')
 				.col-lg-8
 					+e.wrap
 						mixin item(title, city, text)
@@ -34,7 +40,12 @@ mixin sReview(data)
 										h5!= title
 										span!= city
 									.col-auto
-										+img('img/svg/fullStars.svg')
+										+e.stars-wrap
+											+icon('star-filled')
+											+icon('star-filled')
+											+icon('star-filled')
+											+icon('star-filled')
+											+icon('star-filled')
 								p!= text
 						+item('Викторовский А.В.', 'г. Москва', 'Магнитокалорическим эффектом (МКЭ) называется изменение температуры и&nbsp;магнитной части энтропии материала при его намагничивании или размагничивании внешним магнитным полем. Магнитокалорический эффект наблюдается в&nbsp;любом магнитном материале и&nbsp;может быть использован для создания высокоэффективного магнитного холодильника в&nbsp;котором рабочим телом является магнитный материал (в&nbsp;отличие от&nbsp;традиционных холодильников, в&nbsp;которых рабочим телом является газ).')
 						+item('Викторовский А.В.', 'г. Москва', 'Магнитокалорическим эффектом (МКЭ) называется изменение температуры и&nbsp;магнитной части энтропии материала при его намагничивании или размагничивании внешним магнитным полем. Магнитокалорический эффект наблюдается в&nbsp;любом магнитном материале и&nbsp;может быть использован для создания высокоэффективного магнитного холодильника в&nbsp;котором рабочим телом является магнитный материал (в&nbsp;отличие от&nbsp;традиционных холодильников, в&nbsp;которых рабочим телом является газ).')
