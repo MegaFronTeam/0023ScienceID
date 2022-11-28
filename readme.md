@@ -3,6 +3,7 @@
 1. <https://megafronteam.github.io/0023ScienceID/public>
 2. <https://megafronteam.github.io/0023ScienceID/public/00-modal.html>
 2. <https://megafronteam.github.io/0023ScienceID/public/02-catalog.html>
+2. <https://megafronteam.github.io/0023ScienceID/public/02-catalog-2.html>
 3. <https://megafronteam.github.io/0023ScienceID/public/03-users.html>
 4. <https://megafronteam.github.io/0023ScienceID/public/03-users-2.html>
 5. <https://megafronteam.github.io/0023ScienceID/public/04-events.html>

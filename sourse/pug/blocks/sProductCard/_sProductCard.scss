@@ -1,0 +1,113 @@
+// start .sProductCard
+.sProductCard {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(8)};
+	// --sTPB: #{rem()};
+	&__row {
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	&__img-wrap {
+		@include block(641, 493);
+		border: 1px solid $gray-400;
+		border-radius: 4px;
+	}
+	h1 {
+		@extend .h2;
+		margin-bottom: rem(18);
+	}
+	&__city-row {
+		--bs-gutter-x: #{rem(15)};
+
+		margin-bottom: rem(8);
+		span {
+			color: $gray-800;
+			font-size: 16px;
+			line-height: 1.5em;
+			@include media-breakpoint-up(md) {
+				font-size: 20px;
+			}
+			&.active {
+				color: $primary;
+			}
+		}
+	}
+	&__tags {
+		--bs-gutter-x: #{rem(8)};
+		--bs-gutter-y: #{rem(8)};
+
+		position: relative;
+		z-index: 3;
+		margin-bottom: rem(33);
+	}
+	&__tag {
+		font-size: 10px;
+		font-weight: 700;
+		padding: 4px 8px;
+		background-color: $gray-100;
+		color: $primary;
+		border-radius: 4px;
+		display: inline;
+		&:hover {
+			color: #fff;
+			background-color: $primary;
+		}
+	}
+	&__btn {
+		--bs-btn-padding-x: #{rem(24)};
+    --bs-btn-padding-y: #{rem(7)};
+		--bs-btn-font-size: #{rem(16)};
+    --bs-btn-font-weight: 700;
+
+		margin-bottom: rem(33);
+		&:not(:hover) {
+			box-shadow: 0px 4px 8px rgba(67, 150, 247, 0.47);
+		}
+		@include media-breakpoint-up(xl) {
+			--bs-btn-font-size: #{rem(16)};
+		}
+	}
+	h5 {
+		font-size: rem(20);
+		color: $gray-700;
+		margin-bottom: rem(16);
+		line-height: 1.4em;
+	}
+	h6 {
+		color: $gray-800;
+		margin-bottom: rem(8);
+	}
+	ul {
+		margin-bottom: rem(16);
+		list-style-type: none;
+		li {
+			line-height: 1.5em;
+			color: $gray-700;
+			position: relative;
+			padding-left: rem(22);
+			&:not(:last-child) {
+				margin-bottom: rem(6);
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				left: 8px;
+				top: 9px;
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background-color: $gray-700;
+			}
+		}
+	}
+	&__text {
+		color: $gray-700;
+		line-height: 1.5em;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sProductCard

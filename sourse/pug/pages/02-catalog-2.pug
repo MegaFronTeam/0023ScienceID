@@ -1,0 +1,30 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug
+ 
+include ../blocks/footer/_footer.pug
+
+include ../blocks/sProductCard/_sProductCard.pug
+include ../blocks/sReview/_sReview.pug
+
+block variables
+	- let  mainPage= 'catalog-page'
+	- let  bg= '04-events.jpg'
+
+block title
+	- let  title= 'Деьальная товара'
+	title= title
+block pagecontent
+	+mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		//- +topLine
+	main
+		+page-head('', '', false, '', 'Деьальная товара')
+		+sProductCard
+		+sReview
+	+footer()
