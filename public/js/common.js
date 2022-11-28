@@ -391,6 +391,19 @@ function eventHandler() {
 		},
 	});
 
+	const writeUsBannerSwiper = new Swiper('.writeUsBanner__slider--js', {
+		slidesPerView: 1,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
 	const defaultSwiper = new Swiper('.sDefaultSlider__slider--js', {
 		slidesPerView: 'auto',
 		navigation: {

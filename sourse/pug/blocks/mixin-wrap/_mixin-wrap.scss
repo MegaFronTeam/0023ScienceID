@@ -1062,3 +1062,134 @@
 .input-upload {
 	display: none;
 }
+
+.writeUsBanner {
+	&__slider {
+		background-image: radial-gradient(65.78% 257.08% at 17.22% 29.38%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 100%);
+		background-color: #E8F2FF;
+		border-radius: 8px;
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+	}
+	.img {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		max-width: 100%;
+		height: auto;
+		z-index: -1;
+		pointer-events: none;
+	}
+	&__slide {
+		padding: rem(24);
+		@include media-breakpoint-up(md) {
+			padding: rem(37) rem(53) rem(88) rem(48);
+		}
+		.h2 {
+			max-width: rem(470);
+			margin-bottom: rem(16);
+			color: $gray-800;
+		}
+		p {
+			color: $gray-800;
+			margin-bottom: rem(24);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(64);
+			}
+		}
+	}
+	&__control-wrap {
+		position: relative;
+		display: flex;
+		width: auto;
+		align-items: center;
+		flex-wrap: wrap;
+		z-index: 2;
+		padding-left: rem(24);
+		padding-right: rem(24);
+		padding-bottom: rem(24);
+		@include media-breakpoint-up(md) {
+			position: absolute;
+			left: rem(48);
+			bottom: rem(48);
+			padding: 0;
+		}
+		.swiper-button-hand, .swiper-pagination {
+			position: static;
+		}
+		.swiper-button-hand {
+			--swiperArrowSize: #{rem(24)};
+			--swiperBorderColorDef: #{$primary};
+			--swiperColorDef: #{$primary};
+			--swiperBgDef: transparent;
+			--swiperBorderColorDefHover: #{$primary};
+			--swiperBgDefHover: #{$primary};
+			--swiperColorDefHover: #{$white};
+
+			flex: 0 0 auto;
+			border-width: 1px;
+			.icon {
+				font-size: rem(16);
+			}
+			&-prev {
+				margin-right: 12px;
+				@include media-breakpoint-up(sm) {
+					margin-right: rem(42);
+				}
+			}
+		}
+		.swiper-pagination {
+			width: auto;
+			margin-left: rem(40);
+			&-bullet {
+				--swiper-pagination-bullet-horizontal-gap: 8px;
+
+				width: 6px;
+				height: 6px;
+				background-color: $primary;
+				border-radius: 16px;
+				min-width: 6px;
+				&-active {
+					min-width: 25px;
+				}
+			}
+		}
+	}
+	&__btn {
+		--bs-btn-padding-x: #{rem(24)};
+		--bs-btn-padding-y: #{rem(7.75)};
+		--bs-btn-font-size: #{rem(16)};
+    --bs-btn-font-weight: 700;
+		
+		box-shadow: 0px 4px 8px rgba(67, 150, 247, 0.47);
+		width: 100%;
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(xl) {
+			--bs-btn-font-size: #{rem(16)};
+		}
+		@include media-breakpoint-up(md) {
+			width: auto;
+			margin-bottom: 0;
+			margin-right: rem(36);
+		}
+	}
+	&__img-wrap {
+		@include roww('32px', 'm');
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		@include media-breakpoint-up(xl) {
+			--bs-gutter-x: #{rem(72)};
+		}
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+			align-items: center;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}

@@ -156,7 +156,7 @@
 		@include media-breakpoint-up(xl) {
 			padding: rem(40) rem(40) rem(60) rem(40);
 		}
-		h4 {
+		h4, .h4 {
 			color: #fff;
 			margin-bottom: rem(24);
 		}

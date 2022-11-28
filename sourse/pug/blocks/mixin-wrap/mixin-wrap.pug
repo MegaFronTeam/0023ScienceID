@@ -216,3 +216,43 @@ mixin upload-field(title)
 					input.input-upload(type='file' name='file')
 					span Выбрать файл
 			+e.file-name Название файла.pdf
+
+mixin writeUsBanner(container='container')
+	+b.writeUsBanner
+		if(container)
+			.container
+				+e.slider--js.swiper
+					.swiper-wrapper
+						-for(let i = 0; i < 4; i++)
+							+e.slide.swiper-slide
+								+img('img/banner-bg-2.png').img
+								.row
+									.col-md
+										.h2 Нужен реактив, а&nbsp;его у&nbsp;нас не&nbsp;делают?
+										p Давайте проверим. Пишите, и мы поможем найти партнеров
+									.col-md-auto
+										+e.img-wrap
+											+img('img/logo-3.png')
+											+img('img/logo-4.png')
+					+e.control-wrap
+						+e.btn.btn.btn-primary(href="#") Написать нам
+						+arrow
+						.swiper-pagination
+		else
+			+e.slider--js.swiper
+				.swiper-wrapper
+					-for(let i = 0; i < 4; i++)
+						+e.slide.swiper-slide
+							+img('img/banner-bg-2.png').img
+							.row
+								.col-md
+									.h2 Нужен реактив, а&nbsp;его у&nbsp;нас не&nbsp;делают?
+									p Давайте проверим. Пишите, и мы поможем найти партнеров
+								.col-md-auto
+									+e.img-wrap
+										+img('img/logo-3.png')
+										+img('img/logo-4.png')
+				+e.control-wrap
+					+e.btn.btn.btn-primary(href="#") Написать нам
+					+arrow
+					.swiper-pagination
