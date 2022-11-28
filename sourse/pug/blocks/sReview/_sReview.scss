@@ -152,6 +152,9 @@
 		.icon {
 			font-size: rem(24);
 			color: #FFA800;
+			&-star-half-filled {
+				color: #EEF3F6;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}
