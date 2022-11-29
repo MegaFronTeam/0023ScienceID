@@ -7,6 +7,7 @@ include ../blocks/top-nav/_top-nav.pug
 include ../blocks/footer/_footer.pug
 
 include ../blocks/sContent/_sContent.pug
+include ../blocks/sMap/_sMap.pug
 
 block variables
 	- let  mainPage= ''
@@ -24,4 +25,5 @@ block pagecontent
 		//- +topLine
 	main
 		+page-head('Карта СМУ и СНО', '', '', '', 'Карта СМУ и СНО')
+		+sMap
 	+footer()
