@@ -500,14 +500,15 @@ function eventHandler() {
 	let searchBlocks = document.querySelectorAll('.search-block');
 	if(searchBlocks) {
 		for (let searchBlock of searchBlocks) {
+			let del = searchBlock.querySelector('.search-block__delete-text');
 			searchBlock.querySelector('input').addEventListener('input', function() {
 				if(this.value.split('').length > 0) {
-					searchBlock.querySelector('.search-block__delete-text').classList.add('active');
+					del.classList.add('active');
 				} else {
-					searchBlock.querySelector('.search-block__delete-text').classList.remove('active');
+					del.classList.remove('active');
 				}
 			});
-			searchBlock.querySelector('.search-block__delete-text').addEventListener('click', function() {
+			del.addEventListener('click', function() {
 				searchBlock.querySelector('input').value = '';
 				this.classList.remove('active');
 			});
@@ -529,6 +530,64 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		observer: true,
 	});
+
+
+	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+		let popoverContent = {
+			title: popoverTriggerEl.dataset.bsContent,
+			smu: popoverTriggerEl.dataset.smu,
+			sno: popoverTriggerEl.dataset.sno,
+			mu: popoverTriggerEl.dataset.mu, 
+		}
+		let users = `<div class="col-auto pr-0 users-col"> </div>`
+
+		let user = `<div class="col-auto pr-0    user-col" > </div>
+				`
+		let popoverInner = 
+		`
+			<div class="sMap__popover">
+				<div class="sMap__title">${popoverContent.title}</div>
+				<ul>
+					<li class="row gx-2">
+						${users}
+						<div class="col">Активных СМУ <div class="small">Федеральных</div></div> 
+						<div class="col-auto text-primary">${popoverContent.smu}</div>
+					</li>
+					<li class="row gx-2">
+						${users}
+						<div class="col">Активных СНО<div class="small">Региональных</div></div>
+						<div class="col-auto text-primary">${popoverContent.sno}</div>
+					</li>
+					<li class="row gx-2"> 
+						${user}
+						<div class="col">Молодых  ученых</div> 
+						<div class="col-auto text-primary">${popoverContent.mu}</div>
+					</li>
+				</ul>
+			</div>
+		`;
+		return new bootstrap.Popover(popoverTriggerEl, {
+			template: 
+				`
+					<div class="popover" role="tooltip">
+						<div class="popover-arrow"></div> 
+						<h1 class="popover-header"></h1>
+						${popoverInner}
+					</div>`,
+			trigger: 'hover',
+			placement: 'auto',
+		})
+	})
+	let panzoomClass = document.querySelector('.panzoom');
+	if(panzoomClass) {
+		const myPanzoom = new Panzoom(document.querySelector(".panzoom"), {
+			wheel: false,
+			// baseScale: 0,
+			click: false,
+			zoomInCentered: false,
+		});
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
