@@ -563,7 +563,7 @@ function eventHandler() {
 					<li class="row gx-2"> 
 						${user}
 						<div class="col">Молодых  ученых</div> 
-						<div class="col-auto text-primary">${po.mu}</div>
+						<div class="col-auto text-primary">${popoverContent.mu}</div>
 					</li>
 					<li class="row gx-2">
 						<a href="${popoverContent.link}">Подробнее</a>
