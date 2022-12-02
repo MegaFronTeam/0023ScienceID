@@ -539,6 +539,7 @@ function eventHandler() {
 			smu: popoverTriggerEl.dataset.smu,
 			sno: popoverTriggerEl.dataset.sno,
 			mu: popoverTriggerEl.dataset.mu, 
+			link: popoverTriggerEl.dataset.link, 
 		}
 		let users = `<div class="col-auto pr-0 users-col"> </div>`
 
@@ -562,7 +563,10 @@ function eventHandler() {
 					<li class="row gx-2"> 
 						${user}
 						<div class="col">Молодых  ученых</div> 
-						<div class="col-auto text-primary">${popoverContent.mu}</div>
+						<div class="col-auto text-primary">${po.mu}</div>
+					</li>
+					<li class="row gx-2">
+						<a href="${popoverContent.link}">Подробнее</a>
 					</li>
 				</ul>
 			</div>
