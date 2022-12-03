@@ -565,7 +565,7 @@ function eventHandler() {
 						<div class="col">Молодых  ученых</div> 
 						<div class="col-auto text-primary">${popoverContent.mu}</div>
 					</li>
-					<li class="row gx-2">
+					<li class="row gx-2 d-lg-none">
 						<a href="${popoverContent.link}">Подробнее</a>
 					</li>
 				</ul>
