@@ -321,9 +321,9 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = document.body.dataset.bg;
+	screenName = 'screen/'+document.body.dataset.bg;
 	if (screenName && x.includes("localhost:30")) {
-		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
+		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(${screenName});"></div>`);
 	}
 
 
@@ -356,7 +356,6 @@ function eventHandler() {
 			loadPrevNext: true,
 		},
 		watchOverflow: true,
-		spaceBetween: 0,
 		loop: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -419,56 +418,64 @@ function eventHandler() {
 		});
 	}
 
-	let labSlides = document.querySelectorAll('.labSlide');
-	if(labSlides) {
-		for (let labSlide of labSlides) {
-			let labSlideDots = labSlide.querySelector('.dots'),
-					labSlideDetailed = labSlide.querySelector('.detailed'),
-					labSlideMoreText = labSlide.querySelector('.moreText');
-			if(labSlideDetailed) {
-				labSlideDetailed.addEventListener('click', function() {
-					labSlideMoreText.classList.add('active');
-					$(labSlideDots).hide();
-					$(labSlideDetailed).hide();
-				});
-			}
+	// let labSlides = document.querySelectorAll('.labSlide');
+	// if(labSlides) {
+	// 	for (let labSlide of labSlides) {
+	// 		let labSlideDots = labSlide.querySelector('.dots'),
+	// 				labSlideDetailed = labSlide.querySelector('.detailed'),
+	// 				labSlideMoreText = labSlide.querySelector('.moreText');
+	// 		if(labSlideDetailed) {
+	// 			labSlideDetailed.addEventListener('click', function() {
+	// 				labSlideMoreText.classList.add('active');
+	// 				$(labSlideDots).hide();
+	// 				$(labSlideDetailed).hide();
+	// 			});
+	// 		}
 
 
-			let tagBtns = labSlide.querySelectorAll('.labSlide__show-more');
-			for (let tagBtn of tagBtns) {
-				tagBtn.addEventListener('click', function () {
-					this.classList.add('hide');
-					let tagCols = this.closest('.labSlide__tags').querySelectorAll(`.labSlide__tag-col`);
-					$(tagCols).slideDown();
-				});
-			}
-		}
-	};
+	// 		let tagBtns = labSlide.querySelectorAll('.labSlide__show-more');
+	// 		for (let tagBtn of tagBtns) {
+	// 			tagBtn.addEventListener('click', function () {
+	// 				this.classList.add('hide');
+	// 				let tagCols = this.closest('.labSlide__tags').querySelectorAll(`.labSlide__tag-col`);
+	// 				$(tagCols).slideDown();
+	// 			});
+	// 		}
+	// 	}
+	// };
 
-	let productItems = document.querySelectorAll('.product-item');
-	if(productItems) {
-		for (let productItem of productItems) {
-			let productItemDots = productItem.querySelector('.dots'),
-					productItemDetailed = productItem.querySelector('.detailed'),
-					productItemMoreText = productItem.querySelector('.moreText');
-			if(productItemDetailed) {
-				productItemDetailed.addEventListener('click', function() {
-					productItemMoreText.classList.add('active');
-					$(productItemDots).hide();
-					$(productItemDetailed).hide();
-				});
-			}
+	$(document).on("click", '.detailed', function(){
+		const self = $(this);
+		self.hide();
+		self.parent().find(".dots").hide();
+		self.parent().find(".moreText").addClass('active');
 
-			let tagBtns = productItem.querySelectorAll('.product-item__show-more');
-			for (let tagBtn of tagBtns) {
-				tagBtn.addEventListener('click', function () {
-					this.classList.add('hide');
-					let tagCols = this.closest('.product-item__tags').querySelectorAll(`.product-item__tag-col`);
-					$(tagCols).slideDown();
-				});
-			}
-		}
-	};
+	})
+
+	// let productItems = document.querySelectorAll('.product-item');
+	// if(productItems) {
+	// 	for (let productItem of productItems) {
+	// 		let productItemDots = productItem.querySelector('.dots'),
+	// 				productItemDetailed = productItem.querySelector('.detailed'),
+	// 				productItemMoreText = productItem.querySelector('.moreText');
+	// 		if(productItemDetailed) {
+	// 			productItemDetailed.addEventListener('click', function() {
+	// 				productItemMoreText.classList.add('active');
+	// 				$(productItemDots).hide();
+	// 				$(productItemDetailed).hide();
+	// 			});
+	// 		}
+
+	// 		let tagBtns = productItem.querySelectorAll('.product-item__show-more');
+	// 		for (let tagBtn of tagBtns) {
+	// 			tagBtn.addEventListener('click', function () {
+	// 				this.classList.add('hide');
+	// 				let tagCols = this.closest('.product-item__tags').querySelectorAll(`.product-item__tag-col`);
+	// 				$(tagCols).slideDown();
+	// 			});
+	// 		}
+	// 	}
+	// };
 
 	$('.section-title__filter-btn').on('click', function() {
 		$('.section-title__filter-wrap').slideToggle();
@@ -501,17 +508,23 @@ function eventHandler() {
 	if(searchBlocks) {
 		for (let searchBlock of searchBlocks) {
 			let del = searchBlock.querySelector('.search-block__delete-text');
-			searchBlock.querySelector('input').addEventListener('input', function() {
-				if(this.value.split('').length > 0) {
-					del.classList.add('active');
-				} else {
-					del.classList.remove('active');
-				}
-			});
+			let input = searchBlock.querySelector('input');
+			if (input) {
+
+				searchBlock.querySelector('input').addEventListener('input', function() {
+					if(this.value.split('').length > 0) {
+						del.classList.add('active');
+					} else {
+						del.classList.remove('active');
+					}
+				});
+			}
+			if (del) {
 			del.addEventListener('click', function() {
 				searchBlock.querySelector('input').value = '';
 				this.classList.remove('active');
 			});
+		}
 		}
 	}
 
