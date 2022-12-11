@@ -108,6 +108,10 @@
 	&--2 {
 		--sPT: 0;
 		--sPB: #{rem(19)};
+		@include media-breakpoint-up(lg) {
+			--sPT: 0;
+			--sPB: #{rem(19)};
+		}
 		.sCompetencies {
 			&__wrap {
 				padding: rem(20);
