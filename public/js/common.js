@@ -604,7 +604,32 @@ function eventHandler() {
 			click: false,
 			zoomInCentered: false,
 		});
+	};
+
+	const tabs = document.querySelector('.sModel');
+	 if (tabs) {
+
+
+			tabs.addEventListener('click', function (element) {
+				const btn = element.target.closest(`.diagram-block-item--js:not(.active)`);
+				if (!btn) return;
+				const data = btn.dataset.tab; 
+				const content = this.querySelectorAll(`.toggle-content`);
+				const tabsAllBtn = document.querySelectorAll(".diagram-block-item--js");
+				tabsAllBtn.forEach(element => {
+					element.dataset.tab == data
+						? element.classList.add('active')
+						: element.classList.remove('active')
+				});
+				content.forEach(element => { 
+					// console.log(element.id);
+					element.id == data
+						? (element.classList.add('active'))
+						: element.classList.remove('active')
+				});
+			})
 	}
+	const tab = 'tabs';
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

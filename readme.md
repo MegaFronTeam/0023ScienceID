@@ -20,7 +20,7 @@
 16. <https://megafronteam.github.io/0023ScienceID/public/10-news.html>
 17. <https://megafronteam.github.io/0023ScienceID/public/10-news-2.html>
 18. <https://megafronteam.github.io/0023ScienceID/public/11-groups.html>
-19. 
+19. <https://megafronteam.github.io/0023ScienceID/public/12-competencies.html>
 20. <https://megafronteam.github.io/0023ScienceID/public/13-polls.html>
 21. <https://megafronteam.github.io/0023ScienceID/public/14-about.html>
 22. <https://megafronteam.github.io/0023ScienceID/public/15-help.html>
