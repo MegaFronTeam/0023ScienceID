@@ -611,11 +611,11 @@ function eventHandler() {
 
 
 			tabs.addEventListener('click', function (element) {
-				const btn = element.target.closest(`.diagram-block-item--js:not(.active)`);
+				const btn = element.target.closest(`.diagram-tab-js:not(.active)`);
 				if (!btn) return;
 				const data = btn.dataset.tab; 
 				const content = this.querySelectorAll(`.toggle-content`);
-				const tabsAllBtn = document.querySelectorAll(".diagram-block-item--js");
+				const tabsAllBtn = document.querySelectorAll(".diagram-tab-js");
 				tabsAllBtn.forEach(element => {
 					element.dataset.tab == data
 						? element.classList.add('active')
@@ -630,6 +630,12 @@ function eventHandler() {
 			})
 	}
 	const tab = 'tabs';
+
+	const swiperDiagramTabs = new Swiper('.sCompetenciesBlock__swiper--js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchOverflow: true
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
