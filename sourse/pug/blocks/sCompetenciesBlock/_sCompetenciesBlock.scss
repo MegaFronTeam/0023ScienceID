@@ -747,7 +747,7 @@
 			margin-bottom: rem(16);
 			color: $gray-800;
 		}
-		p {
+		p, .p {
 			font-size: rem(15);
 			color: $gray-700;
 			margin-bottom: rem(24);
@@ -789,6 +789,7 @@
 			&__head {
 				position: relative;
 				padding: rem(12) rem(20) rem(12) rem(10);
+				cursor: pointer;
 				&:before, &:after {
 					@include mt;
 					content: '';
