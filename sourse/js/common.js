@@ -545,14 +545,17 @@ function eventHandler() {
 		observer: true,
 	});
 
-	let panzoomClass = document.querySelector('.panzoom');
-	if (panzoomClass) {
-		const myPanzoom = new Panzoom(document.querySelector(".panzoom"), {
-			wheel: false,
-			// baseScale: 0,
-			click: false,
-			zoomInCentered: false,
-		});
+
+
+		let panzoomClass = document.querySelector('.panzoom');
+		if (panzoomClass) {
+			const myPanzoom = new Panzoom(document.querySelector(".panzoom"), {
+				wheel: false,
+				// baseScale: 0,
+				click: false,
+				zoomInCentered: false,
+			});
+		};
 
 	var popoverTriggerList =  document.querySelectorAll('[data-bs-toggle="popover"]');
 		for (const popoverTriggerEl of popoverTriggerList) {
@@ -596,19 +599,48 @@ function eventHandler() {
 		const popover =  new bootstrap.Popover(popoverTriggerEl, {
 			template:
 				`
-				<div class="popover" role="tooltip">
-				<div class="popover-arrow"></div> 
-				<h1 class="popover-header"></h1>
-				${popoverInner}
-				</div>`,
-				trigger: 'hover',
-				delay: { "show": 100, "hide": 100 },
-				placement: 'auto', 
-			
-		}) 
+					<div class="popover" role="tooltip">
+						<div class="popover-arrow"></div> 
+						<h1 class="popover-header"></h1>
+						${popoverInner}
+					</div>`,
+			trigger: 'hover',
+			placement: 'auto',
+			delay: { "show": 100, "hide": 100 },
+		})
 	}
-}	
- 
+
+
+	const tabs = document.querySelector('.sModel');
+	 if (tabs) {
+
+
+			tabs.addEventListener('click', function (element) {
+				const btn = element.target.closest(`.diagram-tab-js:not(.active)`);
+				if (!btn) return;
+				const data = btn.dataset.tab; 
+				const content = this.querySelectorAll(`.toggle-content`);
+				const tabsAllBtn = document.querySelectorAll(".diagram-tab-js");
+				tabsAllBtn.forEach(element => {
+					element.dataset.tab == data
+						? element.classList.add('active')
+						: element.classList.remove('active')
+				});
+				content.forEach(element => { 
+					// console.log(element.id);
+					element.id == data
+						? (element.classList.add('active'))
+						: element.classList.remove('active')
+				});
+			})
+	}
+	const tab = 'tabs';
+
+	const swiperDiagramTabs = new Swiper('.sCompetenciesBlock__swiper--js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchOverflow: true
+	});
 };
 
 if (document.readyState !== 'loading') {
