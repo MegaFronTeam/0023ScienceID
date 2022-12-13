@@ -1,4 +1,5 @@
 "use strict";
+
 const JSCCommon = { 
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
@@ -544,9 +545,18 @@ function eventHandler() {
 		observer: true,
 	});
 
+	let panzoomClass = document.querySelector('.panzoom');
+	if (panzoomClass) {
+		const myPanzoom = new Panzoom(document.querySelector(".panzoom"), {
+			wheel: false,
+			// baseScale: 0,
+			click: false,
+			zoomInCentered: false,
+		});
 
-	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+	var popoverTriggerList =  document.querySelectorAll('[data-bs-toggle="popover"]');
+		for (const popoverTriggerEl of popoverTriggerList) {
+ 
 		let popoverContent = {
 			title: popoverTriggerEl.dataset.bsContent,
 			smu: popoverTriggerEl.dataset.smu,
@@ -556,8 +566,7 @@ function eventHandler() {
 		}
 		let users = `<div class="col-auto pr-0 users-col"> </div>`
 
-		let user = `<div class="col-auto pr-0    user-col" > </div>
-				`
+		let user = `<div class="col-auto pr-0    user-col" > </div>`
 		let popoverInner = 
 		`
 			<div class="sMap__popover">
@@ -584,28 +593,24 @@ function eventHandler() {
 				</ul>
 			</div>
 		`;
-		return new bootstrap.Popover(popoverTriggerEl, {
-			template: 
+		const popover =  new bootstrap.Popover(popoverTriggerEl, {
+			template:
 				`
-					<div class="popover" role="tooltip">
-						<div class="popover-arrow"></div> 
-						<h1 class="popover-header"></h1>
-						${popoverInner}
-					</div>`,
-			trigger: 'hover',
-			placement: 'auto',
-		})
-	})
-	let panzoomClass = document.querySelector('.panzoom');
-	if(panzoomClass) {
-		const myPanzoom = new Panzoom(document.querySelector(".panzoom"), {
-			wheel: false,
-			// baseScale: 0,
-			click: false,
-			zoomInCentered: false,
-		});
+				<div class="popover" role="tooltip">
+				<div class="popover-arrow"></div> 
+				<h1 class="popover-header"></h1>
+				${popoverInner}
+				</div>`,
+				trigger: 'hover',
+				delay: { "show": 100, "hide": 100 },
+				placement: 'auto', 
+			
+		}) 
 	}
+}	
+ 
 };
+
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
