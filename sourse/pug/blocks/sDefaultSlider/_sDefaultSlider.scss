@@ -69,11 +69,19 @@
 		}
 	}
 	&__slider {
-		overflow: visible;
+		@include media-breakpoint-down(xxl){
+
+			overflow: visible;
+		}
+		padding-top: rem(32);
+		padding-left: rem(32);
+		padding-right: rem(32);
+		margin-top: rem(-32);
+		margin-left: rem(-32);
 		margin-right: rem(-32);
 	}
 	&__control-wrap {
-		margin-right: rem(32);
+		// margin-right: rem(32);
 	}
 	&__row {
 		padding-top: rem(32);
