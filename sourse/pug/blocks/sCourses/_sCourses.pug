@@ -23,15 +23,15 @@ mixin sCourses(data)
 					.tabs__content.col-xl.active
 						+e.video-wrap-inner
 							+e.inner
-								+e.icon-wrap
-									+icon('play')
+								//- +e.icon-wrap
+								//- 	+icon('play')
 								.h4 Место Стратегии в&nbsp;научно-технологическом развитии России
 					-for(let i = 0; i < 6; i++)
 						.tabs__content.col-xl
 							+e.video-wrap-inner
 								+e.inner
-									+e.icon-wrap
-										+icon('play')
+									//- +e.icon-wrap
+									//- 	+icon('play')
 									.h4 Место Стратегии в&nbsp;научно-технологическом развитии России
 			+e.experts
 				h3 Эксперты
@@ -39,7 +39,8 @@ mixin sCourses(data)
 					mixin item(img, title, text, customClass='col-12 col-sm-6 col-lg-3')
 						div(class=customClass)
 							+e.item
-								+img(`img/${img}`).res-i
+								+e.img-wrap
+									+img(`img/${img}`).res-i
 								h5!= title
 								p!= text
 					+item('sCourses-img-1.jpg', 'Владимир Княгинин', 'Вице-президент ЦСР, председатель правления &laquo;ЦСР &laquo;Северо-Запад&raquo;')
