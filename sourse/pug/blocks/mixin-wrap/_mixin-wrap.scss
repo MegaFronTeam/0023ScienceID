@@ -1193,3 +1193,67 @@
 		}
 	}
 }
+
+.courses-banner {
+	display: flex;
+	flex-direction: column;
+	background-color: #00489D;
+	border-radius: 8px;
+	overflow: hidden;
+	padding: rem(30);
+	margin-bottom: rem(56);
+	@include media-breakpoint-up(md) {
+		padding: rem(61) rem(75) rem(71);
+	}
+	@include media-breakpoint-up(lg) {
+		min-height: rem(580);
+	}
+	@include media-breakpoint-up(xl) {
+		min-height: rem(680);
+	}
+	&__headline {
+		font-weight: 600;
+		color: #fff;
+		margin-bottom: rem(28);
+	}
+	h1 {
+		max-width: rem(594);
+		margin-bottom: rem(20);
+		color: #fff;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: auto;
+		}
+	}
+	h5 {
+		font-weight: 600;
+		color: rgba($color: #fff, $alpha: .2);
+		margin-bottom: rem(30);
+	}
+	&__tags-row {
+		--bs-gutter-x: 8px;
+		--bs-gutter-y: 8px;
+
+		position: relative;
+		z-index: 3;
+	}
+	&__tag {
+		padding: 6.6px 4.9px 5.4px;
+		background-color: $gray-100;
+		border: 1px solid $gray-100;
+		color: $primary;
+		font-weight: 700;
+		border-radius: 4px;
+		font-size: 10px;
+		line-height: 1;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+	img {
+		mix-blend-mode: screen;
+		opacity: 0.4;
+		@include media-breakpoint-up(lg) {
+			opacity: 1;
+		}
+	}
+}

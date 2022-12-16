@@ -256,3 +256,25 @@ mixin writeUsBanner(container='container')
 					+e.btn.btn.btn-primary(href="#") Написать нам
 					+arrow
 					.swiper-pagination
+
+mixin coursesBanner(headline, title, h5, img)
+	+b.courses-banner.bg-wrap
+		+img(`img/${img}`, 'bg').picture-bg
+		+e.headline!= headline
+		h1.h2!= title
+		h5!= h5
+		+e.tags-row.row
+			.col-auto
+				+e.tag(href="#") #природа
+			.col-auto
+				+e.tag(href="#") #энергетика
+			.col-auto
+				+e.tag(href="#") #демография
+			.col-auto
+				+e.tag(href="#") #безопасность
+			.col-auto
+				+e.tag(href="#") #пространство
+			.col-auto
+				+e.tag(href="#") #продовольствие
+			.col-auto
+				+e.tag(href="#") #экономика

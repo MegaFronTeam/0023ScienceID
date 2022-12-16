@@ -15,7 +15,7 @@
 11. <https://megafronteam.github.io/0023ScienceID/public/07-volunteering.html>
 12. <https://megafronteam.github.io/0023ScienceID/public/07-volunteering-2.html>
 13. <https://megafronteam.github.io/0023ScienceID/public/07-volunteering-3.html>
-14. 
+14. <https://megafronteam.github.io/0023ScienceID/public/08-courses.html>
 15. <https://megafronteam.github.io/0023ScienceID/public/09-map.html>
 16. <https://megafronteam.github.io/0023ScienceID/public/10-news.html>
 17. <https://megafronteam.github.io/0023ScienceID/public/10-news-2.html>
