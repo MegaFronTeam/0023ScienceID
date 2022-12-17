@@ -1282,11 +1282,22 @@
 			height: 100%;
 			background-color: #fff;
 			z-index: 999;
-			padding: rem(23);
+			// padding: rem(23);
 			transform: translateX(-150%);
+			// min-height: calc(var(--vh) * 100);
+			// overflow-y: auto;
+			// overflow-x: hidden;
 			&.active {
 				transform: translateX(0);
 			}
+		}
+	}
+	&__inner {
+		@include media-breakpoint-down(lg) {
+			padding: rem(23);
+			height: calc(var(--vh) * 100);
+			overflow-y: auto;
+			overflow-x: hidden;
 		}
 	}
 	&__cross {
