@@ -278,3 +278,10 @@ mixin coursesBanner(headline, title, h5, img)
 				+e.tag(href="#") #продовольствие
 			.col-auto
 				+e.tag(href="#") #экономика
+
+mixin settings()
+	+b.settings
+		+e.menu.btn.btn-primary.d-lg-none Меню
+		+e.content
+			+e.cross.d-lg-none
+			block

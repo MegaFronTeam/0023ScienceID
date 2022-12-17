@@ -1,0 +1,31 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug
+ 
+include ../blocks/footer/_footer.pug
+
+include ../blocks/sMainInfo/_sMainInfo.pug
+include ../blocks/sContent/_sContent.pug
+
+block variables
+	- let  mainPage= 'cabinet-page-2'
+	- let  bg= '16-contacts.jpg'
+
+block title
+	- let  title= 'Создание мероприятия'
+	title= title
+block pagecontent
+	+mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		//- +topLine
+	main
+		+page-head(title, '', '', '', 'Личный кабинет', 'Настройки профиля')
+		+sMainInfo()
+			+e.cabinet-main-wrapper
+				h3 Основная информация
+	+footer()

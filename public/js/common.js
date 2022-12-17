@@ -641,6 +641,26 @@ function eventHandler() {
 		freeMode: true,
 		watchOverflow: true
 	});
+
+	new AirDatepicker('.calendar-js');
+
+	$('.settings__menu').on('click', function() {
+		$('.settings__content').addClass('active');
+		$('body').addClass('fixed');
+	});
+	document.addEventListener('mouseup', (event) => {
+		let container = event.target.closest(".settings__content.active"); // (1)
+		let toggle = event.target.closest('.settings__cross'); // (1)
+		let btn = event.target.closest('.settings__menu'); // (1)
+		if (!container && !toggle && !btn) {
+			$('.settings__content').removeClass('active');
+			$('body').removeClass('fixed');
+		};
+		if(toggle) {
+			$('.settings__content').removeClass('active');
+			$('body').removeClass('fixed');
+		}
+	});
 };
 
 if (document.readyState !== 'loading') {

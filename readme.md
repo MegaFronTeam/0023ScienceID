@@ -28,3 +28,12 @@
 
 ### Личный кабинет
 24. <https://megafronteam.github.io/0023ScienceID/public/17-cabinet.html>
+#### Редактирование профиля
+25. <https://megafronteam.github.io/0023ScienceID/public/18-profile-editing.html>
+25. <https://megafronteam.github.io/0023ScienceID/public/18-profile-editing-2.html>
+25. <https://megafronteam.github.io/0023ScienceID/public/18-profile-editing-3.html>
+#### Мои мероприятия
+25. <https://megafronteam.github.io/0023ScienceID/public/19-my-events.html>
+25. <https://megafronteam.github.io/0023ScienceID/public/19-my-events-2.html>
+#### Создание мероприятия
+25. <https://megafronteam.github.io/0023ScienceID/public/20-create-event.html>
