@@ -26,44 +26,45 @@ block pagecontent
 	main
 		+page-head(title, '', '', '', 'Личный кабинет', 'Настройки профиля')
 		+sMainInfo(true)
-			+e.cabinet-main-wrapper
-				h3 Основная информация
-				+e.inner-row.row
-					.col-12
-						h5 Личные данные
-						+b.form-wrap
-							.row
-								.col-lg-6
-									+input('Text', 'text', 'Фамилия на русском языке', t, 'true')
-								.col-lg-6
-									+input('Text', 'text', 'Фамилия на английском языке', t, 'true')
-								.col-lg-6
-									+input('Text', 'text', 'Имя на русском языке', t, 'true')
-								.col-lg-6
-									+input('Text', 'text', 'Имя на английском языке', t, 'true')
-								.col-lg-6
-									+input('Text', 'text', 'Отчество', t, 'true')
-								.col-lg-6.d-none.d-lg-block
-								.col-lg-6
-									//- +input('Text', 'text', 'Дата рождения', t, 'true')
-									+e.input-wrap.form-group
-										label
-											+e.SPAN.input-title Дата рождения 
-												span.star *
-											input.form-wrap__input.form-control.calendar-js(name="text" type="text" placeholder="Text" readonly)
-										+icon('calendar3')
-								.col-lg-3
-									+input('Text', 'select', 'Пол', t, 'true')
-					.col-12
-						h5 Контактные данные
-						+b.form-wrap
-							.row
-								.col-lg-6
-									+input('Выбрать', 'select', 'Регион проживания', t, 'true')
-								.col-lg-6
-									+input('Text', 'select', 'Предпочтительный способ связи', t, 'true')
-								.col-lg-6
-									+input('Text', 'email', 'Адрес электронной почты', t, 'true')
-								.col-lg-6
-									+input('Text', 'tel', 'Номер телефона', t, 'true')
+			.col-12
+				+e.cabinet-main-wrapper
+					h3 Основная информация
+					+e.inner-row.row
+						.col-12
+							h5 Личные данные
+							+b.form-wrap
+								.row
+									.col-lg-6
+										+input('Text', 'text', 'Фамилия на русском языке', t, 'true')
+									.col-lg-6
+										+input('Text', 'text', 'Фамилия на английском языке', t, 'true')
+									.col-lg-6
+										+input('Text', 'text', 'Имя на русском языке', t, 'true')
+									.col-lg-6
+										+input('Text', 'text', 'Имя на английском языке', t, 'true')
+									.col-lg-6
+										+input('Text', 'text', 'Отчество', t, 'true')
+									.col-lg-6.d-none.d-lg-block
+									.col-lg-6
+										//- +input('Text', 'text', 'Дата рождения', t, 'true')
+										+e.input-wrap.form-group
+											label
+												+e.SPAN.input-title Дата рождения 
+													span.star *
+												input.form-wrap__input.form-control.calendar-js(name="text" type="text" placeholder="Text" readonly)
+											+icon('calendar3')
+									.col-lg-3
+										+input('Text', 'select', 'Пол', t, 'true')
+						.col-12
+							h5 Контактные данные
+							+b.form-wrap
+								.row
+									.col-lg-6
+										+input('Выбрать', 'select', 'Регион проживания', t, 'true')
+									.col-lg-6
+										+input('Text', 'select', 'Предпочтительный способ связи', t, 'true')
+									.col-lg-6
+										+input('Text', 'email', 'Адрес электронной почты', t, 'true')
+									.col-lg-6
+										+input('Text', 'tel', 'Номер телефона', t, 'true')
 	+footer()

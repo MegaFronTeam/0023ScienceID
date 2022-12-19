@@ -26,35 +26,36 @@ block pagecontent
 	main
 		+page-head(title, '', '', '', 'Личный кабинет', 'Настройки профиля')
 		+sMainInfo(true)
-			+e.cabinet-main-wrapper
-				h3 Настройки конфиденциальности
-				mixin switcher(text)
-					label.form-check.form-switch
-						input.form-check-input(type='checkbox' role='switch')&attributes(attributes)
-						span.form-check-label!= text
-				+e.inner-row.row
-					.col-12
-						h5 Отображение информации в публичном доступе
-						+e.switcher-row.row
-							.col-12
-								+switcher('Отображать раздел Карьера')(checked)
-							.col-12
-								+switcher('Отображать раздел Образование')
-							.col-12
-								+switcher('Отображать раздел Участие в мероприятиях')
-							.col-12
-								+switcher('Отображать раздел Публикации')
-							.col-12
-								+switcher('Отображать раздел Участие в проектах, конкурсах, грантах')
-							.col-12
-								+switcher('Отображать раздел Патенты')
-							.col-12
-								+switcher('Участие в НИР и ОКР')
-					.col-12
-						h5 Отображение информации в публичном доступе
-						+e.switcher-row.row
-							.col-12
-								+switcher('Хочу, чтобы мой профиль индексировали поисковые системы')(checked) 
-							.col-12
-								+switcher('Получать информационные сообщения')(checked)
+			.col-12
+				+e.cabinet-main-wrapper
+					h3 Настройки конфиденциальности
+					mixin switcher(text)
+						label.form-check.form-switch
+							input.form-check-input(type='checkbox' role='switch')&attributes(attributes)
+							span.form-check-label!= text
+					+e.inner-row.row
+						.col-12
+							h5 Отображение информации в публичном доступе
+							+e.switcher-row.row
+								.col-12
+									+switcher('Отображать раздел Карьера')(checked)
+								.col-12
+									+switcher('Отображать раздел Образование')
+								.col-12
+									+switcher('Отображать раздел Участие в мероприятиях')
+								.col-12
+									+switcher('Отображать раздел Публикации')
+								.col-12
+									+switcher('Отображать раздел Участие в проектах, конкурсах, грантах')
+								.col-12
+									+switcher('Отображать раздел Патенты')
+								.col-12
+									+switcher('Участие в НИР и ОКР')
+						.col-12
+							h5 Отображение информации в публичном доступе
+							+e.switcher-row.row
+								.col-12
+									+switcher('Хочу, чтобы мой профиль индексировали поисковые системы')(checked) 
+								.col-12
+									+switcher('Получать информационные сообщения')(checked)
 	+footer()

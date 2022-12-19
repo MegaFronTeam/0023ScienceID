@@ -181,46 +181,403 @@
 									<div class="col-12">
 										<div class="sMainInfo__cabinet-main-wrapper">
 											<h3>Основная информация</h3>
+											<div class="form-wrap">
+												<div class="row">
+													<div class="col-lg-12">
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__input-title">Название<span class="star">&nbsp;*</span></span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Text"/>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+													<div class="col-lg-6">
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__input-title">Тип регистрации<span class="star">&nbsp;*</span></span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Text"/>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+													<div class="col-lg-6 d-none d-lg-block"></div>
+													<div class="col-lg-6">
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__input-title">Дата начала регистрации<span class="star">*</span></span>
+																<input class="form-wrap__input form-control calendar-js" name="text" type="text" placeholder="ДД,ММ.ГГГГ" readonly>
+															</label>
+															<svg class="icon icon-calendar3 ">
+																<use xlink:href="img/svg/sprite.svg#calendar3"></use>
+															</svg>
+														</div>
+													</div>
+													<div class="col-lg-6">
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__input-title">Дата окончания регистрации<span class="star">*</span></span>
+																<input class="form-wrap__input form-control calendar-js" name="text" type="text" placeholder="ДД,ММ.ГГГГ" readonly>
+															</label>
+															<svg class="icon icon-calendar3 ">
+																<use xlink:href="img/svg/sprite.svg#calendar3"></use>
+															</svg>
+														</div>
+													</div>
+													<div class="col-12">
+														<div class="upload-field">
+															<div class="upload-field__title form-wrap__input-title">Изображение
+															</div>
+															<div class="upload-field__wrap">
+																<div class="upload-field__input-wrap">
+																	<label class="upload-field__btn btn btn-outline-primary">
+																		<input class="input-upload" type="file" name="file"/><span>Добавить изображениеs</span>
+																	</label>
+																</div>
+																<div class="upload-field__file-name">Разрешение для зображения: 1958*860<br>Размер фала не должен превышать 5 mb. Допустимые форматы: png, jpg, jpeg
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-12">
+														<div class="upload-field">
+															<div class="upload-field__title form-wrap__input-title">Изображение в шапке
+															</div>
+															<div class="upload-field__wrap">
+																<div class="upload-field__input-wrap">
+																	<label class="upload-field__btn btn btn-outline-primary">
+																		<input class="input-upload" type="file" name="file"/><span>Добавить изображениеs</span>
+																	</label>
+																</div>
+																<div class="upload-field__file-name">Разрешение для зображения: 1958*860<br>Размер фала не должен превышать 5 mb. Допустимые форматы: png, jpg, jpeg
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-12">
+														<label class="form-check form-switch">
+															<input class="form-check-input" type="checkbox" role="switch"><span class="form-check-label">Скрыть информацию в шапке</span>
+														</label>
+													</div>
+													<div class="col-12">
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__input-title">Краткое описание<span class="star">&nbsp;*</span></span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Text"></textarea>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+													<div class="col-12">
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__input-title">Полное описание<span class="star">&nbsp;*</span></span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Text"></textarea>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="sMainInfo__cabinet-main-wrapper">
+											<h3>Дата и место проведения</h3>
 											<div class="sMainInfo__inner-row row">
 												<div class="col-12">
 													<div class="form-wrap">
 														<div class="row">
-															<div class="col-lg-12">
+															<div class="col-lg-6">
 																<div class="form-wrap__input-wrap form-group">
-																	<label><span class="form-wrap__input-title">Название<span class="star">&nbsp;*</span></span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Text"/>
+																	<label><span class="form-wrap__input-title">Дата начала<span class="star">*</span></span>
+																		<input class="form-wrap__input form-control calendar-js" name="text" type="text" placeholder="ДД,ММ.ГГГГ" readonly>
 																	</label>
+																	<svg class="icon icon-calendar3 ">
+																		<use xlink:href="img/svg/sprite.svg#calendar3"></use>
+																	</svg>
 																</div>
-																<!-- +e.input-wrap-->
 															</div>
 															<div class="col-lg-6">
 																<div class="form-wrap__input-wrap form-group">
-																	<label><span class="form-wrap__input-title">Тип регистрации<span class="star">&nbsp;*</span></span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Text"/>
+																	<label><span class="form-wrap__input-title">Дата окончания <span class="star">*</span></span>
+																		<input class="form-wrap__input form-control calendar-js" name="text" type="text" placeholder="ДД,ММ.ГГГГ" readonly>
+																	</label>
+																	<svg class="icon icon-calendar3 ">
+																		<use xlink:href="img/svg/sprite.svg#calendar3"></use>
+																	</svg>
+																</div>
+															</div>
+															<div class="col-lg-6">
+																<div class="form-wrap__input-wrap form-group">
+																	<label><span class="form-wrap__input-title">Регион проведения<span class="star">&nbsp;*</span></span>
+																		<select class="form-wrap__input form-select" name="select">
+																			<option value="Выбрать">Выбрать</option>
+																			<option value=" placeholder 1">placeholder 1</option>
+																			<option value=" placeholder 2">placeholder 2</option>
+																			<option value=" placeholder 3">placeholder 3</option>
+																			<option value=" placeholder 4">placeholder 4</option>
+																		</select>
 																	</label>
 																</div>
 																<!-- +e.input-wrap-->
 															</div>
 															<div class="col-lg-6 d-none d-lg-block"></div>
-															<div class="col-lg-6">
+															<div class="col-lg-12">
 																<div class="form-wrap__input-wrap form-group">
-																	<label><span class="form-wrap__input-title">Дата начала регистрации<span class="star">*</span></span>
-																		<input class="form-wrap__input form-control calendar-js" name="text" type="text" placeholder="ДД,ММ.ГГГГ" readonly>
+																	<label><span class="form-wrap__input-title">Место проведения<span class="star">&nbsp;*</span></span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Выбрать"/>
 																	</label>
-																	<svg class="icon icon-calendar3 ">
-																		<use xlink:href="img/svg/sprite.svg#calendar3"></use>
-																	</svg>
 																</div>
+																<!-- +e.input-wrap-->
 															</div>
-															<div class="col-lg-6">
-																<div class="form-wrap__input-wrap form-group">
-																	<label><span class="form-wrap__input-title">Дата окончания регистрации<span class="star">*</span></span>
-																		<input class="form-wrap__input form-control calendar-js" name="text" type="text" placeholder="ДД,ММ.ГГГГ" readonly>
-																	</label>
-																	<svg class="icon icon-calendar3 ">
-																		<use xlink:href="img/svg/sprite.svg#calendar3"></use>
-																	</svg>
+														</div>
+													</div>
+												</div>
+												<div class="col-12">
+													<h5>На какой вызов СНТР отвечает мероприятие</h5>
+													<div class="sMainInfo__custom-input-row row">
+														<div class="col-12 col-sm-6 col-lg-auto">
+															<label class="form-check form-switch">
+																<input class="form-check-input" type="checkbox" role="switch"><span class="form-check-label">Экономика</span>
+															</label>
+														</div>
+														<div class="col-12 col-sm-6 col-lg-auto">
+															<label class="form-check form-switch">
+																<input class="form-check-input" type="checkbox" role="switch"><span class="form-check-label">Продовольствие</span>
+															</label>
+														</div>
+														<div class="col-12 col-sm-6 col-lg-auto">
+															<label class="form-check form-switch">
+																<input class="form-check-input" type="checkbox" role="switch"><span class="form-check-label">Пространство</span>
+															</label>
+														</div>
+														<div class="col-12 col-sm-6 col-lg-auto">
+															<label class="form-check form-switch">
+																<input class="form-check-input" type="checkbox" role="switch"><span class="form-check-label">Демография</span>
+															</label>
+														</div>
+														<div class="col-12 col-sm-6 col-lg-auto">
+															<label class="form-check form-switch">
+																<input class="form-check-input" type="checkbox" role="switch"><span class="form-check-label">Энергетика</span>
+															</label>
+														</div>
+														<div class="col-12 col-sm-6 col-lg-auto">
+															<label class="form-check form-switch">
+																<input class="form-check-input" type="checkbox" role="switch"><span class="form-check-label">Природа</span>
+															</label>
+														</div>
+														<div class="col-12 col-sm-6 col-lg-auto">
+															<label class="form-check form-switch">
+																<input class="form-check-input" type="checkbox" role="switch"><span class="form-check-label">Безопасность</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div class="col-12">
+													<h5>Область науки</h5>
+													<div class="sMainInfo__custom-input-row row">
+														<div class="col-12">
+															<label class="form-check form-switch">
+																<input class="form-check-input" type="checkbox" role="switch"><span class="form-check-label">Социальные науки</span>
+															</label>
+														</div>
+														<div class="col-12">
+															<label class="form-check form-switch">
+																<input class="form-check-input" type="checkbox" role="switch"><span class="form-check-label">Сельскохозяйственные науки</span>
+															</label>
+														</div>
+														<div class="col-12">
+															<label class="form-check form-switch">
+																<input class="form-check-input" type="checkbox" role="switch"><span class="form-check-label">Медицинские науки и общественное здравоохранение</span>
+															</label>
+														</div>
+														<div class="col-12">
+															<label class="form-check form-switch">
+																<input class="form-check-input" type="checkbox" role="switch"><span class="form-check-label">Естественные и точные науки</span>
+															</label>
+														</div>
+														<div class="col-12">
+															<label class="form-check form-switch">
+																<input class="form-check-input" type="checkbox" role="switch"><span class="form-check-label">Гуманитарные науки</span>
+															</label>
+														</div>
+														<div class="col-12">
+															<label class="form-check form-switch">
+																<input class="form-check-input" type="checkbox" role="switch"><span class="form-check-label">Техника и технологии</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div class="col-12">
+													<h5>Первый уровень ГРНТИ</h5>
+													<div class="sMainInfo__chekboxes-wrap">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">04 СОЦИОЛОГИЯ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">05 ДЕМОГРАФИЯ06 ЭКОНОМИКА И ЭКОНОМИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">10 ГОСУДАРСТВО И ПРАВО. ЮРИДИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">11 ПОЛИТИКА И ПОЛИТИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">11 ПОЛИТИКА И ПОЛИТИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">05 ДЕМОГРАФИЯ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">06 ЭКОНОМИКА И ЭКОНОМИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">12 НАУКОВЕДЕНИЕ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">04 СОЦИОЛОГИЯ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">05 ДЕМОГРАФИЯ06 ЭКОНОМИКА И ЭКОНОМИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">10 ГОСУДАРСТВО И ПРАВО. ЮРИДИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">11 ПОЛИТИКА И ПОЛИТИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">11 ПОЛИТИКА И ПОЛИТИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">05 ДЕМОГРАФИЯ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">06 ЭКОНОМИКА И ЭКОНОМИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">12 НАУКОВЕДЕНИЕ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">04 СОЦИОЛОГИЯ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">05 ДЕМОГРАФИЯ06 ЭКОНОМИКА И ЭКОНОМИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">10 ГОСУДАРСТВО И ПРАВО. ЮРИДИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">11 ПОЛИТИКА И ПОЛИТИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">11 ПОЛИТИКА И ПОЛИТИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">05 ДЕМОГРАФИЯ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">06 ЭКОНОМИКА И ЭКОНОМИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">12 НАУКОВЕДЕНИЕ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">04 СОЦИОЛОГИЯ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">05 ДЕМОГРАФИЯ06 ЭКОНОМИКА И ЭКОНОМИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">10 ГОСУДАРСТВО И ПРАВО. ЮРИДИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">11 ПОЛИТИКА И ПОЛИТИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">11 ПОЛИТИКА И ПОЛИТИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">05 ДЕМОГРАФИЯ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">06 ЭКОНОМИКА И ЭКОНОМИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">12 НАУКОВЕДЕНИЕ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">04 СОЦИОЛОГИЯ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">05 ДЕМОГРАФИЯ06 ЭКОНОМИКА И ЭКОНОМИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">10 ГОСУДАРСТВО И ПРАВО. ЮРИДИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">11 ПОЛИТИКА И ПОЛИТИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">11 ПОЛИТИКА И ПОЛИТИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">05 ДЕМОГРАФИЯ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">06 ЭКОНОМИКА И ЭКОНОМИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">12 НАУКОВЕДЕНИЕ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">04 СОЦИОЛОГИЯ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">05 ДЕМОГРАФИЯ06 ЭКОНОМИКА И ЭКОНОМИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">10 ГОСУДАРСТВО И ПРАВО. ЮРИДИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">11 ПОЛИТИКА И ПОЛИТИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">11 ПОЛИТИКА И ПОЛИТИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">05 ДЕМОГРАФИЯ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">06 ЭКОНОМИКА И ЭКОНОМИЧЕСКИЕ НАУКИ</span>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">12 НАУКОВЕДЕНИЕ</span>
+														</label>
+													</div>
+													<div class="sMainInfo__tags-row row">
+														<div class="col-auto">
+															<div class="sMainInfo__tag">05 ДЕМОГРАФИЯ06 ЭКОНОМИКА И ЭКОНОМИЧЕСКИЕ НАУКИ
+																<div class="sMainInfo__cross">
 																</div>
 															</div>
 														</div>
+														<div class="col-auto">
+															<div class="sMainInfo__tag">11 ПОЛИТИКА И ПОЛИТИЧЕСКИЕ НАУКИ
+																<div class="sMainInfo__cross">
+																</div>
+															</div>
+														</div>
+														<div class="col-auto">
+															<div class="sMainInfo__tag">05 ДЕМОГРАФИЯ
+																<div class="sMainInfo__cross">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form-wrap">
+														<div class="form-wrap__input-wrap form-wrap__input-wrap--add form-group">
+															<label><span class="form-wrap__input-title">Ключевые слова<span class="star">*</span></span>
+																<input class="form-wrap__input form-control" name="text" type="text" placeholder="Text">
+															</label>
+															<button></button>
+														</div>
+														<div class="form-wrap__caption">Выберите из списка. Чтобы добавить новое ключевое слово, впишите его название в поле и нажмите Enter
+														</div>
+													</div>
+													<div class="sMainInfo__tags-row sMainInfo__tags-row--last row">
+														<div class="col-auto">
+															<div class="sMainInfo__tag">#СНО
+																<div class="sMainInfo__cross">
+																</div>
+															</div>
+														</div>
+														<div class="col-auto">
+															<div class="sMainInfo__tag">#ШколаМолодыхОкеанологов
+																<div class="sMainInfo__cross">
+																</div>
+															</div>
+														</div>
+														<div class="col-auto">
+															<div class="sMainInfo__tag">#СНО
+																<div class="sMainInfo__cross">
+																</div>
+															</div>
+														</div>
+														<div class="col-auto">
+															<div class="sMainInfo__tag">#СНО
+																<div class="sMainInfo__cross">
+																</div>
+															</div>
+														</div>
+														<div class="col-auto">
+															<div class="sMainInfo__tag">#ШколаМолодыхОкеанологов
+																<div class="sMainInfo__cross">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="sMainInfo__cabinet-main-wrapper">
+											<div class="sMainInfo__save-data">
+												<div class="row align-items-center">
+													<div class="col-lg-6 order-lg-last">
+														<a class="sMainInfo__btn btn btn-primary" href="#">Сохранить изменеия
+														</a>
+													</div>
+													<div class="col-lg-6">
+														<p> 
+															<svg class="icon icon-done ">
+																<use xlink:href="img/svg/sprite.svg#done"></use>
+															</svg>Все поля заполнены верно
+														</p>
 													</div>
 												</div>
 											</div>

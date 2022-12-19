@@ -207,16 +207,6 @@ mixin callBack(title, subtext, customClass, isUploadField)
 			+e.btn.btn.btn-primary(type='submit') Отправить
 			+policy
 
-mixin upload-field(title)
-	+b.upload-field
-		+e.title.form-wrap__input-title!=title
-		+e.wrap
-			+e.input-wrap
-				+e.LABEL.btn.btn.btn-primary
-					input.input-upload(type='file' name='file')
-					span Выбрать файл
-			+e.file-name Название файла.pdf
-
 mixin writeUsBanner(container='container')
 	+b.writeUsBanner
 		if(container)
@@ -286,3 +276,13 @@ mixin settings()
 			+e.cross.d-lg-none
 			+e.inner
 				block
+
+mixin upload-field(title='Прикрепить файл', btn='Выбрать файл', text)
+	+b.upload-field
+		+e.title.form-wrap__input-title!=title
+		+e.wrap
+			+e.input-wrap
+				+e.LABEL.btn.btn.btn-outline-primary
+					input.input-upload(type='file' name='file')
+					span!= btn
+			+e.file-name!= text

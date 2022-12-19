@@ -50,8 +50,7 @@ mixin sMainInfo(save, secondVariant)
 										a(href='#') Место работы
 				div(class=(secondVariant=='true' ? 'col-lg-9' : 'col-lg-8'))
 					+e.row.row
-						.col-12
-							block
+						block
 						if save
 							.col-12
 								+e.cabinet-main-wrapper

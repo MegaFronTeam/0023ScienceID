@@ -36,12 +36,50 @@
 				right: rem(12);
 				pointer-events: none;
 			}
+			&--add {
+				position: relative;
+				margin-bottom: rem(4);
+				button {
+					display: block;
+					position: absolute;
+					top: rem(34);
+					right: rem(12);
+					width: rem(24);
+					height: rem(24);
+					border: none;
+					background: transparent;
+					&::before, &::after {
+						content: '';
+						position: absolute;
+						display: block;
+						width: rem(20);
+						height: rem(2);
+						@include a-cent;
+						background-color: $primary;
+					}
+					&::before {
+						transform: rotate(-90deg);
+					}
+				}
+				input {
+					padding-right: rem(36);
+				}
+			}
 		}
 		&__input {
 			color: $gray-800;
 			&::placeholder {
 				color: rgba($color: $gray-700, $alpha: .5);
 			}
+		}
+		textarea {
+			min-height: rem(80);
+		}
+		&__caption {
+			font-size: rem(11);
+			color: rgba($color: $gray-700, $alpha: .5);
+			line-height: 1.5em;
+			margin-bottom: 0;
 		}
 	}
 	&__inner-row {
@@ -199,6 +237,10 @@
 		--bs-gutter-y: #{rem(8)};
 
 		margin-bottom: rem(24);
+		&--last {
+			padding-top: rem(24);
+			margin-bottom: 0;
+		}
 	}
 	&__tag {
 		position: relative;
@@ -358,6 +400,91 @@
 			& > * {
 				margin-top: var(--bs-gutter-y);
 			}
+		}
+
+	}
+	&__custom-input-row {
+		--bs-gutter-x: #{rem(56)};
+		--bs-gutter-y: #{rem(16)};
+
+		// max-width: rem(620);
+		.form-switch {
+			@include media-breakpoint-up(lg) {
+				min-width: rem(171);
+			}
+		}
+	}
+	&__chekboxes-wrap {
+		@extend .custom-scroll;
+		padding: rem(16);
+		background-color: $gray-100;
+		border-radius: 4px;
+		max-height: rem(328);
+		overflow-y: auto;
+		overflow-x: hidden;
+		margin-bottom: rem(24);
+		.custom-input {
+			padding-left: rem(36);
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+			&__input {
+				width: rem(20);
+				height: rem(20);
+				border-radius: 4px;
+				margin-top: 1px;
+				margin-left: rem(-36);
+				background-size: 11px;
+				background-color: $gray-100;
+				@include media-breakpoint-up(md) {
+					background-size: 14px;
+				}
+				&:checked {
+					background-image: url("data:image/svg+xml,%3Csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 6L3.79289 8.79289C4.18342 9.18342 4.81658 9.18342 5.20711 8.79289L13 1' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+					background-color: $primary;
+					box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+				}
+				&:focus {
+					box-shadow: none;
+				}
+			}
+			&__text {
+				font-size: rem(15);
+				line-height: 1.5em;
+				color: $gray-800;
+				text-transform: uppercase;
+			}
+		}
+	}
+	.upload-field {
+		&__title {
+			margin-bottom: rem(8);
+			font-weight: 600;
+			font-size: rem(16);
+			color: $gray-700;
+			line-height: 1.5em;
+			padding-bottom: 0;
+		}
+		&__btn {
+			--bs-btn-padding-x: #{rem(18)};
+			--bs-btn-padding-y: #{rem(10)};
+			--bs-btn-font-weight: 700;
+			--bs-btn-color: #1972db;
+			--bs-btn-bg: transparent;
+			--bs-btn-border-color: #{$primary};
+			--bs-btn-border-width: 2px;
+		}
+		&__input-wrap {
+			@include media-breakpoint-up(lg) {
+				margin-right: rem(24);
+				margin-bottom: 0;
+			}
+			margin-bottom: rem(20);
+		}
+		&__file-name {
+			font-size: rem(14);
+			line-height: 1.5em;
+			color: rgba($color: $gray-800, $alpha: .7);
 		}
 	}
 	@include media-breakpoint-up(xl) {}

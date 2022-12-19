@@ -54,6 +54,8 @@
 	input {
 		background-color: $gray-100;
 		border-color: transparent;
+		height: rem(20);
+		margin-top: rem(0.750);
 		&:focus {
 			border-color: transparent;
 			box-shadow: none;
