@@ -28,4 +28,27 @@ block pagecontent
 		+sMainInfo()
 			+e.cabinet-main-wrapper
 				h3 Основная информация
+				+e.inner-row.row
+					.col-12
+						+b.form-wrap
+							.row
+								.col-lg-12
+									+input('Text', 'text', 'Название', t, 'true')
+								.col-lg-6
+									+input('Text', 'text', 'Тип регистрации', t, 'true')
+								.col-lg-6.d-none.d-lg-block
+								.col-lg-6
+									+e.input-wrap.form-group
+										label
+											+e.SPAN.input-title Дата начала регистрации
+												span.star *
+											input.form-wrap__input.form-control.calendar-js(name="text" type="text" placeholder="ДД,ММ.ГГГГ" readonly)
+										+icon('calendar3')
+								.col-lg-6
+									+e.input-wrap.form-group
+										label
+											+e.SPAN.input-title Дата окончания регистрации
+												span.star *
+											input.form-wrap__input.form-control.calendar-js(name="text" type="text" placeholder="ДД,ММ.ГГГГ" readonly)
+										+icon('calendar3')
 	+footer()

@@ -264,7 +264,7 @@ const JSCCommon = {
 						if (this === clickedHead) {
 							//parent element gain toggle class, style head change via parent
 							$(this.parentElement).toggleClass('active');
-							$(this.parentElement).find('.dd-content-js').slideToggle(function () {
+							$(this.parentElement).children('.dd-content-js').slideToggle(function () {
 								$(this).toggleClass('active');
 							});
 						}
@@ -642,8 +642,12 @@ function eventHandler() {
 		watchOverflow: true
 	});
 
-	new AirDatepicker('.calendar-js');
-
+	let calendars = document.querySelectorAll('.calendar-js');
+	if (calendars) {
+		for (let calendar of calendars) {
+			new AirDatepicker(calendar);
+		}
+	}
 	$('.settings__menu').on('click', function() {
 		$('.settings__content').addClass('active');
 		$('body').addClass('fixed');
