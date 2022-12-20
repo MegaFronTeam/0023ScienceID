@@ -668,11 +668,18 @@ function eventHandler() {
 
 	document.addEventListener('mouseup', (event) => {
 		let btn = event.target.closest(".top-nav__cabinet-btn"); // (1)\
+		let activeBtn = event.target.closest(".top-nav__cabinet-btn.active"); // (1)\
 		let container = event.target.closest('.top-nav__cabinet-dropdown'); // (1)
+		// if ($('.top-nav__cabinet-btn').hasClass('active')) {
+		// }
 		if (container || btn) {
 			$('.top-nav__cabinet-btn').addClass('active');
 		} else {
 			$('.top-nav__cabinet-btn').removeClass('active');
+		}
+		if(!container && activeBtn) {
+			$('.top-nav__cabinet-btn').removeClass('active');
+			console.log(123);
 		}
 	});
 };

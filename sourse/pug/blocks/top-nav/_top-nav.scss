@@ -139,6 +139,11 @@
 		overflow: hidden;
 		flex: 0 0 auto;
 		margin-right: 6px;
+		img {
+			width: rem(34);
+			height: rem(34);
+			object-fit: cover
+		}
 	}
 	&__cabinet-dropdown {
 		@include mt;
@@ -162,9 +167,12 @@
 		margin-bottom: rem(16);
 		img {
 			flex: 0 0 auto;
-			max-width: rem(64);
+			width: rem(64);
+			height: rem(64);
+			object-fit: cover;
 			margin-right: rem(16);
 			border-radius: 7px;
+			object-fit: cover;
 		}
 	}
 	&__name {
