@@ -665,8 +665,17 @@ function eventHandler() {
 			$('body').removeClass('fixed');
 		}
 	});
-};
 
+	document.addEventListener('mouseup', (event) => {
+		let btn = event.target.closest(".top-nav__cabinet-btn"); // (1)\
+		let container = event.target.closest('.top-nav__cabinet-dropdown'); // (1)
+		if (container || btn) {
+			$('.top-nav__cabinet-btn').addClass('active');
+		} else {
+			$('.top-nav__cabinet-btn').removeClass('active');
+		}
+	});
+};
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {

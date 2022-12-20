@@ -40,10 +40,34 @@ mixin top-nav(isCabinet)
 							+e.messenger-btn.btn.btn-primary(href="#")
 								+e.num 123
 								+icon('messenger')
-							+e.cabinet-btn.btn.btn-primary(href="#")
+							+e.cabinet-btn.btn.btn-primary
 								+e.img-wrap
 									+img('img/avatar-1.jpg').res-i
 								+icon('chevron-down')
+								+e.cabinet-dropdown
+									+e.info
+										+img('img/avatar-1.jpg').res-i
+										+e.name
+											.h5 Владиславский Арсен
+											span 18118-100010
+									+e.link-wrap
+										a(href="#")
+											+icon('user2')
+											| Профиль
+										a(href="#")
+											+icon('settings')
+											| Настройки
+									+e.link-wrap
+										a(href="#")
+											+icon('calendar4')
+											| Мои мероприятия
+										a(href="#")
+											+icon('building')
+											| Мои СМУ и СНО
+										a(href="#")
+											+icon('users')
+											| Мои Коллеги
+									+e.log-out(href="#") Выйти
 					else
 						+e.wrap
 							+e.link(href='#').d-none.d-xl-block Войти
