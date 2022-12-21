@@ -264,7 +264,7 @@ const JSCCommon = {
 						if (this === clickedHead) {
 							//parent element gain toggle class, style head change via parent
 							$(this.parentElement).toggleClass('active');
-							$(this.parentElement).find('.dd-content-js').slideToggle(function () {
+							$(this.parentElement).children('.dd-content-js').slideToggle(function () {
 								$(this).toggleClass('active');
 							});
 						}
@@ -641,8 +641,48 @@ function eventHandler() {
 		freeMode: true,
 		watchOverflow: true
 	});
-};
 
+	let calendars = document.querySelectorAll('.calendar-js');
+	if (calendars) {
+		for (let calendar of calendars) {
+			new AirDatepicker(calendar);
+		}
+	}
+	$('.settings__menu').on('click', function() {
+		$('.settings__content').addClass('active');
+		$('body').addClass('fixed');
+	});
+	document.addEventListener('mouseup', (event) => {
+		let container = event.target.closest(".settings__content.active"); // (1)
+		let toggle = event.target.closest('.settings__cross'); // (1)
+		let btn = event.target.closest('.settings__menu'); // (1)
+		if (!container && !toggle && !btn) {
+			$('.settings__content').removeClass('active');
+			$('body').removeClass('fixed');
+		};
+		if(toggle) {
+			$('.settings__content').removeClass('active');
+			$('body').removeClass('fixed');
+		}
+	});
+
+	document.addEventListener('mouseup', (event) => {
+		let btn = event.target.closest(".top-nav__cabinet-btn"); // (1)\
+		let activeBtn = event.target.closest(".top-nav__cabinet-btn.active"); // (1)\
+		let container = event.target.closest('.top-nav__cabinet-dropdown'); // (1)
+		// if ($('.top-nav__cabinet-btn').hasClass('active')) {
+		// }
+		if (container || btn) {
+			$('.top-nav__cabinet-btn').addClass('active');
+		} else {
+			$('.top-nav__cabinet-btn').removeClass('active');
+		}
+		if(!container && activeBtn) {
+			$('.top-nav__cabinet-btn').removeClass('active');
+			console.log(123);
+		}
+	});
+};
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {

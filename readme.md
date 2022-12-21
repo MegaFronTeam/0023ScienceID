@@ -15,7 +15,7 @@
 11. <https://megafronteam.github.io/0023ScienceID/public/07-volunteering.html>
 12. <https://megafronteam.github.io/0023ScienceID/public/07-volunteering-2.html>
 13. <https://megafronteam.github.io/0023ScienceID/public/07-volunteering-3.html>
-14. 
+14. <https://megafronteam.github.io/0023ScienceID/public/08-courses.html>
 15. <https://megafronteam.github.io/0023ScienceID/public/09-map.html>
 16. <https://megafronteam.github.io/0023ScienceID/public/10-news.html>
 17. <https://megafronteam.github.io/0023ScienceID/public/10-news-2.html>
@@ -28,3 +28,12 @@
 
 ### Личный кабинет
 24. <https://megafronteam.github.io/0023ScienceID/public/17-cabinet.html>
+#### Редактирование профиля
+25. <https://megafronteam.github.io/0023ScienceID/public/18-profile-editing.html>
+25. <https://megafronteam.github.io/0023ScienceID/public/18-profile-editing-2.html>
+25. <https://megafronteam.github.io/0023ScienceID/public/18-profile-editing-3.html>
+#### Мои мероприятия
+25. <https://megafronteam.github.io/0023ScienceID/public/19-my-events.html>
+25. <https://megafronteam.github.io/0023ScienceID/public/19-my-events-2.html>
+#### Создание мероприятия
+25. <https://megafronteam.github.io/0023ScienceID/public/20-create-event.html>

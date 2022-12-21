@@ -1,0 +1,31 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug
+ 
+include ../blocks/footer/_footer.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sCourses/_sCourses.pug
+
+block variables
+	- let  mainPage= 'courses-page'
+	- let  bg= '08-courses.jpg'
+
+block title
+	- let  title= 'Курс СНТР'
+	title= title
+block pagecontent
+	+mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		//- +topLine
+	main
+		+page-head('', '', '', '', 'Курс СНТР')
+		.container
+			+coursesBanner('Онлайн-курс', 'Стратегия научно-технологического развития Российской Федерации', 'КУРС СНТР', 'coursesBanner-bg-1.jpg')
+		+sCourses
+	+footer()

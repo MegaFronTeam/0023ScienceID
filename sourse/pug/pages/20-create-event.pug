@@ -1,0 +1,163 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug
+ 
+include ../blocks/footer/_footer.pug
+
+include ../blocks/sMainInfo/_sMainInfo.pug
+include ../blocks/sContent/_sContent.pug
+
+block variables
+	- let  mainPage= 'cabinet-page-2'
+	- let  bg= '16-contacts.jpg'
+
+block title
+	- let  title= 'Создание мероприятия'
+	title= title
+block pagecontent
+	+mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		//- +topLine
+	main
+		+page-head(title, '', '', '', 'Личный кабинет', 'Настройки профиля')
+		+sMainInfo('true')
+			mixin switcher(text)
+				label.form-check.form-switch
+					input.form-check-input(type='checkbox' role='switch')&attributes(attributes)
+					span.form-check-label!= text
+			.col-12
+				+e.cabinet-main-wrapper
+					h3 Основная информация
+					+b.form-wrap
+						.row
+							.col-lg-12
+								+input('Text', 'text', 'Название', t, 'true')
+							.col-lg-6
+								+input('Text', 'text', 'Тип регистрации', t, 'true')
+							.col-lg-6.d-none.d-lg-block
+							.col-lg-6
+								+e.input-wrap.form-group
+									label
+										+e.SPAN.input-title Дата начала регистрации
+											span.star *
+										input.form-wrap__input.form-control.calendar-js(name="text" type="text" placeholder="ДД,ММ.ГГГГ" readonly)
+									+icon('calendar3')
+							.col-lg-6
+								+e.input-wrap.form-group
+									label
+										+e.SPAN.input-title Дата окончания регистрации
+											span.star *
+										input.form-wrap__input.form-control.calendar-js(name="text" type="text" placeholder="ДД,ММ.ГГГГ" readonly)
+									+icon('calendar3')
+							.col-12
+								+upload-field('Изображение', 'Добавить изображениеs', 'Разрешение для зображения: 1958*860<br>Размер фала не должен превышать 5 mb. Допустимые форматы: png, jpg, jpeg')
+							.col-12
+								+upload-field('Изображение в шапке', 'Добавить изображениеs', 'Разрешение для зображения: 1958*860<br>Размер фала не должен превышать 5 mb. Допустимые форматы: png, jpg, jpeg')
+							.col-12
+								+switcher('Скрыть информацию в шапке')
+							.col-12
+								+input('Text', 'textarea', 'Краткое описание', t, 'true')
+							.col-12
+								+input('Text', 'textarea', 'Полное описание', t, 'true')
+			.col-12
+				+e.cabinet-main-wrapper
+					h3 Дата и место проведения
+					+e.inner-row.row
+						.col-12
+							+b.form-wrap
+								.row
+									.col-lg-6
+										+e.input-wrap.form-group
+											label
+												+e.SPAN.input-title Дата начала
+													span.star *
+												input.form-wrap__input.form-control.calendar-js(name="text" type="text" placeholder="ДД,ММ.ГГГГ" readonly)
+											+icon('calendar3')
+									.col-lg-6
+										+e.input-wrap.form-group
+											label
+												+e.SPAN.input-title Дата окончания 
+													span.star *
+												input.form-wrap__input.form-control.calendar-js(name="text" type="text" placeholder="ДД,ММ.ГГГГ" readonly)
+											+icon('calendar3')
+									.col-lg-6
+										+input('Выбрать', 'select', 'Регион проведения', t, 'true')
+									.col-lg-6.d-none.d-lg-block
+									.col-lg-12
+										+input('Выбрать', 'text', 'Место проведения', t, 'true')
+						.col-12
+							h5 На какой вызов СНТР отвечает мероприятие
+							+e.custom-input-row.row
+								.col-12.col-sm-6.col-lg-auto
+									+switcher('Экономика')
+								.col-12.col-sm-6.col-lg-auto
+									+switcher('Продовольствие')
+								.col-12.col-sm-6.col-lg-auto
+									+switcher('Пространство')
+								.col-12.col-sm-6.col-lg-auto
+									+switcher('Демография')
+								.col-12.col-sm-6.col-lg-auto
+									+switcher('Энергетика')
+								.col-12.col-sm-6.col-lg-auto
+									+switcher('Природа')
+								.col-12.col-sm-6.col-lg-auto
+									+switcher('Безопасность')
+						.col-12
+							h5 Область науки
+							+e.custom-input-row.row
+								.col-12
+									+switcher('Социальные науки')
+								.col-12
+									+switcher('Сельскохозяйственные науки')
+								.col-12
+									+switcher('Медицинские науки и общественное здравоохранение')
+								.col-12
+									+switcher('Естественные и точные науки')
+								.col-12
+									+switcher('Гуманитарные науки')
+								.col-12
+									+switcher('Техника и технологии')
+						.col-12
+							h5 Первый уровень ГРНТИ
+							+e.chekboxes-wrap
+								-for(let i = 0; i < 6; i++)
+									+in-c('checkbox', '04 СОЦИОЛОГИЯ')
+									+in-c('checkbox', '05 ДЕМОГРАФИЯ06 ЭКОНОМИКА И ЭКОНОМИЧЕСКИЕ НАУКИ')
+									+in-c('checkbox', '10 ГОСУДАРСТВО И ПРАВО. ЮРИДИЧЕСКИЕ НАУКИ')
+									+in-c('checkbox', '11 ПОЛИТИКА И ПОЛИТИЧЕСКИЕ НАУКИ')
+									+in-c('checkbox', '11 ПОЛИТИКА И ПОЛИТИЧЕСКИЕ НАУКИ')
+									+in-c('checkbox', '05 ДЕМОГРАФИЯ')
+									+in-c('checkbox', '06 ЭКОНОМИКА И ЭКОНОМИЧЕСКИЕ НАУКИ')
+									+in-c('checkbox', '12 НАУКОВЕДЕНИЕ')
+							+e.tags-row.row
+								mixin tag(text)
+									.col-auto
+										+e.tag!= text
+											+e.cross
+								+tag('05 ДЕМОГРАФИЯ06 ЭКОНОМИКА И ЭКОНОМИЧЕСКИЕ НАУКИ')
+								+tag('11 ПОЛИТИКА И ПОЛИТИЧЕСКИЕ НАУКИ')
+								+tag('05 ДЕМОГРАФИЯ')
+							+b.form-wrap
+								+e.input-wrap--add.form-group
+									label
+										+e.SPAN.input-title Ключевые слова
+											span.star *
+										input.form-wrap__input.form-control(name="text" type="text" placeholder="Text")
+									button
+								+e.caption Выберите из списка. Чтобы добавить новое ключевое слово, впишите его название в поле и нажмите Enter
+							+e.tags-row--last.row
+								mixin tag(text)
+									.col-auto
+										+e.tag!= text
+											+e.cross
+								+tag('#СНО')
+								+tag('#ШколаМолодыхОкеанологов')
+								+tag('#СНО')
+								+tag('#СНО')
+								+tag('#ШколаМолодыхОкеанологов')
+	+footer()

@@ -1,0 +1,65 @@
+mixin sMainInfo(save, secondVariant)
+	// start sMainInfo
+	+b.sMainInfo.section#sMainInfo&attributes(attributes)
+		.container
+			+e.main-row.row
+				div(class=(secondVariant=='true' ? 'col-lg-3' : 'col-lg-4'))
+					+settings()
+						if secondVariant
+							ul
+								li
+									a.active(href='#') Посещаемые мероприятия
+								li
+									a(href='#') Созданые мероприятия
+						else
+							+e.wrap
+								h5 Основные настройки
+								ul
+									li
+										a.active(href='#') Основная информация
+									li
+										a(href='#') Изменение пароля
+									li
+										a(href='#') Настройки конфиденциальности
+									li
+										a(href='#') Фотография
+									li
+										a(href='#') Привязка к другим системам
+									li
+										a(href='#') Ключевые слова
+									li
+										a(href='#') Карты пользователя
+							+e.wrap
+								h5 Профессиональная деятельность
+								ul
+									li
+										a(href='#') Область знания
+									li
+										a(href='#') Публикации
+									li
+										a(href='#') Проекты и гранты
+									li
+										a(href='#') Патенты
+									li
+										a(href='#') НИОКТР
+									li
+										a(href='#') Образование
+									li
+										a(href='#') Ученая степень и звания
+									li
+										a(href='#') Место работы
+				div(class=(secondVariant=='true' ? 'col-lg-9' : 'col-lg-8'))
+					+e.row.row
+						block
+						if save
+							.col-12
+								+e.cabinet-main-wrapper
+									+e.save-data
+										.row.align-items-center
+											.col-lg-6.order-lg-last
+												+e.btn.btn.btn-primary(href='#') Сохранить изменеия
+											.col-lg-6
+												p 
+													+icon('done')
+													| Все поля заполнены верно
+	// end sMainInfo

@@ -207,16 +207,6 @@ mixin callBack(title, subtext, customClass, isUploadField)
 			+e.btn.btn.btn-primary(type='submit') Отправить
 			+policy
 
-mixin upload-field(title)
-	+b.upload-field
-		+e.title.form-wrap__input-title!=title
-		+e.wrap
-			+e.input-wrap
-				+e.LABEL.btn.btn.btn-primary
-					input.input-upload(type='file' name='file')
-					span Выбрать файл
-			+e.file-name Название файла.pdf
-
 mixin writeUsBanner(container='container')
 	+b.writeUsBanner
 		if(container)
@@ -256,3 +246,43 @@ mixin writeUsBanner(container='container')
 					+e.btn.btn.btn-primary(href="#") Написать нам
 					+arrow
 					.swiper-pagination
+
+mixin coursesBanner(headline, title, h5, img)
+	+b.courses-banner.bg-wrap
+		+img(`img/${img}`, 'bg').picture-bg
+		+e.headline!= headline
+		h1.h2!= title
+		h5!= h5
+		+e.tags-row.row
+			.col-auto
+				+e.tag(href="#") #природа
+			.col-auto
+				+e.tag(href="#") #энергетика
+			.col-auto
+				+e.tag(href="#") #демография
+			.col-auto
+				+e.tag(href="#") #безопасность
+			.col-auto
+				+e.tag(href="#") #пространство
+			.col-auto
+				+e.tag(href="#") #продовольствие
+			.col-auto
+				+e.tag(href="#") #экономика
+
+mixin settings()
+	+b.settings
+		+e.menu.btn.btn-primary.d-lg-none Меню
+		+e.content
+			+e.cross.d-lg-none
+			+e.inner
+				block
+
+mixin upload-field(title='Прикрепить файл', btn='Выбрать файл', text)
+	+b.upload-field
+		+e.title.form-wrap__input-title!=title
+		+e.wrap
+			+e.input-wrap
+				+e.LABEL.btn.btn.btn-outline-primary
+					input.input-upload(type='file' name='file')
+					span!= btn
+			+e.file-name!= text

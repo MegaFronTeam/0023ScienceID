@@ -1,0 +1,46 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug
+ 
+include ../blocks/footer/_footer.pug
+
+include ../blocks/sMainInfo/_sMainInfo.pug
+include ../blocks/sContent/_sContent.pug
+
+block variables
+	- let  mainPage= 'cabinet-page-2'
+	- let  bg= '16-contacts.jpg'
+
+block title
+	- let  title= 'Мои мероприятия'
+	title= title
+block pagecontent
+	+mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		//- +topLine
+	main
+		+page-head(title, '', '', '', 'Личный кабинет', 'Мои мероприятия')
+		+sMainInfo('', 'true')
+			.col-12
+				+e.cabinet-main-wrapper
+					+search('Поиск мероприятия')
+					+e.links-row.row
+						.col-auto 
+							a.btn.btn-outline-primary.active(href="#") Предстоящие
+						.col-auto 
+							a.btn.btn-outline-primary(href="#") Прошедшие
+					+e.row.row
+						.col-12
+							+sliderItem('sliderItem-img-3.png', '1-я Международная научно-техническая конференция «Скоростной транспорт будущего: перспективы, проблемы, решения»', '28 - 29 августа 2022', 'true', 'Санкт-Петербург', '', 'Offline', '', 'Тегмероприятия', 'Тег').news-item--in-row
+						.col-12
+							+sliderItem('sliderItem-img-2.png', '1-я Международная научно-техническая конференция «Скоростной транспорт будущего: перспективы, проблемы, решения»', '28 - 29 августа 2022', 'true', 'Санкт-Петербург', '', 'Offline', '', 'Тегмероприятия', 'Тег').news-item--in-row
+						.col-12
+							+sliderItem('sliderItem-img-1.png', '1-я Международная научно-техническая конференция «Скоростной транспорт будущего: перспективы, проблемы, решения»', '28 - 29 августа 2022', 'true', 'Санкт-Петербург', '', 'Offline', '', 'Тегмероприятия', 'Тег').news-item--in-row
+						.col-12
+							+sliderItem('sliderItem-img-3.png', '1-я Международная научно-техническая конференция «Скоростной транспорт будущего: перспективы, проблемы, решения»', '28 - 29 августа 2022', 'true', 'Санкт-Петербург', '', 'Offline', '', 'Тегмероприятия', 'Тег').news-item--in-row
+	+footer()

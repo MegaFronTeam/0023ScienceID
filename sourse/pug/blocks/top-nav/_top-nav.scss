@@ -110,6 +110,7 @@
     top: -2px;
 	}
 	&__cabinet-btn {
+		position: relative;
 		display: flex;
 		align-items: center;
 		--bs-btn-color: #{$primary};
@@ -125,6 +126,12 @@
 			stroke-width: 2px;
 			fill: none;
 		}
+		&.active {
+			.top-nav__cabinet-dropdown {
+				opacity: 1;
+				pointer-events: all;
+			}
+		}
 	}
 	&__img-wrap {
 		max-width: rem(34);
@@ -132,6 +139,100 @@
 		overflow: hidden;
 		flex: 0 0 auto;
 		margin-right: 6px;
+		img {
+			width: rem(34);
+			height: rem(34);
+			object-fit: cover
+		}
+	}
+	&__cabinet-dropdown {
+		@include mt;
+		position: absolute;
+		top: calc(100% + 10px);
+		right: 0;
+		padding: rem(32) rem(26) rem(24);
+		background-color: #fff;
+		box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+		border-radius: 8px;
+		z-index: 100;
+		color: #000;
+		text-align: left;
+		opacity: 0;
+		pointer-events: none;
+		cursor: auto;
+	}
+	&__info {
+		display: flex;
+		align-items: flex-start;
+		margin-bottom: rem(16);
+		img {
+			flex: 0 0 auto;
+			width: rem(64);
+			height: rem(64);
+			object-fit: cover;
+			margin-right: rem(16);
+			border-radius: 7px;
+			object-fit: cover;
+		}
+	}
+	&__name {
+		.h5 {
+			font-weight: 600;
+			line-height: 1.4em;
+			color: $gray-800;
+			margin-bottom: rem(1);
+		}
+		span {
+			font-size: rem(11);
+			line-height: 1.5em;
+			color: $gray-700;
+		}
+	}
+	&__link-wrap {
+		position: relative;
+		padding-bottom: rem(10);
+		margin-bottom: rem(10);
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 0;
+			width: 100%;
+			max-width: rem(266);
+			height: 1px;
+			background-color: #F0F5FA;
+		}
+		a {
+			display: flex;
+			align-items: center;
+			font-size: rem(14);
+			line-height: 1.5em;
+			color: #1E1E2F;
+			padding: rem(10) rem(6);
+			&:hover, &.active {
+				color: $primary;
+			}
+			.icon {
+				color: $primary;
+				fill: currentColor;
+				stroke: none;
+				stroke-width: 0;
+				font-size: rem(16);
+				flex: 0 0 auto;
+				margin-right: rem(10);
+			}
+		}
+	}
+	&__log-out {
+		font-size: rem(14);
+		line-height: 1.5em;
+		color: #9398A8;
+		padding: rem(8) rem(6);
+		&:hover {
+			color: $danger;
+		}
 	}
 	@include media-breakpoint-up(md) {}
 

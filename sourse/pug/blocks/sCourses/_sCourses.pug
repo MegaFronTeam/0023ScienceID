@@ -1,0 +1,80 @@
+mixin sCourses(data)
+	// start sCourses
+	+b.SECTION.sCourses.section#sCourses&attributes(attributes)
+		.container
+			+b.section-title
+				h3 О курсе
+				.row
+					.col-auto
+						h5 Координационный совет по&nbsp;делам молодёжи в&nbsp;научной и&nbsp;образовательной сферах при Совете при Президенте РФ&nbsp;по&nbsp;науке и&nbsp;образованию совместно с&nbsp;Московским авиационным институтом разработал онлайн-курс, посвящённый Стратегии научно-технологического развития Российской Федерации (СНТР)
+					.col
+						p Принципиальное отличие Стратегии от&nbsp;предшествующих аналогичных документов заключается в&nbsp;том, что впервые этот документ нацелен на&nbsp;решение ключевых социально-экономических задач нашей страны&nbsp;&mdash; &laquo;больших вызовов&raquo;. Эффективный ответ на&nbsp;эти вызовы возможен только в&nbsp;случае глубоких структурных преобразований сектора исследований и&nbsp;разработок и&nbsp;перехода к&nbsp;качественно иному уровню его взаимодействия с&nbsp;социально- экономической сферой. Именно поэтому наука рассматривается в&nbsp;Стратегии не&nbsp;как отдельный, обособленный сектор, а&nbsp;как один из&nbsp;ключевых элементов развития общества и&nbsp;экономики страны. Именно поэтому решением Президента Российской Федерации Стратегии был присвоен высокий статус: она находится в&nbsp;одном ряду со&nbsp;Стратегией национальной безопасности и&nbsp;Стратегией социально-экономического развития и&nbsp;носит надведомственный характер
+			+e.program
+				h3 Программа курса
+				.tabs.row
+					ul.tabs__caption.col-xl-auto.order-xl-last
+						li.tabs__btn.active Место Стратегии в научно-технологическом развитии России
+						li.tabs__btn Большие вызовы для общества и государства
+						li.tabs__btn Связь Стратегии НТР и НТИ
+						li.tabs__btn Приоритеты научно-технологического развития России (Часть 1)
+						li.tabs__btn Приоритеты научно-технологического развития России (Часть 2)
+						li.tabs__btn Состояние современной российской науки
+						li.tabs__btn Механизмы реализации стратегии (Часть 1)
+					.tabs__content.col-xl.active
+						.h4 Место Стратегии в&nbsp;научно-технологическом развитии России
+						.h5 Место Стратегии в&nbsp;научно-технологическом развитии России
+						ul
+							li Lorem ipsum dolor sit amet.
+							li Lorem ipsum dolor sit amet.
+							li Lorem ipsum dolor sit amet.
+							li Lorem ipsum dolor sit amet.
+						.h6 Место Стратегии в&nbsp;научно-технологическом развитии России
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, fuga.
+					-for(let i = 0; i < 6; i++)
+						.tabs__content.col-xl
+							+e.video-wrap-inner
+								+e.inner
+									//- +e.icon-wrap
+									//- 	+icon('play')
+									.h4 Место Стратегии в&nbsp;научно-технологическом развитии России
+									.h5 Место Стратегии в&nbsp;научно-технологическом развитии России
+									.h6 Место Стратегии в&nbsp;научно-технологическом развитии России
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, fuga.
+									ul
+										li Lorem ipsum dolor sit amet.
+										li Lorem ipsum dolor sit amet.
+										li Lorem ipsum dolor sit amet.
+										li Lorem ipsum dolor sit amet.
+			+e.experts
+				h3 Эксперты
+				+e.row.row
+					mixin item(img, title, text, customClass='col-12 col-sm-6 col-lg-3')
+						div(class=customClass)
+							+e.item
+								+e.img-wrap
+									+img(`img/${img}`).res-i
+								h5!= title
+								p!= text
+					+item('sCourses-img-1.jpg', 'Владимир Княгинин', 'Вице-президент ЦСР, председатель правления &laquo;ЦСР &laquo;Северо-Запад&raquo;')
+					+item('sCourses-img-2.jpg', 'Михаил Ковальчук', 'Президент Национального исследовательского центра &laquo;Курчатовский институт&raquo;, член-корреспондент РАН')
+					+item('sCourses-img-3.jpg', 'Александр Кулешов', 'Ректор Сколковского института науки и технологий, академик РАН')
+					+item('sCourses-img-4.jpg', 'Дмитрий Песков', 'Директор направления «Молодые профессионалы» Агентства стратегических инициатив')
+					+item('sCourses-img-5.jpg', 'Михаил Погосян', 'Ректор Московского авиационного института, академик РАН', 'col-12 col-sm-6 col-lg-4')
+					+item('sCourses-img-6.jpg', 'Андрей Фурсенко', 'Помощник Президента РФ', 'col-12 col-sm-6 col-lg-4')
+					+item('sCourses-img-7.jpg', 'Алексей Хохлов', 'Проректор Московского государственного университета&nbsp;им. М.В. Ломоносова, академик РАН', 'col-12 col-sm-6 col-lg-4')
+			+e.video-wrap
+				<iframe width="1280" height="720" src="https://www.youtube.com/embed/L_LUpnjgPso" title="Fireplace 10 hours full HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			+e.moreInfo
+				h3 Дополнительная информация
+				.row
+					mixin item(title)
+						.col-sm-6.col-lg-4
+							+e.document
+								+img('img/svg/pdf.svg')
+								h6!= title
+								p pdf 2.0 mb 
+									a(href='#') Скачать
+					+item('Указ Президента Российской Федерации от&nbsp;1&nbsp;декабря 2016 года &#8470;&nbsp;642 &laquo;О&nbsp;стратегии научно- технологического развития Российской Федерации&raquo;')
+					+item('Федеральный закон от&nbsp;28&nbsp;июня 2014&nbsp;г. &#8470;&nbsp;172-ФЗ &laquo;О&nbsp;стратегическом планировании в&nbsp;Российской Федерации&raquo;')
+					+item('Cтенограмма заседания Совета по&nbsp;науке и&nbsp;образованию при Президенте Российской Федерации от&nbsp;23&nbsp;ноября 2016&nbsp;года, посвященного обсуждению Стратегии научно-технологического развития&nbsp;РФ')
+		// end sCourses

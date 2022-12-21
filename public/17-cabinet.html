@@ -9,6 +9,7 @@
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/air-datepicker/air-datepicker.css" rel="stylesheet"/>
 		<link rel="preconnect" href="https://fonts.googleapis.com"/>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
@@ -109,13 +110,41 @@
 											<use xlink:href="img/svg/sprite.svg#messenger"></use>
 										</svg>
 									</a>
-									<a class="top-nav__cabinet-btn btn btn-primary" href="#">
-										<div class="top-nav__img-wrap"><img class="res-i" src="img/avatar-1.jpg" alt="" loading="lazy"/>
+									<div class="top-nav__cabinet-btn btn btn-primary">
+										<div class="top-nav__img-wrap"><img src="img/avatar-1.jpg" alt="" loading="lazy"/>
 										</div>
 										<svg class="icon icon-chevron-down ">
 											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
 										</svg>
-									</a>
+										<div class="top-nav__cabinet-dropdown">
+											<div class="top-nav__info"><img src="img/avatar-1.jpg" alt="" loading="lazy"/>
+												<div class="top-nav__name">
+													<div class="h5">Владиславский Арсен</div><span>18118-100010</span>
+												</div>
+											</div>
+											<div class="top-nav__link-wrap"><a href="#">
+													<svg class="icon icon-user2 ">
+														<use xlink:href="img/svg/sprite.svg#user2"></use>
+													</svg>Профиль</a><a href="#">
+													<svg class="icon icon-settings ">
+														<use xlink:href="img/svg/sprite.svg#settings"></use>
+													</svg>Настройки</a>
+											</div>
+											<div class="top-nav__link-wrap"><a href="#">
+													<svg class="icon icon-calendar4 ">
+														<use xlink:href="img/svg/sprite.svg#calendar4"></use>
+													</svg>Мои мероприятия</a><a href="#">
+													<svg class="icon icon-building ">
+														<use xlink:href="img/svg/sprite.svg#building"></use>
+													</svg>Мои СМУ и СНО</a><a href="#">
+													<svg class="icon icon-users ">
+														<use xlink:href="img/svg/sprite.svg#users"></use>
+													</svg>Мои Коллеги</a>
+											</div>
+											<a class="top-nav__log-out" href="#">Выйти
+											</a>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -657,7 +686,8 @@
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
-		<script src="libs/inputmask/inputmask.min.js"> </script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/air-datepicker/air-datepicker.js"> </script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 		<script src="libs/@fancyapps/ui/panzoom.controls.umd.js"> </script>
 		<script src="js/common.js"></script>
