@@ -39,6 +39,10 @@ block pagecontent
 			+logoSlide('logoSlide-img-2.png')
 			+logoSlide('logoSlide-img-3.png')
 			+logoSlide('logoSlide-img-4.png')
+			
+		+sDefaultSlider('Наши партнеры 2', 'Все партнеры 2').sDefaultSlider--2-slides
+			- for (var x = 0; x < 3; x++)
+				+logoSlide('banner.png') 
 		+sDefaultSlider('Новости Лабы', 'Все новости').sDefaultSlider--news
 			+sliderItem('news-img-1.jpg', 'Волонтер натуралист&nbsp;&mdash; как заинтересовать детей наукой?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant
 			+sliderItem('news-img-2.jpg', 'Всемирный день туризма. Как в&nbsp;России совместят приятное с&nbsp;полезным?', '14.05.2022', '', 'Разработки', 'swiper-slide', '', 'Академический координатор по&nbsp;работе с&nbsp;корпоративными клиентами (м. Павелецкая английский язык С1-С2)', 'Тег новости', 'Тегновый').news-item--second-variant

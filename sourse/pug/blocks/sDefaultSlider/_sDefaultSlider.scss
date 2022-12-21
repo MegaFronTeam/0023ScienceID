@@ -143,6 +143,15 @@
 			padding-top: rem(36.500);
 		}
 	}
+	&--2-slides{
+		.swiper-slide{
+			max-width: 456px;
+			min-width: calc(50% - 2.1333333333rem / 2);
+		}
+		.logoSlide__img-wrap {
+    --ratio: 1;
+		}
+	}
 	&__cards-row{
 		--bs-gutter-x: #{rem(32)};
 		--bs-gutter-y: #{rem(32)};
