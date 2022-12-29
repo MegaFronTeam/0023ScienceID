@@ -682,6 +682,12 @@ function eventHandler() {
 			console.log(123);
 		}
 	});
+
+	$('.select-js').select2({
+		placeholder: 'Text',
+		multiple: true,
+		width: '100%',
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

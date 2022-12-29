@@ -154,8 +154,12 @@ mixin sUsers(inRow)
 										+e.id!= id
 										.h5!= title
 										p!= text
-									div(class=(col=="col" ? "col" : "col-md-auto"))
-										+e.btn.btn.btn-outline-primary(href="#") Написать
+									div.sUsers__col(class=(col=="col" ? "col" : "col-md-auto"))
+										.row
+											.col-12
+												+e.btn.btn.btn-outline-primary(href="#") Написать
+											.col-12
+												+e.btn.btn.btn-outline-primary(href="#") Написать
 						if inRow
 							+e.wrap
 								+user(1, 'Петрова Эдита Ярославовна', 'Заведующий научно-исследовательской лабораторией медицинской кибернетики и&nbsp;управления в&nbsp;здравоохранении')

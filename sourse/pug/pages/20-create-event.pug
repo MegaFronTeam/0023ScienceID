@@ -147,8 +147,13 @@ block pagecontent
 									label
 										+e.SPAN.input-title Ключевые слова
 											span.star *
-										input.form-wrap__input.form-control(name="text" type="text" placeholder="Text")
-									button
+										select.select-js.form-wrap__input.form-control(name="text" type="select" placeholder="Text")
+											option(value="Text") Text
+											option(value="1") 1
+											option(value="2") 2
+											option(value="3") 3
+											option(value="4") 4
+									+e.add-btn
 								+e.caption Выберите из списка. Чтобы добавить новое ключевое слово, впишите его название в поле и нажмите Enter
 							+e.tags-row--last.row
 								mixin tag(text)

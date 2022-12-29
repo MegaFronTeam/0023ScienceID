@@ -39,31 +39,53 @@
 			&--add {
 				position: relative;
 				margin-bottom: rem(4);
-				button {
-					display: block;
-					position: absolute;
-					top: rem(34);
-					right: rem(12);
-					width: rem(24);
-					height: rem(24);
-					border: none;
-					background: transparent;
-					&::before, &::after {
-						content: '';
-						position: absolute;
-						display: block;
-						width: rem(20);
-						height: rem(2);
-						@include a-cent;
-						background-color: $primary;
-					}
-					&::before {
-						transform: rotate(-90deg);
-					}
-				}
+				// button {
+				// 	display: block;
+				// 	position: absolute;
+				// 	top: rem(37);
+				// 	right: rem(12);
+				// 	width: rem(24);
+				// 	height: rem(24);
+				// 	border: none;
+				// 	background: transparent;
+				// 	&::before, &::after {
+				// 		content: '';
+				// 		position: absolute;
+				// 		display: block;
+				// 		width: rem(20);
+				// 		height: rem(2);
+				// 		@include a-cent;
+				// 		background-color: $primary;
+				// 	}
+				// 	&::before {
+				// 		transform: rotate(-90deg);
+				// 	}
+				// }
 				input {
 					padding-right: rem(36);
 				}
+			}
+		}
+		&__add-btn {
+			display: block;
+			position: absolute;
+			top: rem(35.500);
+			right: rem(12);
+			width: rem(24);
+			height: rem(24);
+			border: none;
+			background: transparent;
+			&::before, &::after {
+				content: '';
+				position: absolute;
+				display: block;
+				width: rem(20);
+				height: rem(2);
+				@include a-cent;
+				background-color: $primary;
+			}
+			&::before {
+				transform: rotate(-90deg);
 			}
 		}
 		&__input {
@@ -81,6 +103,25 @@
 			line-height: 1.5em;
 			margin-bottom: 0;
 		}
+		.select2-selection {
+			background-image: none;
+			// padding-bottom: 0;
+			padding: rem(8);
+			textarea {
+				min-height: auto;
+			}
+		}
+		.select2-search__field {
+			// width: 100%;
+			// margin: 0;
+			// padding: rem(13) rem(30) rem(13);
+		}
+		// .select2-selection__choice {
+		// 	margin-bottom: rem(12);
+		// }
+		// .select2-search__field {
+		// 	white-space: nowrap;
+		// }
 	}
 	&__inner-row {
 		--bs-gutter-y: #{rem(32)};
