@@ -491,16 +491,16 @@ function eventHandler() {
 	if(filter) {
 		filter.querySelector('.filter__head').addEventListener('click', function() {
 			filter.querySelector('.filter__body').classList.add('active');
-			document.body.classList.add('fixed');
+			document.body.classList.add('fixedFilter');
 		});
 		filter.querySelector('.filter__cross').addEventListener('click', function() {
 			filter.querySelector('.filter__body').classList.remove('active');
-			document.body.classList.remove('fixed');
+			document.body.classList.remove('fixedFilter');
 		});
 		window.addEventListener('resize', () => {
 			if (window.matchMedia("(min-width: 992px)").matches) {
 				filter.querySelector('.filter__body').classList.remove('active');
-				document.body.classList.remove('fixed');
+				document.body.classList.remove('fixedFilter');
 			};
 		}, { passive: true });
 	}
@@ -650,7 +650,7 @@ function eventHandler() {
 	}
 	$('.settings__menu').on('click', function() {
 		$('.settings__content').addClass('active');
-		$('body').addClass('fixed');
+		$('body').addClass('fixedSettings');
 	});
 	document.addEventListener('mouseup', (event) => {
 		let container = event.target.closest(".settings__content.active"); // (1)
@@ -658,11 +658,11 @@ function eventHandler() {
 		let btn = event.target.closest('.settings__menu'); // (1)
 		if (!container && !toggle && !btn) {
 			$('.settings__content').removeClass('active');
-			$('body').removeClass('fixed');
+			$('body').removeClass('fixedSettings');
 		};
 		if(toggle) {
 			$('.settings__content').removeClass('active');
-			$('body').removeClass('fixed');
+			$('body').removeClass('fixedSettings');
 		}
 	});
 

@@ -24,7 +24,7 @@ html{
 }
 
 body {
-	&.fixed,
+	&[class*="fixed"],
 	&.fancybox-active{
 		.header{ 
 			padding-right: var(--spacing-end);
@@ -77,7 +77,7 @@ body {
 
 	}
 
-	&.fixed {
+	&[class*="fixed"]  {
 		overflow: hidden;
 		position: absolute;
 		width: 100%;
