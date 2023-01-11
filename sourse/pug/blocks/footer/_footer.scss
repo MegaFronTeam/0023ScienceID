@@ -1,6 +1,9 @@
 .footer {
 	--sPT: #{rem(32)};
 	--sPB: #{rem(32)};
+	img{
+		@extend .res-i;
+	}
 	// --sTPB: #{rem()};
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(64)};
@@ -19,14 +22,14 @@
 		margin-bottom: rem(36);
 		justify-content: space-between;
 		@include media-breakpoint-up(lg) {
-			--bs-gutter-x: #{rem(50)};
+			// --bs-gutter-x: #{rem(50)};
 			justify-content: flex-start;
 		}
 		@include media-breakpoint-up(xl) {
-			--bs-gutter-x: #{rem(100)};
+			// --bs-gutter-x: #{rem(100)};
 		}
 		@include media-breakpoint-up(xxl) {
-			--bs-gutter-x: #{rem(182)};
+			// --bs-gutter-x: #{rem(182)};
 		}
 	}
 	&__list-wrap {
