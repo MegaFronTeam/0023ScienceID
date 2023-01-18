@@ -96,6 +96,8 @@
 	&__headline {
 		margin-bottom: rem(40);
 	}
+
+	li {margin-left: 1rem}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
