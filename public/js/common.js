@@ -683,11 +683,13 @@ function eventHandler() {
 		}
 	});
 
-	$('.select-js').select2({
-		placeholder: 'Text',
-		multiple: true,
-		width: '100%',
-	});
+	if (typeof $('.select-js').select2 === 'function') {
+		$('.select-js').select2({
+			placeholder: 'Text',
+			multiple: true,
+			width: '100%',
+		});
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
