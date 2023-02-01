@@ -18,7 +18,7 @@
 		border-radius: 8px;
 		background-color: #C2DCFB;
 		min-height: rem(378);
-		z-index: 1;
+		z-index: 2;
 		@include media-breakpoint-up(lg) {
 			padding: rem(42) rem(49) rem(48);
 		}
