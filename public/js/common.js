@@ -507,7 +507,7 @@ function eventHandler() {
 			});
 		}
 		
-		if(!body) return;
+		if(!fitlerBody) return;
 			window.addEventListener('resize', () => {
 			if (window.matchMedia("(min-width: 992px)").matches) {
 				
