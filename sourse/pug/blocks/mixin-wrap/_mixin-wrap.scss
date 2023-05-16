@@ -1074,16 +1074,21 @@
 	}
 	.img {
 		position: absolute;
-		top: 50%;
+		top: 0;
 		right: 0;
-		transform: translateY(-50%);
-		max-width: 100%;
-		height: auto;
+		// transform: translateY(-50%);
+		// max-width: 100%;
+		// height: auto;
 		z-index: -1;
 		pointer-events: none;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: right bottom;
 	}
 	&__slide {
 		padding: rem(24);
+		padding-bottom: 150px;
 		@include media-breakpoint-up(md) {
 			padding: rem(37) rem(53) rem(88) rem(48);
 		}
@@ -1101,7 +1106,7 @@
 		}
 	}
 	&__control-wrap {
-		position: relative;
+		// position: relative;
 		display: flex;
 		width: auto;
 		align-items: center;
@@ -1110,8 +1115,10 @@
 		padding-left: rem(24);
 		padding-right: rem(24);
 		padding-bottom: rem(24);
+		position: absolute;
+		left: 0;
+		bottom: 0;
 		@include media-breakpoint-up(md) {
-			position: absolute;
 			left: rem(48);
 			bottom: rem(48);
 			padding: 0;

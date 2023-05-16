@@ -212,10 +212,12 @@ mixin writeUsBanner(container='container')
 		if(container)
 			.container
 				+e.slider--js.swiper
-					.swiper-wrapper
-						-for(let i = 0; i < 4; i++)
+					.swiper-wrapper 
+						- for (var x = 1; x < 3; x++)
 							+e.slide.swiper-slide
-								+img('img/banner-bg-2.png').img
+								picture 
+									source(media="(min-width: 768px)", srcset=`img/banner-bg-${x}-lg.jpg`)
+									+img(`img/banner-bg-${x}-sm.jpg`).img
 								.row
 									.col-md
 										.h2 Нужен реактив,<br>а&nbsp;его у&nbsp;нас не&nbsp;делают?
