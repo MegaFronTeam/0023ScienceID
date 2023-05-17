@@ -1101,7 +1101,7 @@
 			color: $gray-800;
 			margin-bottom: rem(24);
 			@include media-breakpoint-up(md) {
-				margin-bottom: rem(64);
+				// margin-bottom: rem(64);
 			}
 		}
 	}
@@ -1187,7 +1187,9 @@
 		display: flex;
 		align-items: flex-start;
 		flex-direction: column;
+		margin-bottom: 30px;
 		@include media-breakpoint-up(xl) {
+			margin-bottom: 60px;
 			--bs-gutter-x: #{rem(72)};
 		}
 		@include media-breakpoint-up(lg) {
