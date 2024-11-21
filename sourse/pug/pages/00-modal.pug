@@ -23,3 +23,11 @@ block pagecontent
 						a.btn.btn-primary(href=`#` data-src=id data-fancybox="modal")= name
 				+btn("modal-signIn", "modal-signIn")
 
+	.container
+		.row 
+			.col-md
+				+input('select','text')
+			- for (var x = 0; x < 3; x++)
+				.col-md
+					.custom-select-wrap
+						+input('select','select')

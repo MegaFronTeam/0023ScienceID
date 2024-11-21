@@ -1,139 +1,147 @@
-.form-wrap{
- 	&__input-wrap{
-			// @extend .form-group;
-			
-	}
-	&__input{
-		// @extend .form-control;
-	//  outline: 0 !important;
-		resize: none;
- 	}
-	&__input-title {
-		font-size: rem(14);
-		line-height: 1.5em;
-		margin-bottom: 4px;
-		// color: $gray-800;
-		color: rgba($color: $gray-800, $alpha: .7);
-		.star {
-			color: #EB3333;
-			font-size: rem(12);
-			
-		}
-	}
-	&__row {
-		--bs-gutter-x: #{rem(16)};
-		--bs-gutter-y: #{rem(16)};
-	}
- 	&__btn{
-		--bs-btn-padding-x: #{rem(24)};
+.form-wrap {
+  &__input-wrap {
+    // @extend .form-group;
+  }
+  &__input {
+    // @extend .form-control;
+    //  outline: 0 !important;
+    resize: none;
+  }
+  &__input-title {
+    font-size: rem(14);
+    line-height: 1.5em;
+    margin-bottom: 4px;
+    // color: $gray-800;
+    color: rgba($color: $gray-800, $alpha: 0.7);
+    .star {
+      color: #eb3333;
+      font-size: rem(12);
+    }
+  }
+  &__row {
+    --bs-gutter-x: #{rem(16)};
+    --bs-gutter-y: #{rem(16)};
+  }
+  &__btn {
+    --bs-btn-padding-x: #{rem(24)};
     --bs-btn-padding-y: #{rem(15)};
-		--bs-btn-font-size: #{rem(16)};
+    --bs-btn-font-size: #{rem(16)};
     --bs-btn-font-weight: 700;
-		
-		width: 100%;
-		cursor: pointer;
-		@include media-breakpoint-up(xl) {
-			--bs-btn-font-size: #{rem(16)};
-		}
- 	}
- 	label{
- 		width: 100%;
- 		display: block;
- 	}
-	&__policy {
-		font-size: 11px;
-		line-height: 1.5em;
-		color: #535353;
-	}
-	textarea {
-		min-height: rem(159);
-	}
+
+    width: 100%;
+    cursor: pointer;
+    @include media-breakpoint-up(xl) {
+      --bs-btn-font-size: #{rem(16)};
+    }
+  }
+  label {
+    width: 100%;
+    display: block;
+  }
+  &__policy {
+    font-size: 11px;
+    line-height: 1.5em;
+    color: #535353;
+  }
+  textarea {
+    min-height: rem(159);
+  }
 }
 
 .form-switch {
-	input {
-		background-color: $gray-100;
-		border-color: transparent;
-		height: rem(20);
-		margin-top: rem(0.750);
-		&:focus {
-			border-color: transparent;
-			box-shadow: none;
-		}
-	}
-	span {
-		font-size: rem(15);
-		line-height: 1.5em;
-		color: $gray-800;
-	}
+  input {
+    background-color: $gray-100;
+    border-color: transparent;
+    height: rem(20);
+    margin-top: rem(0.75);
+    &:focus {
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+  span {
+    font-size: rem(15);
+    line-height: 1.5em;
+    color: $gray-800;
+  }
 }
 
-.parsley-error{
-	border-image: none;
-	border: 2px solid  red !important;
-	color: red;
-	outline: 0 !important;
-	 
+.parsley-error {
+  border-image: none;
+  border: 2px solid red !important;
+  color: red;
+  outline: 0 !important;
 }
-.parsley-success{
-	border: 2px solid  #00d600 !important;
-
+.parsley-success {
+  border: 2px solid #00d600 !important;
 }
-.parsley-errors-list{
-	color: red;
+.parsley-errors-list {
+  color: red;
 }
 
-// 
-@include media-breakpoint-up(xl) {}
-
-@include media-breakpoint-up(lg) {}
-
-@include media-breakpoint-up(md) {}
-
-@include media-breakpoint-up(sm) {}
-
-@include media-breakpoint-up(xs) {}
-
-// 
-@include media-breakpoint-between(md, xl) {}
-
-// 
-@include media-breakpoint-only(xs) {}
-
-@include media-breakpoint-only(sm) {}
-
-@include media-breakpoint-only(md) {}
-
-@include media-breakpoint-only(lg) {}
-
-@include media-breakpoint-only(xl) {}
-
-// 
-@include media-breakpoint-down(xl) {}
-
-@include media-breakpoint-down(lg) {}
-
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
-
-@include media-breakpoint-down(xs) {}
-
-
-.form-check{
-
+//
+@include media-breakpoint-up(xl) {
 }
-.form-check-input{
 
+@include media-breakpoint-up(lg) {
 }
-.form-check-label{
-	
+
+@include media-breakpoint-up(md) {
+}
+
+@include media-breakpoint-up(sm) {
+}
+
+@include media-breakpoint-up(xs) {
+}
+
+//
+@include media-breakpoint-between(md, xl) {
+}
+
+//
+@include media-breakpoint-only(xs) {
+}
+
+@include media-breakpoint-only(sm) {
+}
+
+@include media-breakpoint-only(md) {
+}
+
+@include media-breakpoint-only(lg) {
+}
+
+@include media-breakpoint-only(xl) {
+}
+
+//
+@include media-breakpoint-down(xl) {
+}
+
+@include media-breakpoint-down(lg) {
+}
+
+@include media-breakpoint-down(md) {
+}
+
+@include media-breakpoint-down(sm) {
+}
+
+@include media-breakpoint-down(xs) {
+}
+
+.form-check {
+}
+.form-check-input {
+}
+.form-check-label {
 }
 
 // .custom-input{
 // 	display: block;
 // 	margin: auto;
-	 
+
 // 	margin-bottom: rem(20);
 // 	cursor: pointer;
 // 	position: relative;
@@ -152,33 +160,31 @@
 // 	}
 
 // 	&__input[type="checkbox"] + &__lab{
-// 		&::after{ 
+// 		&::after{
 // 			content:   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 448 512'%3E%3Cpath fill='%23fff' d='M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z' class='st0'/%3E%3C/svg%3E");
 // 			position: absolute;
-// 			@include a-cent; 
+// 			@include a-cent;
 // 			opacity: 0;
 // 		}
 // 	}
 
-// 	&__input[type="radio"] + &__lab{ 
+// 	&__input[type="radio"] + &__lab{
 // 		border-radius: 50%;
-// 		&::after{ 
+// 		&::after{
 // 			border-radius: 50%;
 // 		}
 // 	}
 
 // 	&__input:checked + &__lab{
 // 		background-color: $success;
-		 
+
 // 		&::after{
-	
+
 // 			opacity: 1;
 // 		}
 // 	}
- 
+
 // }
-
-
 
 // select.form-control {
 // 	background-image: url(../img/svg/chevron-up.svg);
@@ -196,24 +202,21 @@
 // 	}
 // }
 
-
 input[type='number'] {
-	-moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 select::-ms-expand {
-	display: none;
+  display: none;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-	/* display: none; <- Crashes Chrome on hover */
-	-webkit-appearance: none;
-	margin: 0;
-	/* <-- Apparently some margin are still there even though it's hidden */
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
 }
-
-
 
 // .jq-selectbox{
 // 	max-width: 100%;
@@ -222,12 +225,12 @@ input::-webkit-inner-spin-button {
 //  // height: auto;
 // 	&__select{
 // 		// background-color: transparent;
-		 
-// 		box-shadow: none !important; 
+
+// 		box-shadow: none !important;
 // 		background-image: none !important;
 // 		text-shadow: none;
 // 		font-family: $default-font;
-// 		font-size: rem(14); 
+// 		font-size: rem(14);
 // 		text-align: left;
 // 		border: 1px solid $gray-400;
 // 		background-color: #fff;
@@ -237,19 +240,19 @@ input::-webkit-inner-spin-button {
 // 		border-radius: rem(6);
 // 		@include mt;
 // 		&:hover{
-		 
+
 // 		}
 // 		&-text{
 // 			// width: 100% !important;
 // 			line-height: 1;
 // 		}
-// 	}	
+// 	}
 // 	&__select:hover &__trigger{
-		 
+
 // 	}
 // 	&__trigger{
 // 		border: none;
-// 		background-color: $gray-400; 
+// 		background-color: $gray-400;
 // 		height: 100%;
 // 		width: 40px;
 // 		border-radius: rem(6);
@@ -259,35 +262,39 @@ input::-webkit-inner-spin-button {
 // 		background-repeat: no-repeat;
 // 		@include mt;
 // 		&:hover{
-			
 
 // 		}
 // 	}
-// 	&__trigger-arrow { 
+// 	&__trigger-arrow {
 // 		border: none;
-    
+
 // }
 // li{
 // 	font-size: rem(16);
 // 	padding: em(10px) 10px em(10px);
 // 	&:hover {
-     
+
 //     color: #fff;
 // }
 // }
 // }
 
-
+.select2-container--default .select2-selection--multiple,
 .select2-container--default .select2-selection--single {
-	@extend .form-select;
-	height: auto !important;
-	padding-left: rem(10);
+  @extend .form-select;
+  height: auto !important;
+  padding-left: rem(10);
+}
+.select2-container--default .select2-selection--multiple {
+  // padding: 0.5rem 0.8rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.6rem;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
-	padding: 0;
+  padding: 0;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
-	display: none;
+  display: none;
 }
