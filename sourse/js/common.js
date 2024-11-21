@@ -727,14 +727,31 @@ function eventHandler() {
   });
 
   if (typeof $('.select-js').select2 === 'function') {
-    $('.select-js').select2({
-      placeholder: 'Text',
-      multiple: true,
-      width: '100%',
-    });
-  }
+    $('.select-js')
+      .select2({
+        placeholder: 'Text',
+        // multiple: true,
+        width: '100%',
+        // allowClear: true,
+      })
+      .on('change', function (e) {
+        const wrap = document.querySelector('.custom-multi-select-wrap');
+        const values = $(this).val();
+        const parent = this.closest('.custom-multi-select-wrap');
+        if (wrap) {
+          if (values.some((el) => el === 'All')) {
+            console.log(values);
 
- 
+            $(this).val(null).trigger('change');
+            parent.style.setProperty('--count', `'0'`);
+          } else {
+            parent.style.setProperty('--count', `'${values.length}'`);
+          }
+        }
+        // Your change event handler code here
+        console.log('Select2 value changed:', $(this).val());
+      });
+  }
 }
 if (document.readyState !== 'loading') {
   eventHandler();

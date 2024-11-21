@@ -29,5 +29,5 @@ block pagecontent
 				+input('select','text')
 			- for (var x = 0; x < 3; x++)
 				.col-md
-					.custom-select-wrap
-						+input('select','select')
+					.custom-multi-select-wrap(style="--title: 'Выбрано: '; --count: '0'")
+						+input('Выбрано: ','select')
