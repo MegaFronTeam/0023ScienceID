@@ -732,6 +732,7 @@ function eventHandler() {
         placeholder: 'Text',
         // multiple: true,
         width: '100%',
+        closeOnSelect: false,
         // allowClear: true,
       })
       .on('change', function (e) {
