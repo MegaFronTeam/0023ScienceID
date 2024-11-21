@@ -322,13 +322,9 @@ input::-webkit-inner-spin-button {
     display: flex;
     padding-top: rem(5);
     &::before {
-      content: var(--title);
+      content: var(--title) ': ' var(--count);
       display: block;
       margin-right: 5px;
-    }
-    &::after {
-      content: var(--count);
-      display: block;
     }
   }
 }
