@@ -11,7 +11,7 @@ mixin input(placeholder,  t='text', label, name= t, star)
 			+e.SELECT.input.form-select(name= name data-placeholder= placeholder multiple).select-js&attributes(attributes)
 				option(value= 'All')= 'Все'
 				- for (var x = 1; x < 5; x++)
-					option(value=`${'значение' + x}`)=`${'значение' + x}`
+					option(value=`${'значение' + x}` selected)=`${'значение' + x}`
 		else if t=='file'
 			+e.INPUT.input.form-control(name=name type=t)&attributes(attributes)
 			

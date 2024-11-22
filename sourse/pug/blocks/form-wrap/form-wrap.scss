@@ -318,9 +318,11 @@ input::-webkit-inner-spin-button {
     display: none !important;
   }
   .select2-search {
+    display: none !important;
+  }
+  .select2-selection {
     align-items: center;
     display: flex;
-    padding-top: rem(5);
     &::before {
       content: var(--title) ': ' var(--count);
       display: block;
