@@ -324,7 +324,8 @@ input::-webkit-inner-spin-button {
     align-items: center;
     display: flex;
     &::before {
-      content: var(--title) ': ' var(--count);
+      --update-title: var(--title) ': ' var(--count);
+      content: var(--update-title, var(--default-title));
       display: block;
       margin-right: 5px;
     }

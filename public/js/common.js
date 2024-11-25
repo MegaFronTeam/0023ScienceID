@@ -744,7 +744,9 @@ function eventHandler() {
             console.log(values);
 
             $(this).val(null).trigger('change');
-            parent.style.setProperty('--count', `'0'`);
+            parent.style.setProperty('--count', null);
+          } else if (values.length === 0) {
+            parent.style.setProperty('--count', null);
           } else {
             parent.style.setProperty('--count', `'${values.length}'`);
           }
